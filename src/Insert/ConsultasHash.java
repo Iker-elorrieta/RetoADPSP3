@@ -15,13 +15,9 @@ public class ConsultasHash {
 		String hql = "from HashJson where url = " + link;
 		Query q = session.createQuery(hql);
 		HashJson hash1 = (HashJson) q.uniqueResult();
-		if (hash1.getHash() != null) {
-			if (hash1.getHash().equals(Hash)) {
-				session.close();
-				return true;
-			} else {
-				hash1.setHash(Hash);
-			}
+		if (hash1.getHash() != null && hash1.getHash().equals(Hash)) {
+			session.close();
+			return true;
 		} else {
 			hash1.setHash(Hash);
 		}

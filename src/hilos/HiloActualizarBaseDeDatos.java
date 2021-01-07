@@ -9,7 +9,7 @@ private Hash.Estaciones estaciones = new Hash.Estaciones();
 private Hash.Playas playas = new Hash.Playas();
 private Hash.Pueblos pueblos = new Hash.Pueblos();
 private Hash.Links link = new Hash.Links();
-	public void Run(){
+	public void run(){
 		
 		diario.comprobarHashDiarios(links);
 		estaciones.comprobarHashEstaciones();

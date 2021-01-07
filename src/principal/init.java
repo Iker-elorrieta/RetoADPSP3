@@ -1,12 +1,15 @@
 package principal;
 
 import Insert.Consultas;
+import hilos.Control;
+import hilos.HiloActualizarBaseDeDatos;
 
 public class init {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
+		/*
 		Consultas consultas = new Consultas();
 		
 		//INSERTAR PROVINCIAS
@@ -39,6 +42,13 @@ public class init {
 		
 		//INSERTAR HASH
 		consultas.insertHash();
+		*/
+		
+		HiloActualizarBaseDeDatos Actualizar = new HiloActualizarBaseDeDatos();
+		Actualizar.start();
+		
+		Control ControlTiempo = new Control();
+		ControlTiempo.start();
 
 
 	}
