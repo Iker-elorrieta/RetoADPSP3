@@ -61,6 +61,7 @@ public class leerJson {
 							link.setNombreFichero("datos_indice/" + nombre + ".json");
 						}
 						link.setLink(valor.getAsString());
+						link.setNombrePueblo(nombre);
 						enlazes.add(link);
 						System.out.println(" Enlaze guardado: " + valor.getAsString());
 					}
@@ -154,7 +155,7 @@ public class leerJson {
 		}
 	
 
-	public void LeerJsonPueblos(JsonElement elemento) {
+	public String LeerJsonPueblos(JsonElement elemento, String nombre) {
 			Links link = null;
 			if (elemento.isJsonObject()) {
 				System.out.println("Objeto");
@@ -164,6 +165,7 @@ public class leerJson {
 				while (iter.hasNext()) {
 					java.util.Map.Entry<String, JsonElement> entrada = iter.next();
 					Atributo = entrada.getKey();
+					nombre = Atributo.toString();
 					LeerJsonEstaciones(entrada.getValue());
 				}
 
@@ -190,6 +192,7 @@ public class leerJson {
 			} else {
 				System.out.println("Es otra cosa");
 			}
+			return nombre;
 		}
 
 	public void LeerJsonLinks(JsonElement elemento) {

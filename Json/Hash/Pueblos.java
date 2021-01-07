@@ -63,7 +63,7 @@ public class Pueblos {
 				JsonParser parser = new JsonParser();
 				FileReader fr = new FileReader(nombreFichero);
 				JsonElement datos = parser.parse(fr);
-				leer.LeerJsonPueblos(datos);
+				leer.LeerJsonPueblos(datos, "");
 			}
 
 			return true;

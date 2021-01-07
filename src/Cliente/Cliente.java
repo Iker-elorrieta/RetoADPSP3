@@ -1,10 +1,11 @@
 package Cliente;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-
 
 public class Cliente {
 	
@@ -12,30 +13,22 @@ public class Cliente {
 	private final static String IP = "127.0.0.1";
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		iniciar();
 	}
 	
 	public static void iniciar() {
 		Socket cliente = null;
-		ObjectInputStream entrada = null;
-		ObjectOutputStream salida = null;
+		DataInputStream entrada = null;
+		DataOutputStream salida = null;
 		try {
 			cliente = new Socket(IP, PUERTO);
 			System.out.println("Conexión realizada con servidor");
-			entrada = new ObjectInputStream(cliente.getInputStream());
-			salida = new ObjectOutputStream (cliente.getOutputStream());
-			//Persona mensaje = new Persona();
+			entrada = new DataInputStream(cliente.getInputStream());
+			salida = new DataOutputStream (cliente.getOutputStream());
 			
-			//mensaje = (Persona) entrada.readObject();
-			//System.out.println(mensaje.getNombre());
+			String mensage = entrada.readUTF();
+			System.out.println("mensage: " + mensage);
 			
-			//mensaje.setNombre("Pepito");
-			//mensaje.setApellidos("grillo");
-			
-			//salida.writeObject(mensaje);
-			
-
 		} catch (IOException e) {
 			System.out.println("Error: " + e.getMessage());
 		} catch (Exception e) {
@@ -54,5 +47,4 @@ public class Cliente {
 			System.out.println("Fin cliente");
 		}
 	}
-
 }

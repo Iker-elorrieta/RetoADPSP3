@@ -24,11 +24,10 @@ private Hash.Links link = new Hash.Links();
 
 public void run(){
 
-		
-		diario.comprobarHashDiarios(links);
+		pueblos.comprobarHashPueblos();
 		estaciones.comprobarHashEstaciones();
 		playas.comprobarHashPlayas();
-		pueblos.comprobarHashPueblos();
+		diario.comprobarHashDiarios(links);
 		link.comprobarHashLinks(links);
 		
 		System.out.println("fin del hiloActualizar");

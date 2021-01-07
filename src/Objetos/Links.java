@@ -3,6 +3,15 @@ package Objetos;
 public class Links {
 private String NombreFichero;
 private String link;
+private String nombrePueblo;
+
+public String getNombrePueblo() {
+	return nombrePueblo;
+}
+
+public void setNombrePueblo(String nombrePueblo) {
+	this.nombrePueblo = nombrePueblo;
+}
 
 public Links(String nombreFichero, String link) {
 	super();
