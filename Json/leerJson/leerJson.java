@@ -12,19 +12,23 @@ import Objetos.Links;
 public class leerJson {
 	private static boolean seguir = true;
 	private String Atributo;
-
-	public void LeerJsonDiarios(JsonElement elemento, ArrayList<Links> enlazes) {
+	private boolean atributoName;
+	public String LeerJsonDiarios(JsonElement elemento, ArrayList<Links> enlazes,String nombre) {
 		
-			Links link = null;
+			Links link = new Links();
 			if (elemento.isJsonObject()) {
 				System.out.println("Objeto");
 				JsonObject obj = elemento.getAsJsonObject();
 				java.util.Set<java.util.Map.Entry<String, JsonElement>> entradas = obj.entrySet();
 				java.util.Iterator<java.util.Map.Entry<String, JsonElement>> iter = entradas.iterator();
 				while (iter.hasNext()) {
+					
 					java.util.Map.Entry<String, JsonElement> entrada = iter.next();
 					Atributo = entrada.getKey();
-					LeerJsonDiarios(entrada.getValue(), enlazes);
+					if (Atributo.equals("name")) {
+						atributoName=true;
+					}
+					nombre=LeerJsonDiarios(entrada.getValue(), enlazes,nombre);
 				}
 
 			} else if (elemento.isJsonArray()) {
@@ -33,7 +37,7 @@ public class leerJson {
 				java.util.Iterator<JsonElement> iter = array.iterator();
 				while (iter.hasNext()) {
 					JsonElement entrada = iter.next();
-					LeerJsonDiarios(entrada, enlazes);
+					nombre=LeerJsonDiarios(entrada, enlazes,nombre);
 				}
 			} else if (elemento.isJsonPrimitive()) {
 				JsonPrimitive valor = elemento.getAsJsonPrimitive();
@@ -42,17 +46,19 @@ public class leerJson {
 				} else if (valor.isNumber()) {
 					System.out.println("       Numero: " + valor.getAsNumber());
 				} else if (valor.isString()) {
-					if (Atributo.equals("name")) {
+					
+					if (atributoName) {
 						link = new Links();
-						link.setNombreFichero(valor.getAsString());
+						nombre=valor.getAsString();
+						atributoName=false;
 					}
 					if (valor.getAsString().contains("http")) {
 						if (valor.getAsString().contains("datos_horarios")) {
-							link.setNombreFichero("datos_horarios\\/" + link.getNombreFichero() + ".json");
+							link.setNombreFichero("datos_horarios/" + nombre + ".json");
 						} else if (valor.getAsString().contains("datos_diarios")) {
-							link.setNombreFichero("datos_diarios\\/" + link.getNombreFichero() + ".json");
+							link.setNombreFichero("datos_diarios/" + nombre + ".json");
 						} else if (valor.getAsString().contains("datos_indice")) {
-							link.setNombreFichero("datos_indice\\/" + link.getNombreFichero() + ".json");
+							link.setNombreFichero("datos_indice/" + nombre + ".json");
 						}
 						link.setLink(valor.getAsString());
 						enlazes.add(link);
@@ -64,6 +70,7 @@ public class leerJson {
 			} else {
 				System.out.println("Es otra cosa");
 			}
+			return nombre;
 		}
 	
 	

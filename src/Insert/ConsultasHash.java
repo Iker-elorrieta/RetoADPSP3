@@ -14,26 +14,27 @@ public class ConsultasHash {
 		SessionFactory sesion = HibernateUtil.getSessionFactory();
 		Session session = sesion.openSession();
 		session.beginTransaction();
-		String hql = "from HashJson where url = " + link;
-		if(session.createQuery(hql)==null) {
-			HashJson hashJson = new HashJson();
-			hashJson.setHash(Hash);
-			hashJson.setUrl(link);
-			session.save(hashJson);
-			return false;
-		}
+		String hql = "from HashJson where url = '" + link + "'";
+		System.out.println(hql);
 		Query q = session.createQuery(hql);
 		HashJson hash1 = (HashJson) q.uniqueResult();
-		if (hash1.getHash() != null) {
+		if (hash1 != null) {
 			if (hash1.getHash().equals(Hash)) {
 				session.close();
+				System.out.println("No hay cambios en el hash");
 				return true;
 			} else {
 				hash1.setHash(Hash);
 			}
 		} else {
-			hash1.setHash(Hash);
-		}
+			
+							HashJson hashJson = new HashJson();
+							hashJson.setHash(Hash);
+							hashJson.setUrl(link);
+							session.save(hashJson);
+						
+					}
+		
 
 		session.getTransaction().commit();
 
@@ -42,5 +43,5 @@ public class ConsultasHash {
 
 		return false;
 
-	}
+}
 }

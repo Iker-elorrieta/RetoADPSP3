@@ -3,9 +3,12 @@ package Hash;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Reader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.Charset;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -26,6 +29,16 @@ public class Pueblos {
 	private leerJson leer = new leerJson();
 	private ConsultasHash consulta = new ConsultasHash();
 
+	private static String readAll(Reader rd) throws IOException {
+	    StringBuilder sb = new StringBuilder();
+	    int cp;
+	    while ((cp = rd.read()) != -1) {
+	      sb.append((char) cp);
+	    }
+	    return sb.toString();
+	  }
+
+	
 	public boolean comprobarHashPueblos() {
 		try {
 			comprobar.comprobarPagina(link);
@@ -35,10 +48,13 @@ public class Pueblos {
 
 			HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
 			conexion.setRequestMethod("GET");
-			BufferedReader rd = new BufferedReader(new InputStreamReader(conexion.getInputStream()));
+			InputStream is = new URL(link).openStream();
+			BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
+		    String jsonText = readAll(rd);
+		    
 
 			MessageDigest md = MessageDigest.getInstance("SHA");
-			byte dataBytes[] = rd.toString().getBytes();
+			byte dataBytes[] = jsonText.getBytes();
 			md.update(dataBytes);
 			byte resumen[] = md.digest();
 			String hash = new String(resumen);
