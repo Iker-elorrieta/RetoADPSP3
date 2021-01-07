@@ -1,5 +1,7 @@
 package Insert;
 
+import java.net.URL;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -13,6 +15,13 @@ public class ConsultasHash {
 		Session session = sesion.openSession();
 		session.beginTransaction();
 		String hql = "from HashJson where url = " + link;
+		if(session.createQuery(hql)==null) {
+			HashJson hashJson = new HashJson();
+			hashJson.setHash(Hash);
+			hashJson.setUrl(link);
+			session.save(hashJson);
+			return false;
+		}
 		Query q = session.createQuery(hql);
 		HashJson hash1 = (HashJson) q.uniqueResult();
 		if (hash1.getHash() != null && hash1.getHash().equals(Hash)) {
