@@ -22,7 +22,7 @@ public class init {
 		System.out.println();
 		
 		//INSERTAR DATOS CALIDAD
-		//consultas.insertDatosCalidad();
+		consultas.insertDatosCalidad();
 		System.out.println();
 		
 		//INSERTAR ESPACIOS NATURALES
@@ -40,6 +40,8 @@ public class init {
 		//INSERTAR HASH
 		consultas.insertHash();
 
+		//INSERTAR ESTA EN
+		consultas.insertEstaEn();
 
 	}
 

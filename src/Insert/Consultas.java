@@ -11,6 +11,7 @@ import org.hibernate.Transaction;
 
 import Tablas.DatosCalidad;
 import Tablas.EspaciosNaturales;
+import Tablas.EstaEn;
 import Tablas.Estaciones;
 import Tablas.Favoritos;
 import Tablas.HashJson;
@@ -86,13 +87,17 @@ public class Consultas {
 		Session session = sesion.openSession();
 		session.beginTransaction();
 		
-		DatosCalidad datos = datos();
+		String hql = "from Estaciones as est where Nombre = 'MUNOA'";
 		
+		Query q = session.createQuery(hql);
+		Estaciones estacion = (Estaciones) q.uniqueResult();
+
+		DatosCalidad datos = datos();
+		datos.setEstaciones(estacion);
+
 		session.save(datos);
 		session.getTransaction().commit();
-		
 
-		
 		System.out.println("DATOS CREADOS");
 		session.close();
 		
@@ -118,6 +123,36 @@ public class Consultas {
 		
 		return true;
 
+	}
+	
+	public boolean insertEstaEn() {
+		
+		SessionFactory sesion = HibernateUtil.getSessionFactory();
+		Session session = sesion.openSession();
+		session.beginTransaction();
+		
+
+		String hql = "from EspaciosNaturales as esp where Nombre_Espacio = 'Barakaldo'";
+		
+		Query q = session.createQuery(hql);
+		EspaciosNaturales espacio = (EspaciosNaturales) q.uniqueResult();
+		
+		
+		EstaEn estaen = estaen();
+		
+		
+		estaen.setEspaciosNaturales(espacio);
+		
+		session.save(estaen);
+		
+		session.getTransaction().commit();
+		
+
+		
+		System.out.println("RELACION TABLA ESPACION NATURALES Y MUNICIPIOS CREADA");
+		session.close();
+		
+		return true;
 	}
 	
 	public boolean insertUsuarios() {
@@ -233,7 +268,7 @@ public class Consultas {
 		datos.setSo2(4);
 		datos.setSo2ica("muy bueno / oso ona");
 		datos.setIcastation("muy bueno / oso ona");
-		datos.setEstaciones(estacion());
+		
 		
 		return datos;
 	}
@@ -276,6 +311,16 @@ public class Consultas {
 		hash.setHash("8b9248a4e0b64bbccf82e7723a3734279bf9bbc4");
 		hash.setUrl("https://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2020/es_def/adjuntos/datos_indice/BARAKALDO.json");
 		return hash;
+	}
+	
+	
+	public EstaEn estaen() {
+		
+		EstaEn esta = new EstaEn();
+		
+		
+		esta.setMunicipios(municipio());
+		return esta;
 	}
 
 }

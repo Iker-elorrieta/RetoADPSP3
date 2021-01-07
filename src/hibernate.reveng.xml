@@ -67,4 +67,10 @@
 		<column name="Pass"></column>
 		<column name="Nombre"></column>
 	</table>
+	<table catalog="reto2" name="esta_en">
+		<column name="Cod_Espacio"></column>
+		<column name="Cod_Ciudad"></column>
+		<column name="Cod_Espacio"></column>
+		<column name="Cod_Ciudad"></column>
+	</table>
 </hibernate-reverse-engineering>
