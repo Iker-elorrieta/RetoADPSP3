@@ -48,11 +48,11 @@ public class leerJson {
 					}
 					if (valor.getAsString().contains("http")) {
 						if (valor.getAsString().contains("datos_horarios")) {
-							link.setNombreFichero("datos_horarios/" + link.getNombreFichero() + ".json");
+							link.setNombreFichero("datos_horarios\\/" + link.getNombreFichero() + ".json");
 						} else if (valor.getAsString().contains("datos_diarios")) {
-							link.setNombreFichero("datos_diarios/" + link.getNombreFichero() + ".json");
+							link.setNombreFichero("datos_diarios\\/" + link.getNombreFichero() + ".json");
 						} else if (valor.getAsString().contains("datos_indice")) {
-							link.setNombreFichero("datos_indice/" + link.getNombreFichero() + ".json");
+							link.setNombreFichero("datos_indice\\/" + link.getNombreFichero() + ".json");
 						}
 						link.setLink(valor.getAsString());
 						enlazes.add(link);
