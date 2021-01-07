@@ -18,7 +18,7 @@ public class ConsultasHash {
 		System.out.println(hql);
 		Query q = session.createQuery(hql);
 		HashJson hash1 = (HashJson) q.uniqueResult();
-		if (hash1 != null) {
+	
 			if (hash1.getHash().equals(Hash)) {
 				session.close();
 				System.out.println("No hay cambios en el hash");
@@ -26,6 +26,9 @@ public class ConsultasHash {
 			} else {
 				hash1.setHash(Hash);
 			}
+		if (hash1.getHash() != null && hash1.getHash().equals(Hash)) {
+			session.close();
+			return true;
 		} else {
 			
 							HashJson hashJson = new HashJson();
@@ -43,5 +46,5 @@ public class ConsultasHash {
 
 		return false;
 
-}
+	}
 }
