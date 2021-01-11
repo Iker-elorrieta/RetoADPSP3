@@ -11,6 +11,7 @@ import org.hibernate.Transaction;
 
 import Tablas.DatosCalidad;
 import Tablas.EspaciosNaturales;
+import Tablas.EstaEn;
 //import Tablas.EstaEn;
 import Tablas.Estaciones;
 import Tablas.Favoritos;
@@ -138,12 +139,12 @@ public class Consultas {
 		EspaciosNaturales espacio = (EspaciosNaturales) q.uniqueResult();
 		
 		
-		//EstaEn estaen = estaen();
+		EstaEn estaen = estaen();
 		
 		
-		//estaen.setEspaciosNaturales(espacio);
+		estaen.setEspaciosNaturales(espacio);
 		
-		//session.save(estaen);
+		session.save(estaen);
 		
 		session.getTransaction().commit();
 		
@@ -314,13 +315,13 @@ public class Consultas {
 	}
 	
 	
-	/*public EstaEn estaen() {
+	public EstaEn estaen() {
 		
 		EstaEn esta = new EstaEn();
 		
 		
 		esta.setMunicipios(municipio());
 		return esta;
-	}*/
+	}
 
 }
