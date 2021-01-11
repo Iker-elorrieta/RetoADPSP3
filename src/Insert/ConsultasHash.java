@@ -11,12 +11,14 @@ import Tablas.HashJson;
 public class ConsultasHash {
 
 	public boolean comprobarHash(String link, String Hash) {
+		
 		SessionFactory sesion = HibernateUtil.getSessionFactory();
 		Session session = sesion.openSession();
 		session.beginTransaction();
 		String hql = "from HashJson where url = '" + link + "'";
 		System.out.println(hql);
 		Query q = session.createQuery(hql);
+		try {
 		HashJson hash1 = (HashJson) q.uniqueResult();
 	
 			if (hash1.getHash().equals(Hash)) {
@@ -43,7 +45,16 @@ public class ConsultasHash {
 
 		System.out.println("Hash cambiado");
 		session.close();
-
+		}catch (Exception e) {
+			HashJson hashJson = new HashJson();
+			hashJson.setHash(Hash);
+			hashJson.setUrl(link);
+			session.save(hashJson);
+			session.getTransaction().commit();
+			session.close();
+		}
+			
+		
 		return false;
 
 	}

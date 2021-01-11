@@ -8,6 +8,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 
 import Objetos.Links;
+import Tablas.Municipios;
 
 public class leerJson {
 	private static boolean seguir = true;
@@ -126,7 +127,7 @@ public class leerJson {
 				while (iter.hasNext()) {
 					java.util.Map.Entry<String, JsonElement> entrada = iter.next();
 					Atributo = entrada.getKey();
-					LeerJsonEstaciones(entrada.getValue());
+					LeerJsonPlayas(entrada.getValue());
 				}
 
 			} else if (elemento.isJsonArray()) {
@@ -135,7 +136,7 @@ public class leerJson {
 				java.util.Iterator<JsonElement> iter = array.iterator();
 				while (iter.hasNext()) {
 					JsonElement entrada = iter.next();
-					LeerJsonEstaciones(entrada);
+					LeerJsonPlayas(entrada);
 				}
 			} else if (elemento.isJsonPrimitive()) {
 				JsonPrimitive valor = elemento.getAsJsonPrimitive();
@@ -154,9 +155,12 @@ public class leerJson {
 			}
 		}
 	
-
-	public String LeerJsonPueblos(JsonElement elemento, String nombre) {
-			Links link = null;
+	private Municipios municipio=new Municipios();
+	private String[] nombreMuni;
+	boolean mismoNombre=false;
+	public String LeerJsonPueblos(JsonElement elemento, String nombre,ArrayList<Tablas.Municipios> municipios) {
+			
+			int x=1;
 			if (elemento.isJsonObject()) {
 				System.out.println("Objeto");
 				JsonObject obj = elemento.getAsJsonObject();
@@ -166,7 +170,7 @@ public class leerJson {
 					java.util.Map.Entry<String, JsonElement> entrada = iter.next();
 					Atributo = entrada.getKey();
 					nombre = Atributo.toString();
-					LeerJsonEstaciones(entrada.getValue());
+					nombre=LeerJsonPueblos(entrada.getValue(),nombre,municipios);
 				}
 
 			} else if (elemento.isJsonArray()) {
@@ -175,7 +179,7 @@ public class leerJson {
 				java.util.Iterator<JsonElement> iter = array.iterator();
 				while (iter.hasNext()) {
 					JsonElement entrada = iter.next();
-					LeerJsonEstaciones(entrada);
+					nombre=LeerJsonPueblos(entrada,nombre,municipios);
 				}
 			} else if (elemento.isJsonPrimitive()) {
 				JsonPrimitive valor = elemento.getAsJsonPrimitive();
@@ -183,8 +187,58 @@ public class leerJson {
 					System.out.println("       Boolean " + valor.getAsBoolean());
 				} else if (valor.isNumber()) {
 					System.out.println("       Numero: " + valor.getAsNumber());
+					if(nombre.equals("municipalitycode")) {
+						municipio.setCodMunicipio(Integer.parseInt(valor.getAsString().split(" ")[1]));
+					}//fin if municipality code.
 				} else if (valor.isString()) {
 						System.out.println(" Enlaze guardado: " + valor.getAsString());
+					
+					if (nombre.equals("municipality"))	{
+						nombreMuni= valor.getAsString().split(" ");
+						nombre = nombreMuni[0];
+						x=1;
+						//Revision de que el nombre no se repita
+						while(x>nombreMuni.length-1 || !mismoNombre){
+							if(nombreMuni[0].equals(nombreMuni[x])){
+								mismoNombre=true;
+							}else {
+								nombre=nombre+" "+nombreMuni[x];
+							}
+							
+							x++;
+						}
+						municipio.setNombre(nombre);
+						
+					}//fin If municipality
+					
+					else if(nombre.equals("municipalitycode")) {
+						municipio.setCodMunicipio(Integer.parseInt(valor.getAsString().split(" ")[1]));
+				
+					}//fin if municipality code.
+					
+					else if(nombre.equals("territory")) {
+						nombreMuni= valor.getAsString().split(" ");
+						nombre = nombreMuni[0];
+						x=1;
+						//Revision de que el nombre no se repita
+						while(x>nombreMuni.length-1 || !mismoNombre){
+							if(nombreMuni[0].equals(nombreMuni[x])){
+								mismoNombre=true;
+							}else {
+								nombre=nombre+" "+nombreMuni[x];
+							}
+							
+							x++;
+						}
+						municipio.getProvincias().setNombre(nombre);
+						
+					}//fin if territory.
+					
+					else if(nombre.equals("territorycode")) {
+						municipio.getProvincias().setCodProvincia(Integer.parseInt(valor.getAsString().split(" ")[0]));
+						municipios.add(municipio);
+						municipio=new Municipios();
+					}//Fin if territoryCode
 				}
 
 			} else if (elemento.isJsonNull()) {

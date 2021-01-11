@@ -23,7 +23,10 @@ private Hash.Links link = new Hash.Links();
 	
 
 public void run(){
-
+	
+			System.out.println("he entrado al hilo");
+		
+		
 		pueblos.comprobarHashPueblos();
 		estaciones.comprobarHashEstaciones();
 		playas.comprobarHashPlayas();
@@ -31,5 +34,6 @@ public void run(){
 		link.comprobarHashLinks(links);
 		
 		System.out.println("fin del hiloActualizar");
+		
 	}
 }

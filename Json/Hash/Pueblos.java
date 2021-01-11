@@ -11,6 +11,7 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
@@ -28,7 +29,8 @@ public class Pueblos {
 	private escribirJson escribir = new escribirJson();
 	private leerJson leer = new leerJson();
 	private ConsultasHash consulta = new ConsultasHash();
-
+	private ArrayList<Tablas.Municipios> municipios;
+	
 	private static String readAll(Reader rd) throws IOException {
 	    StringBuilder sb = new StringBuilder();
 	    int cp;
@@ -40,10 +42,11 @@ public class Pueblos {
 
 	
 	public boolean comprobarHashPueblos() {
+		municipios = new ArrayList<Tablas.Municipios>();
 		try {
 			comprobar.comprobarPagina(link);
 			URL url;
-
+			System.out.println("e entrado");
 			url = new URL(link);
 
 			HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
@@ -63,7 +66,8 @@ public class Pueblos {
 				JsonParser parser = new JsonParser();
 				FileReader fr = new FileReader(nombreFichero);
 				JsonElement datos = parser.parse(fr);
-				leer.LeerJsonPueblos(datos, "");
+				leer.LeerJsonPueblos(datos, "",municipios);
+				System.out.println(municipios);
 			}
 
 			return true;

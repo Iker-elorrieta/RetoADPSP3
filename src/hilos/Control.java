@@ -17,7 +17,12 @@ public class Control extends Thread{
 	}
 	
 public void run() {
-		
+		try {
+			join();
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		while(seguir) {
 			Date date = new Date();
 			SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
@@ -25,6 +30,12 @@ public void run() {
 			if (horactual.substring(3).equals("00:00")) {
 				HiloActualizarBaseDeDatos Actualizar = new HiloActualizarBaseDeDatos(links);
 				Actualizar.start();
+				try {
+					join();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			
 			try {
