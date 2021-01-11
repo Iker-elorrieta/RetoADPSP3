@@ -278,6 +278,7 @@ public class leerJson {
 							 espaciosNaturales=new EspaciosNaturales();
 							 estaEn = new EstaEn();
 							 estaEnId=new EstaEnId();
+							 estaVacio=false;
 							 
 						}
 						
