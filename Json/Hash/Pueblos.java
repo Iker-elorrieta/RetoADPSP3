@@ -29,7 +29,7 @@ public class Pueblos {
 	private escribirJson escribir = new escribirJson();
 	private leerJson leer = new leerJson();
 	private ConsultasHash consulta = new ConsultasHash();
-	private ArrayList<Tablas.Municipios> municipios;
+	
 	
 	private static String readAll(Reader rd) throws IOException {
 	    StringBuilder sb = new StringBuilder();
@@ -41,12 +41,11 @@ public class Pueblos {
 	  }
 
 	
-	public boolean comprobarHashPueblos() {
-		municipios = new ArrayList<Tablas.Municipios>();
+	public boolean comprobarHashPueblos(ArrayList<Tablas.Municipios> municipios,ArrayList<Tablas.Provincias> provincias) {
+		
 		try {
 			comprobar.comprobarPagina(link);
 			URL url;
-			System.out.println("e entrado");
 			url = new URL(link);
 
 			HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
@@ -66,7 +65,7 @@ public class Pueblos {
 				JsonParser parser = new JsonParser();
 				FileReader fr = new FileReader(nombreFichero);
 				JsonElement datos = parser.parse(fr);
-				leer.LeerJsonPueblos(datos, "",municipios);
+				leer.LeerJsonPueblos(datos, "",municipios,provincias);
 				System.out.println(municipios);
 			}
 

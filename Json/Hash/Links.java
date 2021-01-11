@@ -40,7 +40,7 @@ public class Links {
 
 
 	public boolean comprobarHashLinks(ArrayList<Objetos.Links> links) {
-
+		
 		for (int x = 0; x < links.size() - 1; x++) {
 			try {
 				link=links.get(x).getLink();
@@ -71,7 +71,7 @@ public class Links {
 				}
 
 			} catch (IOException e) {
-				e.printStackTrace();
+				System.out.println("el link no existe");
 
 			} catch (NoSuchAlgorithmException e) {
 				e.printStackTrace();

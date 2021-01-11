@@ -11,12 +11,15 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
 import ComprobarPagina.comprobarPagina;
 import Insert.ConsultasHash;
+import Tablas.EspaciosNaturales;
+import Tablas.EstaEn;
 import escribirJson.escribirJson;
 import leerJson.leerJson;
 
@@ -40,7 +43,7 @@ public class Playas {
 	  }
 
 	
-	public boolean comprobarHashPlayas() {
+	public boolean comprobarHashPlayas(ArrayList<EspaciosNaturales> espacios,ArrayList<EstaEn> estanEn) {
 		try {
 			comprobar.comprobarPagina(link);
 			URL url;
@@ -64,7 +67,7 @@ public class Playas {
 				JsonParser parser = new JsonParser();
 				FileReader fr = new FileReader(nombreFichero);
 				JsonElement datos = parser.parse(fr);
-				leer.LeerJsonPlayas(datos);
+				leer.LeerJsonPlayas(datos,"",espacios,estanEn);
 			}
 
 			return true;

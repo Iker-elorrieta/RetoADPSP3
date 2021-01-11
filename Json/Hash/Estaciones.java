@@ -43,7 +43,7 @@ public class Estaciones {
 	  }
 
 	
-	public boolean comprobarHashEstaciones() {
+	public boolean comprobarHashEstaciones(ArrayList<Tablas.Estaciones> estaciones) {
 		try {
 			comprobar.comprobarPagina(link);
 			URL url;
@@ -67,7 +67,7 @@ public class Estaciones {
 				JsonParser parser = new JsonParser();
 				FileReader fr = new FileReader(nombreFichero);
 				JsonElement datos = parser.parse(fr);
-				leer.LeerJsonEstaciones(datos);
+				leer.LeerJsonEstaciones(datos,"",estaciones);
 			}
 
 			return true;
