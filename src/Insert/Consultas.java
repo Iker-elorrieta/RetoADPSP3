@@ -245,11 +245,7 @@ public class Consultas {
 		espacios.setNatureType("Ciudad");
 		espacios.setLatwgs84((float) 43.28066802127562);
 		espacios.setLongwgs84((float) -1.947645730688464);
-		espacios.setMunicipality("Barakaldo");
-		espacios.setMunicipalityCode(013);
-		espacios.setTerritory("Bizkaia");
-		espacios.setTerritoryCode(48);
-		
+
 		return espacios;
 	}
 	

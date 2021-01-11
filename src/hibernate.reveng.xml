@@ -4,50 +4,50 @@
 <hibernate-reverse-engineering>
 	<table catalog="reto2" name="datos_calidad">
 		<column name="Cod_Datos"></column>
-		<column name="PM10"></column>
-		<column name="PM25ICA"></column>
-		<column name="SO2"></column>
-		<column name="CO8Hmg m3"></column>
-		<column name="SO2ICA"></column>
-		<column name="COmg m3"></column>
-		<column name="NO2"></column>
+		<column name="fecha"></column>
 		<column name="hora"></column>
-		<column name="PM10ICA"></column>
+		<column name="NO2ICA"></column>
+		<column name="NO2"></column>
+		<column name="COmg m3"></column>
+		<column name="SO2ICA"></column>
+		<column name="PM25"></column>
 		<column name="Cod_Estacion"></column>
-		<column name="NOXgm3"></column>
+		<column name="CO8Hmg m3"></column>
+		<column name="PM10"></column>
 		<column name="ICAStation"></column>
 		<column name="NOgm3"></column>
-		<column name="PM25"></column>
-		<column name="fecha"></column>
-		<column name="NO2ICA"></column>
+		<column name="PM10ICA"></column>
+		<column name="PM25ICA"></column>
+		<column name="SO2"></column>
+		<column name="NOXgm3"></column>
 	</table>
 	<table catalog="reto2" name="espacios_naturales">
 		<column name="Cod_Espacio"></column>
-		<column name="Marca"></column>
-		<column name="municipality_code"></column>
-		<column name="longwgs84"></column>
-		<column name="nature_type"></column>
-		<column name="municipality"></column>
 		<column name="Nombre_Espacio"></column>
-		<column name="territory_code"></column>
+		<column name="nature_type"></column>
+		<column name="Marca"></column>
+		<column name="longwgs84"></column>
 		<column name="latwgs84"></column>
-		<column name="territory"></column>
+	</table>
+	<table catalog="reto2" name="esta_en">
+		<column name="Cod_Ciudad"></column>
+		<column name="Cod_Espacio"></column>
 	</table>
 	<table catalog="reto2" name="estaciones">
 		<column name="Cod_Estacion"></column>
-		<column name="Longitud"></column>
-		<column name="Cod_Municipio"></column>
 		<column name="Nombre"></column>
-		<column name="Direccion"></column>
-		<column name="Coordenada Y"></column>
 		<column name="Latitud"></column>
+		<column name="Longitud"></column>
+		<column name="Direccion"></column>
 		<column name="Coordenada X"></column>
+		<column name="Cod_Municipio"></column>
+		<column name="Coordenada Y"></column>
 	</table>
 	<table catalog="reto2" name="favoritos">
 		<column name="Cod_Favorito"></column>
 		<column name="Cod_Ubicacion"></column>
-		<column name="Tipo_Ubicacion"></column>
 		<column name="Cod_Ususario"></column>
+		<column name="Tipo_Ubicacion"></column>
 	</table>
 	<table catalog="reto2" name="hash_json">
 		<column name="URL"></column>
@@ -55,8 +55,8 @@
 	</table>
 	<table catalog="reto2" name="municipios">
 		<column name="Cod_Municipio"></column>
-		<column name="Cod_Provincia"></column>
 		<column name="Nombre"></column>
+		<column name="Cod_Provincia"></column>
 	</table>
 	<table catalog="reto2" name="provincias">
 		<column name="Cod_Provincia"></column>
