@@ -1,5 +1,5 @@
 package Tablas;
-// Generated 11-ene-2021 21:44:03 by Hibernate Tools 5.4.18.Final
+// Generated 11-ene-2021 23:05:26 by Hibernate Tools 5.4.18.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,7 +9,7 @@ import java.util.Set;
  */
 public class EspaciosNaturales implements java.io.Serializable {
 
-	private Integer codEspacio;
+	private int codEspacio;
 	private String nombreEspacio;
 	private String marca;
 	private String natureType;
@@ -20,7 +20,9 @@ public class EspaciosNaturales implements java.io.Serializable {
 	public EspaciosNaturales() {
 	}
 
-	public EspaciosNaturales(String nombreEspacio, String marca, String natureType, float latwgs84, float longwgs84) {
+	public EspaciosNaturales(int codEspacio, String nombreEspacio, String marca, String natureType, float latwgs84,
+			float longwgs84) {
+		this.codEspacio = codEspacio;
 		this.nombreEspacio = nombreEspacio;
 		this.marca = marca;
 		this.natureType = natureType;
@@ -28,8 +30,9 @@ public class EspaciosNaturales implements java.io.Serializable {
 		this.longwgs84 = longwgs84;
 	}
 
-	public EspaciosNaturales(String nombreEspacio, String marca, String natureType, float latwgs84, float longwgs84,
-			Set estaEns) {
+	public EspaciosNaturales(int codEspacio, String nombreEspacio, String marca, String natureType, float latwgs84,
+			float longwgs84, Set estaEns) {
+		this.codEspacio = codEspacio;
 		this.nombreEspacio = nombreEspacio;
 		this.marca = marca;
 		this.natureType = natureType;
@@ -38,11 +41,11 @@ public class EspaciosNaturales implements java.io.Serializable {
 		this.estaEns = estaEns;
 	}
 
-	public Integer getCodEspacio() {
+	public int getCodEspacio() {
 		return this.codEspacio;
 	}
 
-	public void setCodEspacio(Integer codEspacio) {
+	public void setCodEspacio(int codEspacio) {
 		this.codEspacio = codEspacio;
 	}
 
