@@ -12,6 +12,7 @@ import org.hibernate.Transaction;
 import Tablas.DatosCalidad;
 import Tablas.EspaciosNaturales;
 import Tablas.EstaEn;
+import Tablas.EstaEnId;
 //import Tablas.EstaEn;
 import Tablas.Estaciones;
 import Tablas.Favoritos;
@@ -141,8 +142,18 @@ public class Consultas {
 		
 		EstaEn estaen = estaen();
 		
+		EstaEnId idPrueba = new EstaEnId();
+		
 		
 		estaen.setEspaciosNaturales(espacio);
+		
+		System.out.println("espacio natural: "+estaen.getEspaciosNaturales().getCodEspacio());
+		System.out.println("municipio: "+estaen.getMunicipios().getCodMunicipio());
+		
+		idPrueba.setCodEspacio(estaen.getEspaciosNaturales().getCodEspacio());
+		idPrueba.setCodCiudad(estaen.getMunicipios().getCodMunicipio());
+		
+		estaen.setId(idPrueba);
 		
 		session.save(estaen);
 		

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 07-ene-2021 20:52:27 by Hibernate Tools 5.4.18.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-ene-2021 15:35:55 by Hibernate Tools 5.4.18.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
-    <class catalog="reto2" dynamic-insert="false" dynamic-update="false" mutable="true" name="Tablas1.EstaEn" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="esta_en">
-        <composite-id class="Tablas1.EstaEnId" mapped="false" name="id" unsaved-value="undefined">
+    <class catalog="reto2" dynamic-insert="false" dynamic-update="false" mutable="true" name="Tablas.EstaEn" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="esta_en">
+        <composite-id class="Tablas.EstaEnId" mapped="false" name="id" unsaved-value="undefined">
             <key-property name="codEspacio" type="int">
                 <column name="Cod_Espacio"/>
             </key-property>
@@ -10,10 +10,10 @@
                 <column name="Cod_Ciudad"/>
             </key-property>
         </composite-id>
-        <many-to-one class="Tablas1.EspaciosNaturales" embed-xml="true" fetch="select" insert="false" name="espaciosNaturales" not-found="exception" optimistic-lock="true" unique="false" update="false">
+        <many-to-one class="Tablas.EspaciosNaturales" embed-xml="true" fetch="select" insert="false" name="espaciosNaturales" not-found="exception" optimistic-lock="true" unique="false" update="false">
             <column name="Cod_Espacio" not-null="true"/>
         </many-to-one>
-        <many-to-one class="Tablas1.Municipios" embed-xml="true" fetch="select" insert="false" name="municipios" not-found="exception" optimistic-lock="true" unique="false" update="false">
+        <many-to-one class="Tablas.Municipios" embed-xml="true" fetch="select" insert="false" name="municipios" not-found="exception" optimistic-lock="true" unique="false" update="false">
             <column name="Cod_Ciudad" not-null="true"/>
         </many-to-one>
     </class>

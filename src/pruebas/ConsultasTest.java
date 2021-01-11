@@ -56,5 +56,12 @@ class ConsultasTest {
 		Consultas consulta = new Consultas();
 		assertTrue(consulta.insertHash());
 	}
+	
+	@Test
+	void consulta9() {
+		Consultas consulta = new Consultas();
+		assertTrue(consulta.insertEstaEn());
+	}
+	
 
 }
