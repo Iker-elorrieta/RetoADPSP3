@@ -12,7 +12,7 @@ import java.net.URL;
 import ComprobarPagina.comprobarPagina;
 
 public class escribirJson {
-	private boolean Escribir=false;
+	boolean PrimeraVez=true;;
 	public void escribirJsonDiarios(String urlmandado, String NombreFichero) {
 
 		comprobarPagina comprobar = new comprobarPagina();
@@ -32,13 +32,11 @@ public class escribirJson {
 				fichero = new FileWriter(NombreFichero);
 				pw = new PrintWriter(fichero);
 				while ((linea = rd.readLine()) != null) {
-					if (Escribir) {
-						pw.println(linea);
-					} else if (linea.contains("\"aggregated\": ")) {
-						pw.println(linea.split("\"aggregated\": ")[0]);
-						Escribir=true;
+					if (PrimeraVez) {
+						pw.println("//["+linea);
+						PrimeraVez=false;
 					} else {
-						
+						pw.println(linea);
 					}
 				}
 
