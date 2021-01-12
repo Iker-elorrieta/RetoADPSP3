@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 11-ene-2021 15:35:55 by Hibernate Tools 5.4.18.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="reto2" dynamic-insert="false" dynamic-update="false" mutable="true" name="Tablas.Estaciones" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="estaciones">
+        <id name="codEstacion" type="java.lang.Integer">
+            <column name="Cod_Estacion"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="Tablas.Municipios" embed-xml="true" fetch="select" insert="true" name="municipios" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="Cod_Municipio" not-null="true"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="nombre" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="Nombre" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="direccion" optimistic-lock="true" type="string" unique="false">
+            <column length="150" name="Direccion" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="coordenadaX" optimistic-lock="true" type="float" unique="false">
+            <column name="`Coordenada X`" not-null="true" precision="12" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="coordenadaY" optimistic-lock="true" type="float" unique="false">
+            <column name="`Coordenada Y`" not-null="true" precision="12" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="latitud" optimistic-lock="true" type="float" unique="false">
+            <column name="Latitud" not-null="true" precision="12" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="longitud" optimistic-lock="true" type="float" unique="false">
+            <column name="Longitud" not-null="true" precision="12" scale="0"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="datosCalidads" optimistic-lock="true" sort="unsorted" table="datos_calidad">
+            <key on-delete="noaction">
+                <column name="Cod_Estacion" not-null="true"/>
+            </key>
+            <one-to-many class="Tablas.DatosCalidad" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

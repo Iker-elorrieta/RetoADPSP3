@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 11-ene-2021 15:35:55 by Hibernate Tools 5.4.18.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="reto2" dynamic-insert="false" dynamic-update="false" mutable="true" name="Tablas.EspaciosNaturales" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="espacios_naturales">
+        <id name="codEspacio" type="java.lang.Integer">
+            <column name="Cod_Espacio"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="nombreEspacio" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="Nombre_Espacio" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="marca" optimistic-lock="true" type="string" unique="false">
+            <column length="150" name="Marca" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="natureType" optimistic-lock="true" type="string" unique="false">
+            <column length="150" name="nature_type" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="latwgs84" optimistic-lock="true" type="float" unique="false">
+            <column name="latwgs84" not-null="true" precision="12" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="longwgs84" optimistic-lock="true" type="float" unique="false">
+            <column name="longwgs84" not-null="true" precision="12" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="municipality" optimistic-lock="true" type="string" unique="false">
+            <column length="150" name="municipality" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="municipalityCode" optimistic-lock="true" type="int" unique="false">
+            <column name="municipality_code" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="territory" optimistic-lock="true" type="string" unique="false">
+            <column length="150" name="territory" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="territoryCode" optimistic-lock="true" type="int" unique="false">
+            <column name="territory_code" not-null="true"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="estaEns" optimistic-lock="true" sort="unsorted" table="esta_en">
+            <key on-delete="noaction">
+                <column name="Cod_Espacio" not-null="true"/>
+            </key>
+            <one-to-many class="Tablas.EstaEn" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>
