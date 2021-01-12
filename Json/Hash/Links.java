@@ -24,6 +24,7 @@ import ComprobarPagina.comprobarPagina;
 import Insert.ConsultasHash;
 import Insert.HibernateUtil;
 import Tablas.Municipios;
+import XML.EscribirXml;
 import escribirJson.escribirJson;
 import leerJson.leerJson;
 
@@ -34,6 +35,7 @@ public class Links {
 	private escribirJson escribir = new escribirJson();
 	private leerJson leer = new leerJson();
 	private ConsultasHash consulta = new ConsultasHash();
+	private EscribirXml escribirXML = new EscribirXml();
 	
 	private static String readAll(Reader rd) throws IOException {
 	    StringBuilder sb = new StringBuilder();
@@ -80,6 +82,7 @@ public class Links {
 					 Query q = session.createQuery(hql);
 					 Tablas.Estaciones estacion = (Tablas.Estaciones) q.uniqueResult();
 					leer.LeerJsonLinks(datos,"",datosCalidad,estacion);
+					escribirXML.convertJsonToXml(nombreFichero, "Datos_De_Calidad", "Dato_De_Calidad", nombreFichero.replace(".xml", ".xml"), "");
 				}
 
 			} catch (IOException e) {

@@ -20,6 +20,7 @@ import ComprobarPagina.comprobarPagina;
 import Insert.ConsultasHash;
 import Tablas.EspaciosNaturales;
 import Tablas.EstaEn;
+import XML.EscribirXml;
 import escribirJson.escribirJson;
 import leerJson.leerJson;
 
@@ -31,7 +32,7 @@ public class Playas {
 	private escribirJson escribir = new escribirJson();
 	private leerJson leer = new leerJson();
 	private ConsultasHash consulta = new ConsultasHash();
-
+	private EscribirXml escribirXML = new EscribirXml();
 
 	private static String readAll(Reader rd) throws IOException {
 	    StringBuilder sb = new StringBuilder();
@@ -68,6 +69,7 @@ public class Playas {
 				FileReader fr = new FileReader(nombreFichero);
 				JsonElement datos = parser.parse(fr);
 				leer.LeerJsonPlayas(datos,"",espacios,estanEn);
+				escribirXML.convertJsonToXml(nombreFichero, "Espacios_Naturales", "Espacio_Natural", nombreFichero.replace(".json", ".xml"), "");
 			}
 
 			return true;

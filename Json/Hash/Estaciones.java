@@ -19,6 +19,7 @@ import com.google.gson.JsonParser;
 import ComprobarPagina.comprobarPagina;
 import Insert.ConsultasHash;
 import Objetos.Links;
+import XML.EscribirXml;
 import escribirJson.escribirJson;
 import leerJson.leerJson;
 
@@ -31,6 +32,7 @@ public class Estaciones {
 	private escribirJson escribir = new escribirJson();
 	private leerJson leer = new leerJson();
 	private ConsultasHash consulta = new ConsultasHash();
+	private EscribirXml escribirXML = new EscribirXml();
 
 	
 	private static String readAll(Reader rd) throws IOException {
@@ -67,6 +69,7 @@ public class Estaciones {
 				JsonParser parser = new JsonParser();
 				FileReader fr = new FileReader(nombreFichero);
 				JsonElement datos = parser.parse(fr);
+				escribirXML.convertJsonToXml(nombreFichero, "Estaciones", "Estacion", nombreFichero.replace(".json", ".xml"), "");
 				leer.LeerJsonEstaciones(datos,"",estaciones);
 			}
 

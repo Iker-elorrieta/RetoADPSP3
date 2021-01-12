@@ -49,8 +49,7 @@ public class HiloActualizarBaseDeDatos extends Thread {
 		espacios=new ArrayList<EspaciosNaturales>();
 		estanEn=new ArrayList<EstaEn>();
 		pueblos.comprobarHashPueblos(municipios, provincias);
-		escribirXML.escribirXmlProvincia(provincias);
-		escribirXML.escribirXmlMunicipios(municipios);
+		
 		
 		//Añadimos Provincias y municipios a la base de datos.
 		consultaProvincia.insertProvincia(provincias);
@@ -58,14 +57,14 @@ public class HiloActualizarBaseDeDatos extends Thread {
 		
 		
 		estaciones.comprobarHashEstaciones(estacion);
-		escribirXML.escribirXmlEstaciones(estacion);
+		
 		
 		//Añadimos Estacion a la base de datos.
 		consultasEstaciones.insertEstaciones(estacion);
 		
 		playas.comprobarHashPlayas(espacios,estanEn);
 		consultasEspacios.insertEspaciosNaturales(espacios);
-		escribirXML.escribirXmlEspacios(espacios);
+		//escribirXML.escribirXmlEspacios(espacios);
 		consultasEstaEn.insertEstaEn(estanEn);
 		
 		diario.comprobarHashDiarios(links);
