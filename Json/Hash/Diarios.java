@@ -65,7 +65,7 @@ public class Diarios {
 			byte resumen[] = md.digest();
 			String hash = new String(resumen);
 			if (!consulta.comprobarHash(link, hash)) {
-				escribir.escribirJson(link, nombreFichero);
+				escribir.escribirJsonDiarios(link, nombreFichero);
 				
 			}
 			JsonParser parser = new JsonParser();
