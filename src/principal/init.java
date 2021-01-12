@@ -1,12 +1,22 @@
 package principal;
 
+import java.util.ArrayList;
+
 import Insert.Consultas;
+import hilos.Control;
+import hilos.HiloActualizarBaseDeDatos;
 
 public class init {
-
+	private static ArrayList<Objetos.Links> links;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		links=new ArrayList<Objetos.Links>();
+		
+		
+
+		
+		/*
 		Consultas consultas = new Consultas();
 		
 		//INSERTAR PROVINCIAS
@@ -39,9 +49,17 @@ public class init {
 		
 		//INSERTAR HASH
 		consultas.insertHash();
+		*/
+		
+		HiloActualizarBaseDeDatos Actualizar = new HiloActualizarBaseDeDatos(links);
+		Actualizar.start();
+		
+		Control ControlTiempo = new Control(links);
+		ControlTiempo.start();
+		System.out.println("fin de programa");
 
 		//INSERTAR ESTA EN
-		consultas.insertEstaEn();
+	//	consultas.insertEstaEn();
 
 	}
 

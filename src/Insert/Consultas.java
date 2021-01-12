@@ -277,7 +277,7 @@ public class Consultas {
 		datos.setPm10ica("muy bueno / oso ona");
 		datos.setPm25((float) 3.58);
 		datos.setPm25ica("muy bueno / oso ona");
-		datos.setSo2(4);
+		//datos.setSo2(4);
 		datos.setSo2ica("muy bueno / oso ona");
 		datos.setIcastation("muy bueno / oso ona");
 		
@@ -292,11 +292,7 @@ public class Consultas {
 		espacios.setNatureType("Ciudad");
 		espacios.setLatwgs84((float) 43.28066802127562);
 		espacios.setLongwgs84((float) -1.947645730688464);
-		espacios.setMunicipality("Barakaldo");
-		espacios.setMunicipalityCode(013);
-		espacios.setTerritory("Bizkaia");
-		espacios.setTerritoryCode(48);
-		
+
 		return espacios;
 	}
 	

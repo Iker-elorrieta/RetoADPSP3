@@ -1,5 +1,5 @@
 package Tablas;
-// Generated 11-ene-2021 15:35:54 by Hibernate Tools 5.4.18.Final
+// Generated 12-ene-2021 15:16:35 by Hibernate Tools 5.4.18.Final
 
 import java.util.Date;
 
@@ -8,30 +8,38 @@ import java.util.Date;
  */
 public class DatosCalidad implements java.io.Serializable {
 
-	private Integer codDatos;
+	private int codDatos;
 	private Estaciones estaciones;
 	private Date fecha;
 	private Date hora;
-	private float comgM3;
-	private float co8hmgM3;
-	private int nogm3;
-	private int no2;
+	private Float comgM3;
+	private Float co8hmgM3;
+	private Integer nogm3;
+	private Integer no2;
 	private String no2ica;
-	private int noxgm3;
-	private float pm10;
+	private Integer noxgm3;
+	private Float pm10;
 	private String pm10ica;
-	private float pm25;
+	private Float pm25;
 	private String pm25ica;
-	private float so2;
+	private Float so2;
 	private String so2ica;
 	private String icastation;
 
 	public DatosCalidad() {
 	}
 
-	public DatosCalidad(Estaciones estaciones, Date fecha, Date hora, float comgM3, float co8hmgM3, int nogm3, int no2,
-			String no2ica, int noxgm3, float pm10, String pm10ica, float pm25, String pm25ica, float so2, String so2ica,
-			String icastation) {
+	public DatosCalidad(int codDatos, Estaciones estaciones, Date fecha, Date hora) {
+		this.codDatos = codDatos;
+		this.estaciones = estaciones;
+		this.fecha = fecha;
+		this.hora = hora;
+	}
+
+	public DatosCalidad(int codDatos, Estaciones estaciones, Date fecha, Date hora, Float comgM3, Float co8hmgM3,
+			Integer nogm3, Integer no2, String no2ica, Integer noxgm3, Float pm10, String pm10ica, Float pm25,
+			String pm25ica, Float so2, String so2ica, String icastation) {
+		this.codDatos = codDatos;
 		this.estaciones = estaciones;
 		this.fecha = fecha;
 		this.hora = hora;
@@ -50,11 +58,11 @@ public class DatosCalidad implements java.io.Serializable {
 		this.icastation = icastation;
 	}
 
-	public Integer getCodDatos() {
+	public int getCodDatos() {
 		return this.codDatos;
 	}
 
-	public void setCodDatos(Integer codDatos) {
+	public void setCodDatos(int codDatos) {
 		this.codDatos = codDatos;
 	}
 
@@ -82,35 +90,35 @@ public class DatosCalidad implements java.io.Serializable {
 		this.hora = hora;
 	}
 
-	public float getComgM3() {
+	public Float getComgM3() {
 		return this.comgM3;
 	}
 
-	public void setComgM3(float comgM3) {
+	public void setComgM3(Float comgM3) {
 		this.comgM3 = comgM3;
 	}
 
-	public float getCo8hmgM3() {
+	public Float getCo8hmgM3() {
 		return this.co8hmgM3;
 	}
 
-	public void setCo8hmgM3(float co8hmgM3) {
+	public void setCo8hmgM3(Float co8hmgM3) {
 		this.co8hmgM3 = co8hmgM3;
 	}
 
-	public int getNogm3() {
+	public Integer getNogm3() {
 		return this.nogm3;
 	}
 
-	public void setNogm3(int nogm3) {
+	public void setNogm3(Integer nogm3) {
 		this.nogm3 = nogm3;
 	}
 
-	public int getNo2() {
+	public Integer getNo2() {
 		return this.no2;
 	}
 
-	public void setNo2(int no2) {
+	public void setNo2(Integer no2) {
 		this.no2 = no2;
 	}
 
@@ -122,19 +130,19 @@ public class DatosCalidad implements java.io.Serializable {
 		this.no2ica = no2ica;
 	}
 
-	public int getNoxgm3() {
+	public Integer getNoxgm3() {
 		return this.noxgm3;
 	}
 
-	public void setNoxgm3(int noxgm3) {
+	public void setNoxgm3(Integer noxgm3) {
 		this.noxgm3 = noxgm3;
 	}
 
-	public float getPm10() {
+	public Float getPm10() {
 		return this.pm10;
 	}
 
-	public void setPm10(float pm10) {
+	public void setPm10(Float pm10) {
 		this.pm10 = pm10;
 	}
 
@@ -146,11 +154,11 @@ public class DatosCalidad implements java.io.Serializable {
 		this.pm10ica = pm10ica;
 	}
 
-	public float getPm25() {
+	public Float getPm25() {
 		return this.pm25;
 	}
 
-	public void setPm25(float pm25) {
+	public void setPm25(Float pm25) {
 		this.pm25 = pm25;
 	}
 
@@ -162,11 +170,11 @@ public class DatosCalidad implements java.io.Serializable {
 		this.pm25ica = pm25ica;
 	}
 
-	public float getSo2() {
+	public Float getSo2() {
 		return this.so2;
 	}
 
-	public void setSo2(float so2) {
+	public void setSo2(Float so2) {
 		this.so2 = so2;
 	}
 
