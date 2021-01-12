@@ -82,7 +82,7 @@ public class Links {
 					 Query q = session.createQuery(hql);
 					 Tablas.Estaciones estacion = (Tablas.Estaciones) q.uniqueResult();
 					leer.LeerJsonLinks(datos,"",datosCalidad,estacion);
-					escribirXML.convertJsonToXml(nombreFichero, "Datos_De_Calidad", "Dato_De_Calidad", nombreFichero.replace(".xml", ".xml"), "");
+					escribirXML.convertJsonToXml(nombreFichero, "Datos_De_Calidad", "Dato_De_Calidad", nombreFichero.replace(".json", ".xml"), "");
 				}
 
 			} catch (IOException e) {

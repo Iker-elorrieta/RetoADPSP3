@@ -375,7 +375,7 @@ public class leerJson {
 		}
 
 	private DatosCalidad datosDeCalidad = new DatosCalidad();
-
+	private int codigoCalidad=0;
 	public String LeerJsonLinks(JsonElement elemento, String nombre, ArrayList<DatosCalidad> datosCalidad,
 			Estaciones estaciones) {
 		if (seguir) {
@@ -414,9 +414,11 @@ public class leerJson {
 						switch (nombre) {
 						case "Date":
 							if (datosDeCalidad.getFecha() != null) {
+								datosDeCalidad.setCodDatos(codigoCalidad);
 								datosDeCalidad.setEstaciones(estaciones);
 								datosCalidad.add(datosDeCalidad);
 								datosDeCalidad = new DatosCalidad();
+								codigoCalidad++;
 							}
 							SimpleDateFormat parseador = new SimpleDateFormat("dd/MM/yyyy");
 							Date date = null;

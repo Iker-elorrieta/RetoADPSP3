@@ -37,12 +37,12 @@ public class escribirJson {
 					
 					if (PrimeraVez) {
 						
-						if(contador==2) {
-							pw.println("//["+linea);
+						if(contador==3) {
+							pw.println("["+linea);
 							PrimeraVez=false;
 						}
 						contador++;
-					} else if(linea.contains("//[")){
+					} else if(linea.contains("]")){
 						pw.println(linea);
 						PrimeraVez=true;
 						contador=0;
