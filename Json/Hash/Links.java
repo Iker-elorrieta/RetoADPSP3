@@ -13,11 +13,17 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
 import ComprobarPagina.comprobarPagina;
 import Insert.ConsultasHash;
+import Insert.HibernateUtil;
+import Tablas.Municipios;
 import escribirJson.escribirJson;
 import leerJson.leerJson;
 
@@ -39,7 +45,7 @@ public class Links {
 	  }
 
 
-	public boolean comprobarHashLinks(ArrayList<Objetos.Links> links) {
+	public boolean comprobarHashLinks(ArrayList<Objetos.Links> links,ArrayList<Tablas.DatosCalidad> datosCalidad) {
 		
 		for (int x = 0; x < links.size() - 1; x++) {
 			try {
@@ -67,7 +73,13 @@ public class Links {
 					JsonParser parser = new JsonParser();
 					FileReader fr = new FileReader(nombreFichero);
 					JsonElement datos = parser.parse(fr);
-					leer.LeerJsonLinks(datos);
+					SessionFactory sesion = HibernateUtil.getSessionFactory();
+					 Session session = sesion.openSession();
+					 session.beginTransaction();
+					 String hql = "from Estaciones as est where Nombre = '" + links.get(x).getNombrePueblo().replace("_", " ") +"'";
+					 Query q = session.createQuery(hql);
+					 Tablas.Estaciones estacion = (Tablas.Estaciones) q.uniqueResult();
+					leer.LeerJsonLinks(datos,"",datosCalidad,estacion);
 				}
 
 			} catch (IOException e) {

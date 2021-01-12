@@ -12,21 +12,14 @@ public class ConsultasEstaciones {
 			for (int x=0;x<estaciones.size()-1;x++) {
 			try {
 		
-			session.beginTransaction();
-			
-			
-
-			
+			session.beginTransaction();			
 			session.save(estaciones.get(x));
 			session.getTransaction().commit();
-			
-
-			System.out.println("Estacion CREADO");
-		
 			}catch(Exception e) {
 				System.out.println("valor repetido");
 			}	
 			}
+			System.out.println("Estacion CREADO");
 			session.close();
 			return true;
 

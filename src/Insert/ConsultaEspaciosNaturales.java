@@ -21,12 +21,13 @@ public class ConsultaEspaciosNaturales {
 			session.getTransaction().commit();
 			
 
-			System.out.println("Espacio CREADO");
+			
 		
 			}catch(Exception e) {
 				System.out.println("valor repetido Espacios");
 			}	
 			}
+			System.out.println("Espacio CREADO");
 			session.close();
 			return true;
 

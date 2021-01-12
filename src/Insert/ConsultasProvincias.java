@@ -14,22 +14,15 @@ public boolean insertProvincia(ArrayList<Tablas.Provincias> provincias) {
 
 		for (int x=0;x<provincias.size()-1;x++) {
 		try {
-		
-		
-		
-
 		session.beginTransaction();
 		session.save(provincias.get(x));
 		session.getTransaction().commit();
-		
-
-		System.out.println("Provincia CREADA");
-		
 		}catch(Exception e) {
 			System.out.println("valor repetido");
 			
 		}
 		}
+		System.out.println("Provincia CREADA");
 		session.close();
 		return true;
 

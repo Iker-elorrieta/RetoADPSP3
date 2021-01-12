@@ -21,12 +21,13 @@ public class ConsultasEstaEn {
 			session.getTransaction().commit();
 			
 
-			System.out.println("EstaEn CREADO");
+			
 		
 			}catch(Exception e) {
 				System.out.println("valor repetido EstaEn");
 			}	
 			}
+			System.out.println("EstaEn CREADO");
 			session.close();
 			return true;
 

@@ -21,12 +21,13 @@ public boolean insertMunicipio(ArrayList<Tablas.Municipios> municipios) {
 		session.getTransaction().commit();
 		
 
-		System.out.println("MUNICIPIO CREADO");
+		
 	
 		}catch(Exception e) {
 			System.out.println("valor repetido");
 		}	
 		}
+		System.out.println("MUNICIPIO CREADO");
 		session.close();
 		return true;
 
