@@ -53,7 +53,7 @@ public class ConsultaInicial {
 			Query q2= (Query) session.createQuery(hql2);
 			List <Municipios> ciudades= q2.list();
 			if(ciudades.size()>0) {
-				Municipios muni = ciudades.get(0);
+				Municipios muni = ciudades.get(1);
 				return "Ciudad : " + muni.getNombre() ;
 			}
 			

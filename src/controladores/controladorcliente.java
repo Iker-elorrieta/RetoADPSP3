@@ -10,7 +10,7 @@ import vistas.VentanaCliente;
 public class controladorcliente {
 	
 	private final static int PUERTO = 5000;
-	private final static String IP = "127.0.0.1";
+	private final static String IP = "192.168.7.248";
 	Socket cliente = null;
 	DataInputStream entrada = null;
 	DataOutputStream salida = null;
