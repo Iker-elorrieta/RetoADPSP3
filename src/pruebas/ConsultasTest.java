@@ -41,11 +41,9 @@ import hilos.HiloActualizarBaseDeDatos;
 import hilos.HiloActualizarLinks;
 import hilos.HiloActualizarPlayas;
 import hilos.HiloCrearXml;
-import init.Cliente;
 import leerJson.leerJson;
 
 class ConsultasTest {
-	Cliente cliente = new Cliente();
 	private ArrayList<Objetos.Links> links;
 	Control control = new Control(links);
 	HiloActualizarBaseDeDatos HiloABase = new HiloActualizarBaseDeDatos(links);
