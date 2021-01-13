@@ -9,7 +9,6 @@ import javax.crypto.SealedObject;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import Cliente.Cliente;
 import ComprobarPagina.comprobarPagina;
 import Hash.Diarios;
 import Hash.Links;
@@ -42,6 +41,7 @@ import hilos.HiloActualizarBaseDeDatos;
 import hilos.HiloActualizarLinks;
 import hilos.HiloActualizarPlayas;
 import hilos.HiloCrearXml;
+import init.Cliente;
 import leerJson.leerJson;
 
 class ConsultasTest {
