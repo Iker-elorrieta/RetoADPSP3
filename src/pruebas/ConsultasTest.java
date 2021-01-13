@@ -23,6 +23,9 @@ import Insert.ConsultasEstaciones;
 import Insert.ConsultasHash;
 import Insert.ConsultasProvincias;
 import Insert.HibernateUtil;
+import Servidor.ConsultaInicial;
+import Servidor.CrearUsuario;
+import Servidor.Hiloconecxiones;
 import Servidor.Servidor;
 import Tablas.DatosCalidad;
 import Tablas.EspaciosNaturales;
@@ -35,13 +38,17 @@ import Tablas.Municipios;
 import Tablas.Provincias;
 import Tablas.Usuarios;
 import XML.EscribirXml;
+import controladores.controladorcliente;
 import escribirJson.escribirJson;
 import hilos.Control;
 import hilos.HiloActualizarBaseDeDatos;
 import hilos.HiloActualizarLinks;
 import hilos.HiloActualizarPlayas;
 import hilos.HiloCrearXml;
+import init.Init;
 import leerJson.leerJson;
+import vistas.Registro;
+import vistas.VentanaCliente;
 
 class ConsultasTest {
 	private ArrayList<Objetos.Links> links;
@@ -97,6 +104,17 @@ class ConsultasTest {
 	DatosCalidad datos3 = new DatosCalidad(1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null);
 	Usuarios usu2 = new Usuarios(1,"",null);
 	Usuarios usu3 = new Usuarios(1,"",null,null);
+	Init init2 = new Init();
+	Registro registo = new Registro(null,null);
+	VentanaCliente venClien = new VentanaCliente(null, null);
+	CrearUsuario crearusuario = new CrearUsuario("Hola:Adios");
+	ConsultaInicial consultaInicial = new ConsultaInicial("Hola:Adios");
+	ConsultaInicial consultaInicial2 = new ConsultaInicial("Hola:Adios2");
+	Hiloconecxiones hiloConexiones = new Hiloconecxiones(null, null);
+	Servidor servidor2 = new Servidor();
+	
+	
+	
 	
 	
 	
@@ -169,4 +187,37 @@ class ConsultasTest {
 		
 		assertTrue(init.iniciarTodo());
 	}
+	
+	@Test
+	void controladorClienteprueba() {
+		controladorcliente controlador = new controladorcliente();
+		assertTrue(controlador.desconectar());
+	}
+	@Test
+	void CrearClienteprueba() {
+		crearusuario.separardatos();
+		
+		assertTrue(crearusuario.ConsultarDatos());
+	}
+	
+	@Test
+	void CrearClientepruebaError() {
+		crearusuario.separardatos();
+		
+		assertTrue(crearusuario.ConsultarDatos());
+	}
+	@Test
+	void CrearConsultaInicial() {
+		consultaInicial.separardatos();
+		
+		assertEquals("Abaltzisketa", consultaInicial.pedirciudad());
+	}
+	
+	@Test
+	void CrearConsultaInicialError() {
+		consultaInicial2.separardatos();
+		
+		assertEquals("Abaltzisketa", consultaInicial.pedirciudad());
+	}
+	
 }

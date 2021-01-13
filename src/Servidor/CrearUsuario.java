@@ -13,45 +13,47 @@ import Tablas.Usuarios;
 public class CrearUsuario {
 	String usuario;
 	String pass;
-	String dat ="";
-	public SessionFactory sesion= HibernateUtil.getSessionFactory();
-	public Session session= sesion.openSession();
-	
+	String dat = "";
+	public SessionFactory sesion = HibernateUtil.getSessionFactory();
+	public Session session = sesion.openSession();
+
 	public CrearUsuario(String datos) {
 		dat = datos;
-		
+
 	}
-	
-	public int separardatos(){
+
+	public int separardatos() {
 		try {
 			String inf[] = dat.split(":");
 			usuario = inf[0];
 			pass = inf[1];
 			return 1;
-		}catch(Exception e) {
+		} catch (Exception e) {
 			return -1;
 		}
-		
+
 	}
-	
-	public String ConsultarDatos() {
+
+	public boolean ConsultarDatos() {
 		boolean agregar = true;
-		String hql= "From Usuarios";
-		Query q= (Query) session.createQuery(hql);
-		List <Usuarios> dep= q.list();
-		
-		for(int i=0;i<dep.size();i++) {
+		String hql = "From Usuarios";
+		Query q = (Query) session.createQuery(hql);
+		List<Usuarios> dep = q.list();
+
+		for (int i = 0; i < dep.size(); i++) {
 			Usuarios d = dep.get(i);
-			if(d.getNombre().equals(usuario)) {
+			if (d.getNombre().equals(usuario)) {
 				agregar = false;
-				
+
 			}
-			
+
 		}
-		
-		if(agregar) {
-			/*SessionFactory sesion = HibernateUtil.getSessionFactory();
-			Session session = sesion.openSession();*/
+
+		if (agregar) {
+			/*
+			 * SessionFactory sesion = HibernateUtil.getSessionFactory(); Session session =
+			 * sesion.openSession();
+			 */
 			session.beginTransaction();
 			Usuarios usu = new Usuarios();
 			usu.setNombre(usuario);
@@ -61,10 +63,10 @@ public class CrearUsuario {
 			session.getTransaction().commit();
 			System.out.println("Usuario Creado");
 			session.close();
-			return "ok";
-		}else {
-			return "error";
-			}
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }

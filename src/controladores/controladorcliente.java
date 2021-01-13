@@ -48,7 +48,7 @@ public class controladorcliente {
 		} 
 	}
 	
-	public void desconectar() {
+	public boolean desconectar() {
 		try {
 			if (cliente != null)
 			cliente.close();
@@ -60,7 +60,7 @@ public class controladorcliente {
 			e.printStackTrace();
 		}
 		System.out.println("Fin cliente");
-		
+		return true;
 	}
 	
 }

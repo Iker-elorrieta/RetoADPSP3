@@ -49,7 +49,11 @@ public class Hiloconecxiones extends Thread{
 				String datos = entrada.readUTF();
 				CrearUsuario cr = new CrearUsuario(datos);
 				cr.separardatos();
-				salida.writeUTF(cr.ConsultarDatos());
+				if(cr.ConsultarDatos()) {
+				salida.writeUTF("ok");
+				}else {
+				salida.writeUTF("error");
+				}
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
