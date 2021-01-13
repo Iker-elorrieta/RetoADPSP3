@@ -2,6 +2,8 @@ package principal;
 
 import java.util.ArrayList;
 
+import org.hibernate.engine.internal.JoinSequence.Join;
+
 import Insert.Consultas;
 import hilos.Control;
 import hilos.HiloActualizarBaseDeDatos;
@@ -11,7 +13,7 @@ public class init {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		links=new ArrayList<Objetos.Links>();
+		iniciarTodo();
 		
 		
 
@@ -51,16 +53,23 @@ public class init {
 		consultas.insertHash();
 		*/
 		
+
+		//INSERTAR ESTA EN
+	//	consultas.insertEstaEn();
+
+	}
+	public static boolean iniciarTodo() {
+		links=new ArrayList<Objetos.Links>();
 		HiloActualizarBaseDeDatos Actualizar = new HiloActualizarBaseDeDatos(links);
 		Actualizar.start();
 		
 		Control ControlTiempo = new Control(links);
 		ControlTiempo.start();
 		System.out.println("fin de programa");
-
-		//INSERTAR ESTA EN
-	//	consultas.insertEstaEn();
-
+		while(Actualizar.isAlive()){
+			
+		}
+		return true;
 	}
 
 }

@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-01-2021 a las 15:17:23
--- Versión del servidor: 10.4.16-MariaDB
--- Versión de PHP: 7.4.12
+-- Tiempo de generación: 12-01-2021 a las 22:48:22
+-- Versión del servidor: 10.4.11-MariaDB
+-- Versión de PHP: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -47,13 +48,6 @@ CREATE TABLE `datos_calidad` (
   `Cod_Estacion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `datos_calidad`
---
-
-INSERT INTO `datos_calidad` (`Cod_Datos`, `fecha`, `hora`, `COmg m3`, `CO8Hmg m3`, `NOgm3`, `NO2`, `NO2ICA`, `NOXgm3`, `PM10`, `PM10ICA`, `PM25`, `PM25ICA`, `SO2`, `SO2ICA`, `ICAStation`, `Cod_Estacion`) VALUES
-(16, '2021-01-11', '11:00:00', 0.23, 0.21, 3, 10, 'muy bueno / oso ona', 14, 5.33, 'muy bueno / oso ona', 3.58, 'muy bueno / oso ona', 4, 'muy bueno / oso ona', 'muy bueno / oso ona', 27);
-
 -- --------------------------------------------------------
 
 --
@@ -68,13 +62,6 @@ CREATE TABLE `espacios_naturales` (
   `latwgs84` float NOT NULL,
   `longwgs84` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `espacios_naturales`
---
-
-INSERT INTO `espacios_naturales` (`Cod_Espacio`, `Nombre_Espacio`, `Marca`, `nature_type`, `latwgs84`, `longwgs84`) VALUES
-(25, 'Barakaldo', 'Bilbao', 'Ciudad', 43.2807, -1.94765);
 
 -- --------------------------------------------------------
 
@@ -93,13 +80,6 @@ CREATE TABLE `estaciones` (
   `Longitud` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `estaciones`
---
-
-INSERT INTO `estaciones` (`Cod_Estacion`, `Nombre`, `Cod_Municipio`, `Direccion`, `Coordenada X`, `Coordenada Y`, `Latitud`, `Longitud`) VALUES
-(27, 'MUNOA', 11, 'C/ Llano, 55. CEP Munoa. Bº Lutxana', 501728, 4792530, 43.2856, -2.9787);
-
 -- --------------------------------------------------------
 
 --
@@ -110,13 +90,6 @@ CREATE TABLE `esta_en` (
   `Cod_Espacio` int(11) NOT NULL,
   `Cod_Ciudad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `esta_en`
---
-
-INSERT INTO `esta_en` (`Cod_Espacio`, `Cod_Ciudad`) VALUES
-(25, 11);
 
 -- --------------------------------------------------------
 
@@ -131,13 +104,6 @@ CREATE TABLE `favoritos` (
   `Tipo_Ubicacion` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `favoritos`
---
-
-INSERT INTO `favoritos` (`Cod_Favorito`, `Cod_Ususario`, `Cod_Ubicacion`, `Tipo_Ubicacion`) VALUES
-(21, 0, 1, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -148,13 +114,6 @@ CREATE TABLE `hash_json` (
   `hash` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `URL` varchar(500) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `hash_json`
---
-
-INSERT INTO `hash_json` (`hash`, `URL`) VALUES
-('8b9248a4e0b64bbccf82e7723a3734279bf9bbc4', 'https://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2020/es_def/adjuntos/datos_indice/BARAKALDO.json');
 
 -- --------------------------------------------------------
 
@@ -168,13 +127,6 @@ CREATE TABLE `municipios` (
   `Cod_Provincia` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `municipios`
---
-
-INSERT INTO `municipios` (`Cod_Municipio`, `Nombre`, `Cod_Provincia`) VALUES
-(11, 'Barakaldo', 48);
-
 -- --------------------------------------------------------
 
 --
@@ -185,13 +137,6 @@ CREATE TABLE `provincias` (
   `Cod_Provincia` int(11) NOT NULL,
   `Nombre` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `provincias`
---
-
-INSERT INTO `provincias` (`Cod_Provincia`, `Nombre`) VALUES
-(48, 'Bizkaia');
 
 -- --------------------------------------------------------
 
@@ -204,13 +149,6 @@ CREATE TABLE `usuarios` (
   `Nombre` varchar(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `Pass` varchar(32) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `usuarios`
---
-
-INSERT INTO `usuarios` (`Cod_Usuario`, `Nombre`, `Pass`) VALUES
-(0, 'Perry', 'reto');
 
 --
 -- Índices para tablas volcadas

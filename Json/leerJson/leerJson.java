@@ -58,9 +58,9 @@ public class leerJson {
 		} else if (elemento.isJsonPrimitive()) {
 			JsonPrimitive valor = elemento.getAsJsonPrimitive();
 			if (valor.isBoolean()) {
-				System.out.println("       Boolean " + valor.getAsBoolean());
+				
 			} else if (valor.isNumber()) {
-				System.out.println("       Numero: " + valor.getAsNumber());
+				
 			} else if (valor.isString()) {
 
 				if (atributoName) {
@@ -97,7 +97,7 @@ public class leerJson {
 
 		Links link = null;
 		if (elemento.isJsonObject()) {
-			System.out.println("Objeto");
+			
 			JsonObject obj = elemento.getAsJsonObject();
 			java.util.Set<java.util.Map.Entry<String, JsonElement>> entradas = obj.entrySet();
 			java.util.Iterator<java.util.Map.Entry<String, JsonElement>> iter = entradas.iterator();
@@ -122,9 +122,9 @@ public class leerJson {
 		} else if (elemento.isJsonPrimitive()) {
 			JsonPrimitive valor = elemento.getAsJsonPrimitive();
 			if (valor.isBoolean()) {
-				System.out.println("       Boolean " + valor.getAsBoolean());
+				
 			} else if (valor.isNumber()) {
-				System.out.println("       Numero: " + valor.getAsNumber());
+				
 			} else if (valor.isString()) {
 				switch(nombre) {
 				case "Name":
@@ -206,12 +206,11 @@ public class leerJson {
 		} else if (elemento.isJsonPrimitive()) {
 			JsonPrimitive valor = elemento.getAsJsonPrimitive();
 			if (valor.isBoolean()) {
-				System.out.println("       Boolean " + valor.getAsBoolean());
+				
 			} else if (valor.isNumber()) {
-				System.out.println("       Numero: " + valor.getAsNumber());
+				
 			} else if (valor.isString()) {
-				System.out.println(" Enlaze guardado: " + valor.getAsString());
-
+				
 				switch(nombre) {
 				case "documentName":
 					espaciosNaturales.setNombreEspacio(valor.getAsString());
@@ -301,9 +300,9 @@ public class leerJson {
 			} else if (elemento.isJsonPrimitive()) {
 				JsonPrimitive valor = elemento.getAsJsonPrimitive();
 				if (valor.isBoolean()) {
-					System.out.println("       Boolean " + valor.getAsBoolean());
+					
 				} else if (valor.isNumber()) {
-					System.out.println("       Numero: " + valor.getAsNumber());
+					
 					if(nombre.equals("municipalitycode")) {
 						municipio.setCodMunicipio(Integer.parseInt(valor.getAsString().split(" ")[0]));
 					}//fin if municipality code.
@@ -403,9 +402,9 @@ public class leerJson {
 			} else if (elemento.isJsonPrimitive()) {
 				JsonPrimitive valor = elemento.getAsJsonPrimitive();
 				if (valor.isBoolean()) {
-					System.out.println("       Boolean " + valor.getAsBoolean());
+					
 				} else if (valor.isNumber()) {
-					System.out.println("       Numero: " + valor.getAsNumber());
+					
 				} else if (valor.isString()) {
 					if (valor.getAsString().contains("01/12/2020")) {
 
@@ -426,7 +425,7 @@ public class leerJson {
 								date = parseador.parse(valor.getAsString());
 							} catch (ParseException e) {
 								// TODO Auto-generated catch block
-								e.printStackTrace();
+								
 							}
 							datosDeCalidad.setFecha(date);
 							break;
@@ -438,7 +437,7 @@ public class leerJson {
 								date2 = parseador2.parse(valor.getAsString());
 							} catch (ParseException e) {
 								// TODO Auto-generated catch block
-								e.printStackTrace();
+								
 							}
 							datosDeCalidad.setHora(date2);
 							break;
@@ -470,13 +469,13 @@ public class leerJson {
 							datosDeCalidad.setPm10ica(valor.getAsString());
 							break;
 						case "PM25":
-							datosDeCalidad.setPm25(valor.getAsFloat());
+							datosDeCalidad.setPm25(Float.parseFloat(valor.getAsString().replace(",", ".")));
 							break;
 						case "PM25ICA":
 							datosDeCalidad.setPm25ica(valor.getAsString());
 							break;
 						case "SO2":
-							datosDeCalidad.setSo2(valor.getAsFloat());
+							datosDeCalidad.setSo2(Float.parseFloat(valor.getAsString().replace(",", ".")));
 							break;
 						case "SO2ICA":
 							datosDeCalidad.setSo2ica(valor.getAsString());
@@ -500,3 +499,6 @@ public class leerJson {
 	}
 
 }
+
+
+

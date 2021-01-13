@@ -32,12 +32,6 @@ public class ConsultasHash {
 				System.out.println("No hay cambios en el hash");
 				return true;
 			} else {
-				hash1.setHash(Hash);
-			}
-		if (hash1.getHash() != null && hash1.getHash().equals(Hash)) {
-			session.close();
-			return true;
-		} else {
 			
 							HashJson hashJson = new HashJson();
 							hashJson.setHash(Hash);

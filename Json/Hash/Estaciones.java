@@ -21,6 +21,7 @@ import Insert.ConsultasHash;
 import Objetos.Links;
 import XML.EscribirXml;
 import escribirJson.escribirJson;
+import hilos.HiloCrearXml;
 import leerJson.leerJson;
 
 //https://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2020/es_def/adjuntos/estaciones.json
@@ -69,7 +70,8 @@ public class Estaciones {
 				JsonParser parser = new JsonParser();
 				FileReader fr = new FileReader(nombreFichero);
 				JsonElement datos = parser.parse(fr);
-				escribirXML.convertJsonToXml(nombreFichero, "Estaciones", "Estacion", nombreFichero.replace(".json", ".xml"), "");
+				HiloCrearXml crearXml = new HiloCrearXml(nombreFichero, "Estaciones", "Estacion");
+				crearXml.start();
 				leer.LeerJsonEstaciones(datos,"",estaciones);
 			}
 

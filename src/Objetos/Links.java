@@ -13,11 +13,6 @@ public void setNombrePueblo(String nombrePueblo) {
 	this.nombrePueblo = nombrePueblo;
 }
 
-public Links(String nombreFichero, String link) {
-	super();
-	NombreFichero = nombreFichero;
-	this.link = link;
-}
 
 public Links() {
 }

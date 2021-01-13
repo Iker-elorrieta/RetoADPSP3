@@ -26,6 +26,7 @@ import Insert.HibernateUtil;
 import Tablas.Municipios;
 import XML.EscribirXml;
 import escribirJson.escribirJson;
+import hilos.HiloCrearXml;
 import leerJson.leerJson;
 
 public class Links {
@@ -49,7 +50,7 @@ public class Links {
 
 	public boolean comprobarHashLinks(ArrayList<Objetos.Links> links,ArrayList<Tablas.DatosCalidad> datosCalidad) {
 		
-		for (int x = 0; x < links.size() - 1; x++) {
+		for (int x = 0; x < links.size(); x++) {
 			try {
 				link=links.get(x).getLink();
 				nombreFichero=links.get(x).getNombreFichero();
@@ -81,9 +82,13 @@ public class Links {
 					 String hql = "from Estaciones as est where Nombre = '" + links.get(x).getNombrePueblo().replace("_", " ") +"'";
 					 Query q = session.createQuery(hql);
 					 Tablas.Estaciones estacion = (Tablas.Estaciones) q.uniqueResult();
-					leer.LeerJsonLinks(datos,"",datosCalidad,estacion);
-					escribirXML.convertJsonToXml(nombreFichero, "Datos_De_Calidad", "Dato_De_Calidad", nombreFichero.replace(".json", ".xml"), "");
-				}
+					 HiloCrearXml crearXml = new HiloCrearXml(nombreFichero, "Datos_De_Calidad", "Dato_De_Calidad");
+						crearXml.start();
+						leer.LeerJsonLinks(datos,"",datosCalidad,estacion);
+						
+					
+					}
+				
 
 			} catch (IOException e) {
 				System.out.println("el link no existe");
@@ -92,6 +97,12 @@ public class Links {
 				e.printStackTrace();
 
 			}
+		}
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return true;
 	}

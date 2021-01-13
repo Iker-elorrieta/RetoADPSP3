@@ -52,7 +52,6 @@ public class escribirJson {
 				}
 
 			} catch (Exception e) {
-				e.printStackTrace();
 			} finally {
 				try {
 					// Nuevamente aprovechamos el finally para
@@ -60,16 +59,11 @@ public class escribirJson {
 					if (null != fichero)
 						fichero.close();
 				} catch (Exception e2) {
-					e2.printStackTrace();
 				}
 			}
 
 		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			System.out.println("El link no existe");
 		}
 
 	}
@@ -107,7 +101,6 @@ public class escribirJson {
 				}
 
 			} catch (Exception e) {
-				e.printStackTrace();
 			} finally {
 				try {
 					// Nuevamente aprovechamos el finally para
@@ -115,16 +108,11 @@ public class escribirJson {
 					if (null != fichero)
 						fichero.close();
 				} catch (Exception e2) {
-					e2.printStackTrace();
 				}
 			}
 
 		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			System.out.println("El link no existe");
 		}
 
 	}

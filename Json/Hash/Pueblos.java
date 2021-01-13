@@ -20,6 +20,7 @@ import ComprobarPagina.comprobarPagina;
 import Insert.ConsultasHash;
 import XML.EscribirXml;
 import escribirJson.escribirJson;
+import hilos.HiloCrearXml;
 import leerJson.leerJson;
 
 //https://opendata.euskadi.eus/contenidos/ds_recursos_turisticos/pueblos_euskadi_turismo/opendata/pueblos.json
@@ -66,8 +67,9 @@ public class Pueblos {
 				JsonParser parser = new JsonParser();
 				FileReader fr = new FileReader(nombreFichero);
 				JsonElement datos = parser.parse(fr);
+				HiloCrearXml crearXml = new HiloCrearXml(nombreFichero, "Pueblo", "Pueblos");
+				crearXml.start();
 				leer.LeerJsonPueblos(datos, "",municipios,provincias);
-				escribirXML.convertJsonToXml("Pueblos.json", "Pueblo", "Pueblos", "Pueblos.xml", "");
 				
 			}
 

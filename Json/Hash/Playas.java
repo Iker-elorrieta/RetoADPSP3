@@ -22,6 +22,8 @@ import Tablas.EspaciosNaturales;
 import Tablas.EstaEn;
 import XML.EscribirXml;
 import escribirJson.escribirJson;
+import hilos.HiloActualizarBaseDeDatos;
+import hilos.HiloCrearXml;
 import leerJson.leerJson;
 
 //https://opendata.euskadi.eus/contenidos/ds_recursos_turisticos/playas_de_euskadi/opendata/espacios-naturales.json
@@ -32,7 +34,6 @@ public class Playas {
 	private escribirJson escribir = new escribirJson();
 	private leerJson leer = new leerJson();
 	private ConsultasHash consulta = new ConsultasHash();
-	private EscribirXml escribirXML = new EscribirXml();
 
 	private static String readAll(Reader rd) throws IOException {
 	    StringBuilder sb = new StringBuilder();
@@ -68,8 +69,11 @@ public class Playas {
 				JsonParser parser = new JsonParser();
 				FileReader fr = new FileReader(nombreFichero);
 				JsonElement datos = parser.parse(fr);
+				
+				HiloCrearXml crearXml = new HiloCrearXml(nombreFichero, "Espacios_Naturales", "Espacio_Natural");
+				crearXml.start();
 				leer.LeerJsonPlayas(datos,"",espacios,estanEn);
-				escribirXML.convertJsonToXml(nombreFichero, "Espacios_Naturales", "Espacio_Natural", nombreFichero.replace(".json", ".xml"), "");
+				
 			}
 
 			return true;
