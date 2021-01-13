@@ -6,6 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -79,7 +82,53 @@ public class VentanaCliente extends JFrame {
 		
 	}
 	
-	public void entrar() {
+	public int entrar() {
+		String usuario = textField.getText();
+		char[] pass1 = passwordField.getPassword();
+
+		if(usuario.length() == 0) {
+			LBL1.setText("El campo de usuario no puede estar vacio");
+			return -1;
+		}
+		if(pass1.length == 0) {
+			LBL1.setText("El campo de Contraseña no puede estar vacio");
+			return -1;
+		}
+		String res = "";
+		try {			
+			String resu ="";
+			String texto = new String(pass1);
+			MessageDigest md;
+			try {
+				md = MessageDigest.getInstance("SHA");
+				byte dataBytes[] = texto.getBytes();
+				md.update(dataBytes);
+				byte resumen[] = md.digest();
+				resu = new String(resumen);
+				System.out.println(res);
+			} catch (NoSuchAlgorithmException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			salida.writeUTF("2");
+			salida.writeUTF(usuario+":"+ resu);
+			res = entrada.readUTF();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if(res.equals("error")) {
+			LBL1.setText("Usuario o pass incorrectos");
+			dispose();
+			return -1;
+				
+		}else {
+			LBL1.setText(res);
+			return 1;
+		}
+
+		
 		
 	}
 	

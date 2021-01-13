@@ -54,7 +54,20 @@ public class Hiloconecxiones extends Thread{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			break;//	case1
+			break;//	case 1
+			
+		case 2: // tras logearse muestra una ciudad en un label
+			try {
+				String datos = entrada.readUTF();
+				ConsultaInicial ci = new ConsultaInicial(datos);
+				ci.separardatos();
+				salida.writeUTF(ci.pedirciudad());
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break; //	case 2
 		}
 	}
 

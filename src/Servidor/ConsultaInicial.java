@@ -7,19 +7,19 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import Insert.HibernateUtil;
-import Tablas.Provincias;
+import Tablas.Municipios;
 import Tablas.Usuarios;
 
-public class CrearUsuario {
+public class ConsultaInicial {
+	
 	String usuario;
 	String pass;
 	String dat ="";
 	public SessionFactory sesion= HibernateUtil.getSessionFactory();
 	public Session session= sesion.openSession();
 	
-	public CrearUsuario(String datos) {
+	public ConsultaInicial(String datos) {
 		dat = datos;
-		
 	}
 	
 	public int separardatos(){
@@ -34,7 +34,8 @@ public class CrearUsuario {
 		
 	}
 	
-	public String ConsultarDatos() {
+	public String pedirciudad() {
+		
 		boolean agregar = true;
 		String hql= "From Usuarios";
 		Query q= (Query) session.createQuery(hql);
@@ -42,29 +43,23 @@ public class CrearUsuario {
 		
 		for(int i=0;i<dep.size();i++) {
 			Usuarios d = dep.get(i);
-			if(d.getNombre().equals(usuario)) {
+			if(d.getNombre().equals(usuario) && d.getPass().equals(pass) ) {
 				agregar = false;
-				
+			}
+		}
+		
+		if(!agregar) {
+			String hql2= "From Municipios";
+			Query q2= (Query) session.createQuery(hql2);
+			List <Municipios> ciudades= q2.list();
+			if(ciudades.size()>0) {
+				Municipios muni = ciudades.get(0);
+				return "Ciudad : " + muni.getNombre() ;
 			}
 			
 		}
 		
-		if(agregar) {
-			/*SessionFactory sesion = HibernateUtil.getSessionFactory();
-			Session session = sesion.openSession();*/
-			session.beginTransaction();
-			Usuarios usu = new Usuarios();
-			usu.setNombre(usuario);
-			usu.setPass(pass);
-			usu.setCodUsuario(dep.size());
-			session.save(usu);
-			session.getTransaction().commit();
-			System.out.println("Usuario Creado");
-			session.close();
-			return "ok";
-		}else {
-			return "error";
-			}
+		return "Error";
 	}
 
 }
