@@ -17,12 +17,7 @@ public class Control extends Thread{
 	}
 	
 public void run() {
-		try {
-			join();
-		} catch (InterruptedException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+
 		while(seguir) {
 			Date date = new Date();
 			SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
