@@ -58,7 +58,6 @@ public class CrearUsuario {
 			Usuarios usu = new Usuarios();
 			usu.setNombre(usuario);
 			usu.setPass(pass);
-			usu.setCodUsuario(dep.size());
 			session.save(usu);
 			session.getTransaction().commit();
 			System.out.println("Usuario Creado");

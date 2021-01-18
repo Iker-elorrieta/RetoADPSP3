@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 12-ene-2021 15:16:36 by Hibernate Tools 5.4.18.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 18-ene-2021 15:45:27 by Hibernate Tools 5.4.18.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
     <class catalog="reto2" dynamic-insert="false" dynamic-update="false" mutable="true" name="Tablas.DatosCalidad" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="datos_calidad">
-        <id name="codDatos" type="int">
+        <id name="codDatos" type="java.lang.Integer">
             <column name="Cod_Datos"/>
-            <generator class="assigned"/>
+            <generator class="identity"/>
         </id>
         <many-to-one class="Tablas.Estaciones" embed-xml="true" fetch="select" insert="true" name="estaciones" not-found="exception" optimistic-lock="true" unique="false" update="true">
             <column name="Cod_Estacion" not-null="true"/>

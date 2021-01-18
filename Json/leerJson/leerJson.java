@@ -69,17 +69,14 @@ public class leerJson {
 					atributoName = false;
 				}
 				if (valor.getAsString().contains("http")) {
-					if (valor.getAsString().contains("datos_horarios")) {
-						link.setNombreFichero("datos_horarios/" + nombre + ".json");
-					} else if (valor.getAsString().contains("datos_diarios")) {
-						link.setNombreFichero("datos_diarios/" + nombre + ".json");
-					} else if (valor.getAsString().contains("datos_indice")) {
+					if (valor.getAsString().contains("datos_indice")) {
 						link.setNombreFichero("datos_indice/" + nombre + ".json");
+						link.setLink(valor.getAsString());
+						link.setNombrePueblo(nombre);
+						enlazes.add(link);
+						System.out.println(" Enlaze guardado: " + valor.getAsString());
 					}
-					link.setLink(valor.getAsString());
-					link.setNombrePueblo(nombre);
-					enlazes.add(link);
-					System.out.println(" Enlaze guardado: " + valor.getAsString());
+					
 				}
 			}
 		} else if (elemento.isJsonNull()) {

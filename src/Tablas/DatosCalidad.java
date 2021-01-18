@@ -1,5 +1,5 @@
 package Tablas;
-// Generated 12-ene-2021 15:16:35 by Hibernate Tools 5.4.18.Final
+// Generated 18-ene-2021 15:45:27 by Hibernate Tools 5.4.18.Final
 
 import java.util.Date;
 
@@ -8,7 +8,7 @@ import java.util.Date;
  */
 public class DatosCalidad implements java.io.Serializable {
 
-	private int codDatos;
+	private Integer codDatos;
 	private Estaciones estaciones;
 	private Date fecha;
 	private Date hora;
@@ -29,17 +29,15 @@ public class DatosCalidad implements java.io.Serializable {
 	public DatosCalidad() {
 	}
 
-	public DatosCalidad(int codDatos, Estaciones estaciones, Date fecha, Date hora) {
-		this.codDatos = codDatos;
+	public DatosCalidad(Estaciones estaciones, Date fecha, Date hora) {
 		this.estaciones = estaciones;
 		this.fecha = fecha;
 		this.hora = hora;
 	}
 
-	public DatosCalidad(int codDatos, Estaciones estaciones, Date fecha, Date hora, Float comgM3, Float co8hmgM3,
-			Integer nogm3, Integer no2, String no2ica, Integer noxgm3, Float pm10, String pm10ica, Float pm25,
-			String pm25ica, Float so2, String so2ica, String icastation) {
-		this.codDatos = codDatos;
+	public DatosCalidad(Estaciones estaciones, Date fecha, Date hora, Float comgM3, Float co8hmgM3, Integer nogm3,
+			Integer no2, String no2ica, Integer noxgm3, Float pm10, String pm10ica, Float pm25, String pm25ica,
+			Float so2, String so2ica, String icastation) {
 		this.estaciones = estaciones;
 		this.fecha = fecha;
 		this.hora = hora;
@@ -58,11 +56,11 @@ public class DatosCalidad implements java.io.Serializable {
 		this.icastation = icastation;
 	}
 
-	public int getCodDatos() {
+	public Integer getCodDatos() {
 		return this.codDatos;
 	}
 
-	public void setCodDatos(int codDatos) {
+	public void setCodDatos(Integer codDatos) {
 		this.codDatos = codDatos;
 	}
 

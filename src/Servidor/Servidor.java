@@ -22,7 +22,7 @@ public static void iniciar() {
 		Socket cliente = null;
 		DataInputStream entrada = null;
 		DataOutputStream salida = null;
-		
+	
 		
 		try {
 			servidor = new ServerSocket(PUERTO);

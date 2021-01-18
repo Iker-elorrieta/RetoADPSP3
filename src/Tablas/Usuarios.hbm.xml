@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 12-ene-2021 15:16:36 by Hibernate Tools 5.4.18.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 18-ene-2021 15:45:27 by Hibernate Tools 5.4.18.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
     <class catalog="reto2" dynamic-insert="false" dynamic-update="false" mutable="true" name="Tablas.Usuarios" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="usuarios">
-        <id name="codUsuario" type="int">
+        <id name="codUsuario" type="java.lang.Integer">
             <column name="Cod_Usuario"/>
-            <generator class="assigned"/>
+            <generator class="identity"/>
         </id>
         <property generated="never" lazy="false" name="nombre" optimistic-lock="true" type="string" unique="false">
             <column length="20" name="Nombre" not-null="true"/>
@@ -14,7 +14,7 @@
         </property>
         <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="favoritoses" optimistic-lock="true" sort="unsorted" table="favoritos">
             <key on-delete="noaction">
-                <column name="Cod_Ususario" not-null="true"/>
+                <column name="Cod_Usuario" not-null="true"/>
             </key>
             <one-to-many class="Tablas.Favoritos" embed-xml="true" not-found="exception"/>
         </set>
