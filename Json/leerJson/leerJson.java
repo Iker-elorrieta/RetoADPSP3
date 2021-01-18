@@ -15,6 +15,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 
+import Insert.ConsultasDatosCalidad;
 import Insert.HibernateUtil;
 import Objetos.Links;
 import Tablas.DatosCalidad;
@@ -26,7 +27,7 @@ import Tablas.Municipios;
 import Tablas.Provincias;
 
 public class leerJson {
-	private static boolean seguir = true;
+	private boolean seguir = true;
 	private String Atributo;
 	private boolean atributoName;
 	final private String name = "name";
@@ -407,10 +408,11 @@ public class leerJson {
 		}
 
 	private DatosCalidad datosDeCalidad = new DatosCalidad();
-	
+	ConsultasDatosCalidad consulta = new ConsultasDatosCalidad();
 	public String LeerJsonLinks(JsonElement elemento, String nombre, ArrayList<DatosCalidad> datosCalidad,
 			Estaciones estaciones) {
 		if (seguir) {
+			
 			Links link = null;
 			if (elemento.isJsonObject()) {
 				JsonObject obj = elemento.getAsJsonObject();
@@ -447,6 +449,7 @@ public class leerJson {
 							if (datosDeCalidad.getFecha() != null) {
 								datosDeCalidad.setEstaciones(estaciones);
 								datosCalidad.add(datosDeCalidad);
+								consulta.insertDatosCalidad(datosDeCalidad);
 								datosDeCalidad = new DatosCalidad();
 								
 							}

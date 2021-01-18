@@ -5,15 +5,17 @@ import java.util.ArrayList;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+import Tablas.DatosCalidad;
+
 public class ConsultasDatosCalidad {
-	public boolean insertDatosCalidad(ArrayList<Tablas.DatosCalidad> datosCalidad) {
+	public boolean insertDatosCalidad(DatosCalidad datoCalidad) {
 		SessionFactory sesion = HibernateUtil.getSessionFactory();
 		Session session = sesion.openSession();
-			for (int x=0;x<datosCalidad.size()-1;x++) {
+			
 			try {
 		
 			session.beginTransaction();
-			session.save(datosCalidad.get(x));
+			session.save(datoCalidad);
 			session.getTransaction().commit();
 			
 		
@@ -21,10 +23,10 @@ public class ConsultasDatosCalidad {
 				e.printStackTrace();
 				System.out.println("valor repetido");
 			}	
-			}
-			System.out.println("DATOS CALIDAD CREADO");
+			
+			
 			session.close();
 			return true;
 
-		}
+	}
 }

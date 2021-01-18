@@ -66,13 +66,14 @@ public class Diarios {
 			String hash = new String(resumen);
 			if (!consulta.comprobarHash(link, hash)) {
 				escribir.escribirJsonDiarios(link, nombreFichero);
+				HiloCrearXml crearXml = new HiloCrearXml(nombreFichero, "Links", "link");
+				crearXml.start();
 				
 			}
 			JsonParser parser = new JsonParser();
 			FileReader fr = new FileReader(nombreFichero);
 			JsonElement datos = parser.parse(fr);
-			HiloCrearXml crearXml = new HiloCrearXml(nombreFichero, "Links", "link");
-			crearXml.start();
+			
 			leer.LeerJsonDiarios(datos, links,"");
 			return true;
 

@@ -13,16 +13,8 @@ public class ConsultaEspaciosNaturales {
 			try {
 		
 			session.beginTransaction();
-			
-			
-
-			
 			session.save(espacios.get(x));
 			session.getTransaction().commit();
-			
-
-			
-		
 			}catch(Exception e) {
 				System.out.println("valor repetido Espacios");
 			}	

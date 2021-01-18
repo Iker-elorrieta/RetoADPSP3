@@ -21,7 +21,6 @@ import Insert.ConsultasHash;
 import Objetos.Links;
 import XML.EscribirXml;
 import escribirJson.escribirJson;
-import hilos.HiloAnadirDatosCalidad;
 import hilos.HiloCrearXml;
 import leerJson.leerJson;
 

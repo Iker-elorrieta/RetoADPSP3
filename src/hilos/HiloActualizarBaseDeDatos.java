@@ -57,8 +57,11 @@ public class HiloActualizarBaseDeDatos extends Thread {
 		
 		//A�adimos Estacion a la base de datos.
 		consultasEstaciones.insertEstaciones(estacion);
+		while(actualizarLinks.isAlive()) {
+			
+		}
+		
 		link.comprobarHashLinks(links,datosCalidad);
-		consultaCalidad.insertDatosCalidad(datosCalidad);
 		System.out.println("fin del hiloActualizar");
 
 	}
