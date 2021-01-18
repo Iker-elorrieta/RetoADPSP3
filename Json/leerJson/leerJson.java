@@ -1,5 +1,6 @@
 package leerJson;
 
+import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -28,12 +29,45 @@ public class leerJson {
 	private static boolean seguir = true;
 	private String Atributo;
 	private boolean atributoName;
-
+	final private String name = "name";
+	final private String Name = "Name";
+	final private String Town = "Town";
+	final private String Address = "Address";
+	final private String CoordenatesXETRS89 = "CoordenatesXETRS89";
+	final private String CoordenatesYETRS89 = "CoordenatesYETRS89";
+	final private String Latitude = "Latitude";
+	final private String Longitude = "Longitude";
+	final private String documentName = "documentName";
+	final private String marks = "marks";
+	final private String templateType = "templateType";
+	final private String latwgs84 = "latwgs84";
+	final private String municipality = "municipality";
+	final private String municipalitycode = "municipalitycode";
+	final private String territory = "territory";
+	final private String territorycode = "territorycode";
+	final private String Date = "Date";
+	final private String Hour = "Hour";
+	final private String COmgm3 = "COmgm3";
+	final private String CO8hmgm3 = "CO8hmgm3";
+	final private String lonwgs84 = "lonwgs84";
+	final private String NOgm3 = "NOgm3";
+	final private String NO2 = "NO2";
+	final private String NO2gm3 = "NO2gm3";
+	final private String NO2ICA = "NO2ICA";
+	final private String NOXgm3 = "NOXgm3";
+	final private String PM10 = "PM10";
+	final private String PM10ICA = "PM10ICA";
+	final private String PM25 = "PM25";
+	final private String PM25ICA = "PM25ICA";
+	final private String SO2 = "SO2";
+	final private String SO2ICA = "SO2ICA";
+	final private String ICAEstacion = "ICAEstacion";
+	
+	
 	public String LeerJsonDiarios(JsonElement elemento, ArrayList<Links> enlazes, String nombre) {
 
 		Links link = new Links();
 		if (elemento.isJsonObject()) {
-			System.out.println("Objeto");
 			JsonObject obj = elemento.getAsJsonObject();
 			java.util.Set<java.util.Map.Entry<String, JsonElement>> entradas = obj.entrySet();
 			java.util.Iterator<java.util.Map.Entry<String, JsonElement>> iter = entradas.iterator();
@@ -41,7 +75,7 @@ public class leerJson {
 
 				java.util.Map.Entry<String, JsonElement> entrada = iter.next();
 				Atributo = entrada.getKey();
-				if (Atributo.equals("name")) {
+				if (Atributo.equals(name)) {
 					atributoName = true;
 				}
 				nombre = LeerJsonDiarios(entrada.getValue(), enlazes, nombre);
@@ -68,17 +102,18 @@ public class leerJson {
 					nombre = valor.getAsString();
 					atributoName = false;
 				}
-				if (valor.getAsString().contains("http")) {
 					if (valor.getAsString().contains("datos_indice")) {
 						link.setNombreFichero("datos_indice/" + nombre + ".json");
 						link.setLink(valor.getAsString());
+						
 						link.setNombrePueblo(nombre);
+						
 						enlazes.add(link);
 						System.out.println(" Enlaze guardado: " + valor.getAsString());
 					}
 					
 				}
-			}
+			
 		} else if (elemento.isJsonNull()) {
 			System.out.println("Es NULL");
 		} else {
@@ -107,14 +142,12 @@ public class leerJson {
 
 		} else if (elemento.isJsonArray()) {
 			JsonArray array = elemento.getAsJsonArray();
-			System.out.println("Array. Numero de elementos: " + array.size());
 			java.util.Iterator<JsonElement> iter = array.iterator();
 			while (iter.hasNext()) {
 				JsonElement entrada = iter.next();
 				nombre = LeerJsonEstaciones(entrada, nombre, estaciones);
 			}
 
-			// REVISALO IBAI GILIPOLLAS
 
 		} else if (elemento.isJsonPrimitive()) {
 			JsonPrimitive valor = elemento.getAsJsonPrimitive();
@@ -124,10 +157,10 @@ public class leerJson {
 				
 			} else if (valor.isString()) {
 				switch(nombre) {
-				case "Name":
+				case Name:
 					estacion.setNombre(valor.getAsString());
 					break;
-				case "Town":
+				case Town:
 					SessionFactory sesion = HibernateUtil.getSessionFactory();
 					Session session = sesion.openSession();
 					session.beginTransaction();
@@ -137,19 +170,19 @@ public class leerJson {
 					estacion.setMunicipios(municipio);
 					session.close();
 					break;
-				case "Address":
+				case Address:
 					estacion.setDireccion(valor.getAsString());
 					break;
-				case "CoordenatesXETRS89":
+				case CoordenatesXETRS89:
 					estacion.setCoordenadaX(Float.parseFloat(valor.getAsString().replace(",", ".")));
 					break;
-				case "CoordenatesYETRS89":
+				case CoordenatesYETRS89:
 					estacion.setCoordenadaY(Float.parseFloat(valor.getAsString().replace(",", ".")));
 					break;
-				case "Latitude":
+				case Latitude:
 					estacion.setLatitud(Float.parseFloat(valor.getAsString().replace(",", ".")));
 					break;
-				case "Longitude":
+				case Longitude:
 					estacion.setLongitud(Float.parseFloat(valor.getAsString().replace(",", ".")));
 					estacion.setCodEstacion(codEstacion);
 
@@ -181,7 +214,6 @@ public class leerJson {
 
 		Links link = null;
 		if (elemento.isJsonObject()) {
-			System.out.println("Objeto");
 			JsonObject obj = elemento.getAsJsonObject();
 			java.util.Set<java.util.Map.Entry<String, JsonElement>> entradas = obj.entrySet();
 			java.util.Iterator<java.util.Map.Entry<String, JsonElement>> iter = entradas.iterator();
@@ -209,27 +241,27 @@ public class leerJson {
 			} else if (valor.isString()) {
 				
 				switch(nombre) {
-				case "documentName":
+				case documentName:
 					espaciosNaturales.setNombreEspacio(valor.getAsString());
 					break;
-				case "marks":
+				case marks:
 					espaciosNaturales.setMarca(valor.getAsString());
 					break;
-				case "templateType":
+				case templateType:
 					espaciosNaturales.setNatureType(valor.getAsString());
 					break;
-				case "latwgs84":
+				case latwgs84:
 					if (valor.getAsString().equals("")) {
 						estaVacio = true;
 					} else {
 						espaciosNaturales.setLatwgs84(valor.getAsFloat());
 					}
 					break;
-				case "lonwgs84":
+				case lonwgs84:
 					if (!valor.getAsString().equals(""))
 						espaciosNaturales.setLongwgs84(valor.getAsFloat());
 					break;
-				case "municipality":
+				case municipality:
 					if (!estaVacio) {
 						espaciosNaturales.setCodEspacio(codigoEspacio);
 						SessionFactory sesion = HibernateUtil.getSessionFactory();
@@ -275,7 +307,6 @@ public class leerJson {
 			
 			int x=1;
 			if (elemento.isJsonObject()) {
-				System.out.println("Objeto");
 				JsonObject obj = elemento.getAsJsonObject();
 				java.util.Set<java.util.Map.Entry<String, JsonElement>> entradas = obj.entrySet();
 				java.util.Iterator<java.util.Map.Entry<String, JsonElement>> iter = entradas.iterator();
@@ -308,7 +339,7 @@ public class leerJson {
 						
 					
 					switch(nombre){
-						case "municipality":
+						case municipality:
 							mismoNombre=false;
 							nombreMuni= valor.getAsString().split(" ");
 							nombre = nombreMuni[0];
@@ -325,14 +356,19 @@ public class leerJson {
 								x++;
 							}
 							}
+							
+						
+							
 							municipio.setNombre(nombre);
 							
+					
+							
 							break;
-						case "municipalitycode":
+						case municipalitycode:
 							municipio.setCodMunicipio(CodMunicipio);
 							CodMunicipio++;
 							break;
-						case "territory":
+						case territory:
 							mismoNombre=false;
 							nombreMuni= valor.getAsString().split(" ");
 							nombre = nombreMuni[0];
@@ -351,7 +387,7 @@ public class leerJson {
 							provincia.setNombre(nombre);
 							
 						break;
-						case "territorycode":
+						case territorycode:
 							provincia.setCodProvincia(Integer.parseInt(valor.getAsString().split(" ")[0]));
 							municipio.setProvincias(provincia);
 							provincias.add(provincia);
@@ -371,13 +407,12 @@ public class leerJson {
 		}
 
 	private DatosCalidad datosDeCalidad = new DatosCalidad();
-	private int codigoCalidad=0;
+	
 	public String LeerJsonLinks(JsonElement elemento, String nombre, ArrayList<DatosCalidad> datosCalidad,
 			Estaciones estaciones) {
 		if (seguir) {
 			Links link = null;
 			if (elemento.isJsonObject()) {
-				System.out.println("Objeto");
 				JsonObject obj = elemento.getAsJsonObject();
 				java.util.Set<java.util.Map.Entry<String, JsonElement>> entradas = obj.entrySet();
 				java.util.Iterator<java.util.Map.Entry<String, JsonElement>> iter = entradas.iterator();
@@ -403,18 +438,17 @@ public class leerJson {
 				} else if (valor.isNumber()) {
 					
 				} else if (valor.isString()) {
-					if (valor.getAsString().contains("01/12/2020")) {
+					if (valor.getAsString().contains("07/01/2021")) {
 
 						seguir = false;
 					} else {
 						switch (nombre) {
-						case "Date":
+						case Date:
 							if (datosDeCalidad.getFecha() != null) {
-								datosDeCalidad.setCodDatos(codigoCalidad);
 								datosDeCalidad.setEstaciones(estaciones);
 								datosCalidad.add(datosDeCalidad);
 								datosDeCalidad = new DatosCalidad();
-								codigoCalidad++;
+								
 							}
 							SimpleDateFormat parseador = new SimpleDateFormat("dd/MM/yyyy");
 							Date date = null;
@@ -427,7 +461,7 @@ public class leerJson {
 							datosDeCalidad.setFecha(date);
 							break;
 
-						case "Hour":
+						case Hour:
 							SimpleDateFormat parseador2 = new SimpleDateFormat("hh:mm");
 							Date date2 = null;
 							try {
@@ -438,46 +472,46 @@ public class leerJson {
 							}
 							datosDeCalidad.setHora(date2);
 							break;
-						case "COmgm3":
+						case COmgm3:
 							datosDeCalidad.setComgM3(Float.parseFloat(valor.getAsString().replace(",", ".")));
 							break;
-						case "CO8hmgm3":
+						case CO8hmgm3:
 							datosDeCalidad.setCo8hmgM3(Float.parseFloat(valor.getAsString().replace(",", ".")));
 							break;
-						case "NOgm3":
+						case NOgm3:
 							datosDeCalidad.setNogm3(valor.getAsInt());
 							break;
-						case "NO2":
+						case NO2:
 							datosDeCalidad.setNo2(valor.getAsInt());
 							break;
-						case "NO2gm3":
+						case NO2gm3:
 							datosDeCalidad.setNo2(valor.getAsInt());
 							break;
-						case "NO2ICA":
+						case NO2ICA:
 							datosDeCalidad.setNo2ica(valor.getAsString());
 							break;
-						case "NOXgm3":
+						case NOXgm3:
 							datosDeCalidad.setNoxgm3(valor.getAsInt());
 							break;
-						case "PM10":
+						case PM10:
 							datosDeCalidad.getPm10();
 							break;
-						case "PM10ICA":
+						case PM10ICA:
 							datosDeCalidad.setPm10ica(valor.getAsString());
 							break;
-						case "PM25":
+						case PM25:
 							datosDeCalidad.setPm25(Float.parseFloat(valor.getAsString().replace(",", ".")));
 							break;
-						case "PM25ICA":
+						case PM25ICA:
 							datosDeCalidad.setPm25ica(valor.getAsString());
 							break;
-						case "SO2":
+						case SO2:
 							datosDeCalidad.setSo2(Float.parseFloat(valor.getAsString().replace(",", ".")));
 							break;
-						case "SO2ICA":
+						case SO2ICA:
 							datosDeCalidad.setSo2ica(valor.getAsString());
 							break;
-						case "ICAEstacion":
+						case ICAEstacion:
 							datosDeCalidad.setIcastation(valor.getAsString());
 							break;
 

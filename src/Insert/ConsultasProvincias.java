@@ -18,7 +18,7 @@ public boolean insertProvincia(ArrayList<Tablas.Provincias> provincias) {
 		session.save(provincias.get(x));
 		session.getTransaction().commit();
 		}catch(Exception e) {
-			System.out.println("valor repetido");
+			
 			
 		}
 		}

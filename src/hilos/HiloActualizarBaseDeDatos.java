@@ -43,7 +43,7 @@ public class HiloActualizarBaseDeDatos extends Thread {
 		pueblos.comprobarHashPueblos(municipios, provincias);
 		
 		
-		//Añadimos Provincias y municipios a la base de datos.
+		//Aï¿½adimos Provincias y municipios a la base de datos.
 		consultaProvincia.insertProvincia(provincias);
 		consultaMunicipios.insertMunicipio(municipios);
 		HiloActualizarPlayas actualizarPlaya = new HiloActualizarPlayas();
@@ -55,7 +55,7 @@ public class HiloActualizarBaseDeDatos extends Thread {
 		estaciones.comprobarHashEstaciones(estacion);
 		
 		
-		//Añadimos Estacion a la base de datos.
+		//Aï¿½adimos Estacion a la base de datos.
 		consultasEstaciones.insertEstaciones(estacion);
 		link.comprobarHashLinks(links,datosCalidad);
 		consultaCalidad.insertDatosCalidad(datosCalidad);

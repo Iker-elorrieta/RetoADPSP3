@@ -35,24 +35,29 @@ public class ConsultasHash {
 			
 							HashJson hashJson = new HashJson();
 							hashJson.setHash(Hash);
-							hashJson.setUrl(link);
 							session.save(hashJson);
-						
+							System.out.println("Hash cambiado");
+							session.getTransaction().commit();
 					}
 		
 
-		session.getTransaction().commit();
+		
 
-		System.out.println("Hash cambiado");
+		
 		session.close();
 		}catch (Exception e) {
+			try {
 			HashJson hashJson = new HashJson();
 			hashJson.setHash(Hash);
 			hashJson.setUrl(link);
 			session.save(hashJson);
 			session.getTransaction().commit();
 			session.close();
-		}
+			}catch(Exception e1) {
+				System.out.println("No hay cambios en el hash");
+				}
+			}
+		
 			
 	
 		return false;

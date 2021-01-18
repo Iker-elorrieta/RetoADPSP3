@@ -21,6 +21,7 @@ import Insert.ConsultasHash;
 import Objetos.Links;
 import XML.EscribirXml;
 import escribirJson.escribirJson;
+import hilos.HiloAnadirDatosCalidad;
 import hilos.HiloCrearXml;
 import leerJson.leerJson;
 
@@ -34,7 +35,7 @@ public class Estaciones {
 	private leerJson leer = new leerJson();
 	private ConsultasHash consulta = new ConsultasHash();
 	private EscribirXml escribirXML = new EscribirXml();
-
+	
 	
 	private static String readAll(Reader rd) throws IOException {
 	    StringBuilder sb = new StringBuilder();
@@ -49,6 +50,7 @@ public class Estaciones {
 	public boolean comprobarHashEstaciones(ArrayList<Tablas.Estaciones> estaciones) {
 		try {
 			comprobar.comprobarPagina(link);
+			
 			URL url;
 
 			url = new URL(link);

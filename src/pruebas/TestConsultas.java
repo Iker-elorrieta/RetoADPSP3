@@ -4,9 +4,9 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
-import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import ComprobarPagina.comprobarPagina;
 import Hash.Diarios;
@@ -48,10 +48,11 @@ import init.Init;
 import leerJson.leerJson;
 import vistas.Registro;
 import vistas.VentanaCliente;
-import org.junit.runners.*;
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TestConsultas {
+
 	Init init2 = new Init();
 	private ArrayList<Objetos.Links> links;
 	Control control = new Control(links);
@@ -138,7 +139,6 @@ public class TestConsultas {
 	@Test
 	public void Prueba4CrearClienteprueba() {
 		crearusuario.separardatos();
-		
 		assertTrue(crearusuario.ConsultarDatos());
 	}
 	
@@ -162,4 +162,5 @@ public class TestConsultas {
 		
 		assertNotEquals("Abaltzisketa", consultaInicial.pedirciudad());
 	}
+
 }

@@ -25,17 +25,11 @@ public void run() {
 			if (horactual.substring(3).equals("00:00")) {
 				HiloActualizarBaseDeDatos Actualizar = new HiloActualizarBaseDeDatos(links);
 				Actualizar.start();
-				try {
-					join();
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
 			}
 			
 			try {
 				Thread.sleep(1000);
-				System.out.println("segs");
+				
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

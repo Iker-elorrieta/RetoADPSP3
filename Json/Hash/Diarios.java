@@ -25,11 +25,11 @@ import escribirJson.escribirJson;
 import hilos.HiloCrearXml;
 import leerJson.leerJson;
 
-//https://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2020/es_def/adjuntos/index.json
+//https://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2021/es_def/adjuntos/index.json
 
 public class Diarios {
 	private final String nombreFichero="Diarios.json";
-	private final String link = "https://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2020/es_def/adjuntos/index.json";
+	private final String link = "https://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2021/es_def/adjuntos/index.json";
 	private comprobarPagina comprobar = new comprobarPagina();
 	private escribirJson escribir = new escribirJson();
 	private leerJson leer = new leerJson();
@@ -44,7 +44,6 @@ public class Diarios {
 	    }
 	    return sb.toString();
 	  }
-
 	
 	public boolean comprobarHashDiarios(ArrayList<Links> links) {
 		try {

@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-01-2021 a las 22:48:22
--- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.4.1
+-- Tiempo de generación: 18-01-2021 a las 17:04:48
+-- Versión del servidor: 10.4.17-MariaDB
+-- Versión de PHP: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -36,17 +35,17 @@ CREATE TABLE `datos_calidad` (
   `CO8Hmg m3` float DEFAULT NULL,
   `NOgm3` int(11) DEFAULT NULL,
   `NO2` int(11) DEFAULT NULL,
-  `NO2ICA` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
+  `NO2ICA` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
   `NOXgm3` int(11) DEFAULT NULL,
   `PM10` float DEFAULT NULL,
-  `PM10ICA` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
+  `PM10ICA` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
   `PM25` float DEFAULT NULL,
-  `PM25ICA` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
+  `PM25ICA` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
   `SO2` float DEFAULT NULL,
-  `SO2ICA` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
-  `ICAStation` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
+  `SO2ICA` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `ICAStation` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
   `Cod_Estacion` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -56,12 +55,12 @@ CREATE TABLE `datos_calidad` (
 
 CREATE TABLE `espacios_naturales` (
   `Cod_Espacio` int(11) NOT NULL,
-  `Nombre_Espacio` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `Marca` varchar(150) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `nature_type` varchar(150) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `Nombre_Espacio` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `Marca` varchar(150) COLLATE utf8_spanish_ci NOT NULL,
+  `nature_type` varchar(150) COLLATE utf8_spanish_ci NOT NULL,
   `latwgs84` float NOT NULL,
   `longwgs84` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -71,14 +70,14 @@ CREATE TABLE `espacios_naturales` (
 
 CREATE TABLE `estaciones` (
   `Cod_Estacion` int(11) NOT NULL,
-  `Nombre` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `Nombre` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `Cod_Municipio` int(11) NOT NULL,
-  `Direccion` varchar(150) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `Direccion` varchar(150) COLLATE utf8_spanish_ci NOT NULL,
   `Coordenada X` float NOT NULL,
   `Coordenada Y` float NOT NULL,
   `Latitud` float NOT NULL,
   `Longitud` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -89,7 +88,7 @@ CREATE TABLE `estaciones` (
 CREATE TABLE `esta_en` (
   `Cod_Espacio` int(11) NOT NULL,
   `Cod_Ciudad` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -99,10 +98,10 @@ CREATE TABLE `esta_en` (
 
 CREATE TABLE `favoritos` (
   `Cod_Favorito` int(11) NOT NULL,
-  `Cod_Ususario` int(11) NOT NULL,
+  `Cod_Usuario` int(11) NOT NULL,
   `Cod_Ubicacion` int(11) NOT NULL,
   `Tipo_Ubicacion` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -111,9 +110,9 @@ CREATE TABLE `favoritos` (
 --
 
 CREATE TABLE `hash_json` (
-  `hash` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `URL` varchar(500) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `hash` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `URL` varchar(500) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -123,9 +122,9 @@ CREATE TABLE `hash_json` (
 
 CREATE TABLE `municipios` (
   `Cod_Municipio` int(11) NOT NULL,
-  `Nombre` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `Nombre` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `Cod_Provincia` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -135,8 +134,8 @@ CREATE TABLE `municipios` (
 
 CREATE TABLE `provincias` (
   `Cod_Provincia` int(11) NOT NULL,
-  `Nombre` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -146,9 +145,9 @@ CREATE TABLE `provincias` (
 
 CREATE TABLE `usuarios` (
   `Cod_Usuario` int(11) NOT NULL,
-  `Nombre` varchar(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `Pass` varchar(32) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Nombre` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `Pass` varchar(32) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Índices para tablas volcadas
@@ -186,7 +185,7 @@ ALTER TABLE `esta_en`
 --
 ALTER TABLE `favoritos`
   ADD PRIMARY KEY (`Cod_Favorito`),
-  ADD KEY `FK_usu_fav` (`Cod_Ususario`);
+  ADD KEY `FK_usu_fav` (`Cod_Usuario`);
 
 --
 -- Indices de la tabla `hash_json`
@@ -218,16 +217,28 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `datos_calidad`
+--
+ALTER TABLE `datos_calidad`
+  MODIFY `Cod_Datos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+
+--
 -- AUTO_INCREMENT de la tabla `estaciones`
 --
 ALTER TABLE `estaciones`
-  MODIFY `Cod_Estacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `Cod_Estacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 
 --
 -- AUTO_INCREMENT de la tabla `favoritos`
 --
 ALTER TABLE `favoritos`
   MODIFY `Cod_Favorito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `Cod_Usuario` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
@@ -256,7 +267,7 @@ ALTER TABLE `esta_en`
 -- Filtros para la tabla `favoritos`
 --
 ALTER TABLE `favoritos`
-  ADD CONSTRAINT `FK_usu_fav` FOREIGN KEY (`Cod_Ususario`) REFERENCES `usuarios` (`Cod_Usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `FK_usu_fav` FOREIGN KEY (`Cod_Usuario`) REFERENCES `usuarios` (`Cod_Usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `municipios`
