@@ -91,7 +91,7 @@ public class VentanaCliente extends JFrame {
 			return -1;
 		}
 		if(pass1.length == 0) {
-			LBL1.setText("El campo de Contraseña no puede estar vacio");
+			LBL1.setText("El campo de Contraseï¿½a no puede estar vacio");
 			return -1;
 		}
 		String res = "";
@@ -104,13 +104,13 @@ public class VentanaCliente extends JFrame {
 				byte dataBytes[] = texto.getBytes();
 				md.update(dataBytes);
 				byte resumen[] = md.digest();
-				resu = new String(resumen);
-				System.out.println(res);
+				for(byte b : resumen){
+					resu += b;
+				}
 			} catch (NoSuchAlgorithmException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
 			salida.writeUTF("2");
 			salida.writeUTF(usuario+":"+ resu);
 			res = entrada.readUTF();
