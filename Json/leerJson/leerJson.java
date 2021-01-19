@@ -408,7 +408,7 @@ public class leerJson {
 
 	private DatosCalidad datosDeCalidad = new DatosCalidad();
 	
-	public String LeerJsonLinks(JsonElement elemento, String nombre, ArrayList<DatosCalidad> datosCalidad,
+	public String v(JsonElement elemento, String nombre, ArrayList<DatosCalidad> datosCalidad,
 			Estaciones estaciones) {
 		if (seguir) {
 			Links link = null;

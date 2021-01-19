@@ -19,7 +19,7 @@ public class ConsultaEspaciosNaturales {
 			
 			session.save(espacios.get(x));
 			session.getTransaction().commit();
-			
+			session.flush();
 
 			
 		

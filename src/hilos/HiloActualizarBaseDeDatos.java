@@ -42,7 +42,6 @@ public class HiloActualizarBaseDeDatos extends Thread {
 		
 		pueblos.comprobarHashPueblos(municipios, provincias);
 		
-		
 		//A�adimos Provincias y municipios a la base de datos.
 		consultaProvincia.insertProvincia(provincias);
 		consultaMunicipios.insertMunicipio(municipios);
