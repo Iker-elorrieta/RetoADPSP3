@@ -62,13 +62,13 @@ public class init {
 		links=new ArrayList<Objetos.Links>();
 		HiloActualizarBaseDeDatos Actualizar = new HiloActualizarBaseDeDatos(links);
 		Actualizar.start();
-		
-		Control ControlTiempo = new Control(links);
-		ControlTiempo.start();
-		System.out.println("fin de programa");
 		while(Actualizar.isAlive()){
 			
 		}
+		Control ControlTiempo = new Control(links);
+		ControlTiempo.start();
+		System.out.println("fin de programa");
+		
 		return true;
 	}
 

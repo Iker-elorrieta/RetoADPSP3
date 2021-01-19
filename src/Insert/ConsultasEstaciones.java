@@ -9,7 +9,7 @@ public class ConsultasEstaciones {
 	public boolean insertEstaciones(ArrayList<Tablas.Estaciones> estaciones) {
 		SessionFactory sesion = HibernateUtil.getSessionFactory();
 		Session session = sesion.openSession();
-			for (int x=0;x<estaciones.size()-1;x++) {
+			for (int x=0;x<estaciones.size();x++) {
 			try {
 		
 			session.beginTransaction();			
