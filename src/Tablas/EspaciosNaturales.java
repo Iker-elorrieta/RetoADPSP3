@@ -20,6 +20,7 @@ public class EspaciosNaturales implements java.io.Serializable {
 	public EspaciosNaturales() {
 	}
 
+
 	public EspaciosNaturales(int codEspacio, String nombreEspacio, String marca, String natureType, float latwgs84,
 			float longwgs84) {
 		this.codEspacio = codEspacio;
