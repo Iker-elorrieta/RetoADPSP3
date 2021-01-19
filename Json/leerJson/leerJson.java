@@ -27,7 +27,7 @@ import Tablas.Municipios;
 import Tablas.Provincias;
 
 public class leerJson {
-	private static boolean seguir = true;
+	private boolean seguir = true;
 	private String Atributo;
 	private boolean atributoName;
 	final private String name = "name";
