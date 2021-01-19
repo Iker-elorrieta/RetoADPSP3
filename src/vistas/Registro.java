@@ -93,15 +93,15 @@ public class Registro extends JFrame {
 			return -1;
 		}
 		if(pass1.length == 0) {
-			lblNewLabel_3.setText("El campo de Contraseña no puede estar vacio");
+			lblNewLabel_3.setText("El campo de Contraseï¿½a no puede estar vacio");
 			return -1;
 		}
 		if(pass2.length == 0) {
-			lblNewLabel_3.setText("El campo de Repetir Contraseña no puede estar vacio");
+			lblNewLabel_3.setText("El campo de Repetir Contraseï¿½a no puede estar vacio");
 			return -1;
 		}
 		if(pass1.equals(pass2)) {
-			lblNewLabel_3.setText("Las contraseñas no coinciden");
+			lblNewLabel_3.setText("Las contraseï¿½as no coinciden");
 			return -1;
 		}
 		String res = "";
@@ -114,8 +114,9 @@ public class Registro extends JFrame {
 				byte dataBytes[] = texto.getBytes();
 				md.update(dataBytes);
 				byte resumen[] = md.digest();
-				resu = new String(resumen);
-				System.out.println(res);
+				for(byte b : resumen){
+					resu += b;
+				}
 			} catch (NoSuchAlgorithmException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
