@@ -135,6 +135,10 @@ public class Links {
 					leer.LeerJsonLinks(datos, "", datosCalidad, estacion);
 					
 					session.close();
+					
+					
+					
+					
 				}
 
 			} catch (IOException e) {
