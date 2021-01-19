@@ -136,9 +136,6 @@ public class Links {
 					
 					session.close();
 					
-					
-					
-					
 				}
 
 			} catch (IOException e) {
