@@ -303,7 +303,7 @@ public class leerJson {
 	private Provincias provincia = new Provincias();
 	private String[] nombreMuni;
 	boolean mismoNombre = false;
-
+	private final String fecha = "15/01/2021";
 	public String LeerJsonPueblos(JsonElement elemento, String nombre,ArrayList<Tablas.Municipios> municipios,ArrayList<Tablas.Provincias> provincias) {
 			
 			int x=1;
@@ -320,7 +320,6 @@ public class leerJson {
 
 			} else if (elemento.isJsonArray()) {
 				JsonArray array = elemento.getAsJsonArray();
-				System.out.println("Array. Numero de elementos: " + array.size());
 				java.util.Iterator<JsonElement> iter = array.iterator();
 				while (iter.hasNext()) {
 					JsonElement entrada = iter.next();
@@ -409,7 +408,7 @@ public class leerJson {
 
 	private DatosCalidad datosDeCalidad = new DatosCalidad();
 	ConsultasDatosCalidad consulta = new ConsultasDatosCalidad();
-	public String LeerJsonLinks(JsonElement elemento, String nombre, ArrayList<DatosCalidad> datosCalidad,
+	public String LeerJsonLinks(JsonElement elemento, String nombre,
 			Estaciones estaciones) {
 		if (seguir) {
 			
@@ -422,7 +421,7 @@ public class leerJson {
 					java.util.Map.Entry<String, JsonElement> entrada = iter.next();
 					Atributo = entrada.getKey();
 					nombre = Atributo.toString();
-					nombre = LeerJsonLinks(entrada.getValue(), nombre, datosCalidad, estaciones);
+					nombre = LeerJsonLinks(entrada.getValue(), nombre, estaciones);
 				}
 
 			} else if (elemento.isJsonArray()) {
@@ -431,7 +430,7 @@ public class leerJson {
 				java.util.Iterator<JsonElement> iter = array.iterator();
 				while (iter.hasNext()) {
 					JsonElement entrada = iter.next();
-					nombre = LeerJsonLinks(entrada, nombre, datosCalidad, estaciones);
+					nombre = LeerJsonLinks(entrada, nombre, estaciones);
 				}
 			} else if (elemento.isJsonPrimitive()) {
 				JsonPrimitive valor = elemento.getAsJsonPrimitive();
@@ -440,7 +439,7 @@ public class leerJson {
 				} else if (valor.isNumber()) {
 					
 				} else if (valor.isString()) {
-					if (valor.getAsString().contains("07/01/2021")) {
+					if (valor.getAsString().contains(fecha)) {
 
 						seguir = false;
 					} else {
@@ -448,7 +447,6 @@ public class leerJson {
 						case Date:
 							if (datosDeCalidad.getFecha() != null) {
 								datosDeCalidad.setEstaciones(estaciones);
-								datosCalidad.add(datosDeCalidad);
 								consulta.insertDatosCalidad(datosDeCalidad);
 								datosDeCalidad = new DatosCalidad();
 								

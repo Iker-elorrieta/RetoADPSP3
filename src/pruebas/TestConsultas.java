@@ -118,7 +118,7 @@ public class TestConsultas {
 	borrarBaseDeDatos.borrar borrar = new borrarBaseDeDatos.borrar();
 
 	@Test
-	public void Prueba0BorrarBaseDeDatos() {
+	public void Prueba8BorrarBaseDeDatos() {
 		assertTrue(borrar.borrado());
 	}
 
