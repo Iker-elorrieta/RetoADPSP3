@@ -53,7 +53,7 @@ public class VentanaCliente extends JFrame {
 		lblNewLabel.setBounds(10, 97, 46, 14);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Contrase\u00F1a");
+		JLabel lblNewLabel_1 = new JLabel("Contraseña");
 		lblNewLabel_1.setBounds(10, 129, 73, 14);
 		contentPane.add(lblNewLabel_1);
 		
