@@ -50,11 +50,11 @@ public class Registro extends JFrame {
 		lblNewLabel.setBounds(10, 33, 46, 14);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Contrase\u00F1a");
+		JLabel lblNewLabel_1 = new JLabel("Contraseña");
 		lblNewLabel_1.setBounds(10, 64, 93, 14);
 		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("Repite contrtase\u00F1a");
+		JLabel lblNewLabel_2 = new JLabel("Repite contrtaseña");
 		lblNewLabel_2.setBounds(10, 95, 93, 14);
 		contentPane.add(lblNewLabel_2);
 		
@@ -93,15 +93,15 @@ public class Registro extends JFrame {
 			return -1;
 		}
 		if(pass1.length == 0) {
-			lblNewLabel_3.setText("El campo de Contrase�a no puede estar vacio");
+			lblNewLabel_3.setText("El campo de Contraseña no puede estar vacio");
 			return -1;
 		}
 		if(pass2.length == 0) {
-			lblNewLabel_3.setText("El campo de Repetir Contrase�a no puede estar vacio");
+			lblNewLabel_3.setText("El campo de Repetir Contraseña no puede estar vacio");
 			return -1;
 		}
 		if(pass1.equals(pass2)) {
-			lblNewLabel_3.setText("Las contrase�as no coinciden");
+			lblNewLabel_3.setText("Las contraseñas no coinciden");
 			return -1;
 		}
 		String res = "";
