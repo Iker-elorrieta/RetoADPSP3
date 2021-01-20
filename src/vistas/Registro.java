@@ -25,7 +25,7 @@ public class Registro extends JFrame {
 	private JPasswordField passwordField;
 	private JPasswordField passwordField_1;
 	private JButton btnNewButton = new JButton("Registrar");
-	private JLabel lblNewLabel_3 = new JLabel("New label");
+	private JLabel lblNewLabel_3 = new JLabel("");
 	DataInputStream entrada = null;
 	DataOutputStream salida = null;
 

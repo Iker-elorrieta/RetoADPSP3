@@ -103,6 +103,7 @@ public class TestConsultas {
 	Provincias provincia3 = new Provincias(1,"",null);
 	EstaEn estaEn2 = new EstaEn(null,null,null);
 	HashJson hash2 = new HashJson("", "");
+
 	DatosCalidad datos2 = new DatosCalidad(null,null,null);
 	DatosCalidad datos3 = new DatosCalidad(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null);
 	Usuarios usu2 = new Usuarios("",null);
@@ -115,8 +116,6 @@ public class TestConsultas {
 	ConsultaInicial consultaInicial2 = new ConsultaInicial("Hola:Adios2");
 	Hiloconecxiones hiloConexiones = new Hiloconecxiones(null, null);
 	Servidor servidor2 = new Servidor();
-	
-
 	
 	@Test
 	public void Prueba1IniciarTodoPrueba() {
