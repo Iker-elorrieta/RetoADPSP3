@@ -66,6 +66,15 @@ public class leerJson {
 	final private String ICAEstacion = "ICAEstacion";
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public String LeerJsonDiarios(JsonElement elemento, ArrayList<Links> enlazes, String nombre) {
 
 		Links link = new Links();
