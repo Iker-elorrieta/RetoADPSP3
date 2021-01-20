@@ -55,12 +55,12 @@ public class Hiloconecxiones extends Thread{
 				salida.writeUTF("error");
 				}
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 			break;//	case 1
 			
-		case 2: // tras logearse muestra una ciudad en un label
+		case 2: // tras logearse Inicia la aplicacion
 			try {
 				String datos = entrada.readUTF();
 				ConsultaInicial ci = new ConsultaInicial(datos);
@@ -68,10 +68,22 @@ public class Hiloconecxiones extends Thread{
 				salida.writeUTF(ci.pedirciudad());
 				
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 			break; //	case 2
+		case 3: //tras comprobar usuario y contraseña correcta cambia la contraseña
+			
+			break;//	case 3
+		case 4: // Carga las provincias en el jcombobox 
+			
+			break;//	case 4
+		case 5: // Tras seleccionar una provincia Cargamos el nombre de los espacios correspondientes
+			
+			break;//	case 5
+		case 6: // Tras seleccionar el boton de buscar Cargaremos los datos del espacio natural para mostrarlo;
+			
+			break;
 		}
 	}
 

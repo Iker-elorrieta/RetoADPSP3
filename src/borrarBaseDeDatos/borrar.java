@@ -10,6 +10,10 @@ public class borrar {
 
 	public static void main(String[] args) {
 		
+		borrado();
+		
+	}
+	public static boolean borrado() {
 		SessionFactory sesion = HibernateUtil.getSessionFactory();
 		Session session = sesion.openSession();
 		Query q = (Query) session.createQuery("delete from DatosCalidad");
@@ -28,10 +32,9 @@ public class borrar {
 		q6.executeUpdate();
 		Query q7 = (Query) session.createQuery("delete from Usuarios");
 		q7.executeUpdate();
-		
 		session.close();
 		sesion.close();
-		
+		return true;
 	}
 
 }

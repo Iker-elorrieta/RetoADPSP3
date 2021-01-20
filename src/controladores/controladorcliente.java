@@ -10,7 +10,7 @@ import vistas.VentanaCliente;
 public class controladorcliente {
 	
 	private final static int PUERTO = 5000;
-	private final static String IP = "192.168.7.233";
+	private final static String IP = "127.0.0.1";
 	Socket cliente = null;
 	DataInputStream entrada = null;
 	DataOutputStream salida = null;
@@ -28,7 +28,7 @@ public class controladorcliente {
 	public void conectar() {
 		try {
 			cliente = new Socket(IP, PUERTO);
-			System.out.println("Conexión realizada con servidor");
+			System.out.println("Conexiï¿½n realizada con servidor");
 			ventana.getLBL1().setText("conectado con el servidor");
 			entrada = new DataInputStream(cliente.getInputStream());
 			salida = new DataOutputStream (cliente.getOutputStream());
