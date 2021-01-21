@@ -158,14 +158,14 @@ public class TestConsultas {
 	public void Prueba6CrearConsultaInicial() {
 		consultaInicial.separardatos();
 
-		assertEquals("Ciudad : Abaltzisketa", consultaInicial.pedirciudad());
+		assertEquals("Ciudad : Abaltzisketa", consultaInicial.CambiarVentana());
 	}
 
 	@Test
 	public void Prueba7CrearConsultaInicialError() {
 		consultaInicial2.separardatos();
 
-		assertNotEquals("Abaltzisketa", consultaInicial.pedirciudad());
+		assertNotEquals("Abaltzisketa", consultaInicial.CambiarVentana());
 	}
 
 }

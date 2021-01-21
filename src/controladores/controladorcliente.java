@@ -28,7 +28,7 @@ public class controladorcliente {
 	public void conectar() {
 		try {
 			cliente = new Socket(IP, PUERTO);
-			System.out.println("Conexi�n realizada con servidor");
+			System.out.println("Conexión realizada con servidor");
 			ventana.getLBL1().setText("conectado con el servidor");
 			entrada = new DataInputStream(cliente.getInputStream());
 			salida = new DataOutputStream (cliente.getOutputStream());

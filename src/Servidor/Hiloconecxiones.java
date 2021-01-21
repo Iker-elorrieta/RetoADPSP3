@@ -65,7 +65,7 @@ public class Hiloconecxiones extends Thread{
 				String datos = entrada.readUTF();
 				ConsultaInicial ci = new ConsultaInicial(datos);
 				ci.separardatos();
-				salida.writeUTF(ci.pedirciudad());
+				salida.writeUTF(ci.CambiarVentana());
 				
 			} catch (IOException e) {
 				
@@ -73,7 +73,16 @@ public class Hiloconecxiones extends Thread{
 			}
 			break; //	case 2
 		case 3: //tras comprobar usuario y contraseña correcta cambia la contraseña
-			
+			try {
+				String datos = entrada.readUTF();
+				ConsultaInicial ci = new ConsultaInicial(datos);
+				ci.separardatos();
+//				salida.writeUTF(ci.CambiarVentana());
+				
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
 			break;//	case 3
 		case 4: // Carga las provincias en el jcombobox 
 			

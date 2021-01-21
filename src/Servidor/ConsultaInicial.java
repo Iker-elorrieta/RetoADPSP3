@@ -9,6 +9,9 @@ import org.hibernate.SessionFactory;
 import Insert.HibernateUtil;
 import Tablas.Municipios;
 import Tablas.Usuarios;
+import controladores.controladorListado;
+import controladores.controladorcliente;
+import vistas.Listado;
 
 public class ConsultaInicial {
 	
@@ -34,8 +37,7 @@ public class ConsultaInicial {
 		
 	}
 	
-	public String pedirciudad() {
-		
+	public Boolean CambiarContraseña() {
 		boolean agregar = true;
 		String hql= "From Usuarios";
 		Query q= (Query) session.createQuery(hql);
@@ -47,15 +49,32 @@ public class ConsultaInicial {
 				agregar = false;
 			}
 		}
+		if(!agregar) {
+			
+		return true;
+		}
+		return false;
+	}
+	
+	public String CambiarVentana() {
+		
+		boolean agregar = true;
+		String hql= "From Usuarios where ";
+		Query q= (Query) session.createQuery(hql);
+		List <Usuarios> dep= q.list();
+		
+		for(int i=0;i<dep.size();i++) {
+			Usuarios d = dep.get(i);
+			if(d.getNombre().equals(usuario) && d.getPass().equals(pass) ) {
+				agregar = false;
+			}
+		}
 		
 		if(!agregar) {
-			String hql2= "From Municipios";
-			Query q2= (Query) session.createQuery(hql2);
-			List <Municipios> ciudades= q2.list();
-			if(ciudades.size()>0) {
-				Municipios muni = ciudades.get(1);
-				return "Ciudad : " + muni.getNombre() ;
-			}
+			
+			Listado listado = new Listado();
+			controladorListado controladorListado = new controladorListado(listado);
+			listado.setVisible(true);
 			
 		}
 		
