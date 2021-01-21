@@ -56,29 +56,18 @@ public class ConsultaInicial {
 		return false;
 	}
 	
-	public String CambiarVentana() {
+	public boolean CambiarVentana() {
 		
-		boolean agregar = true;
-		String hql= "From Usuarios where ";
+		boolean cambiar = true;
+		String hql= "From Usuarios where nombre='"+usuario+"'";
 		Query q= (Query) session.createQuery(hql);
-		List <Usuarios> dep= q.list();
+		Usuarios dep= (Usuarios) q.uniqueResult();
 		
-		for(int i=0;i<dep.size();i++) {
-			Usuarios d = dep.get(i);
-			if(d.getNombre().equals(usuario) && d.getPass().equals(pass) ) {
-				agregar = false;
+		
+			if(dep.getNombre().equals(usuario) && dep.getPass().equals(pass) ) {
+				return true;
 			}
-		}
-		
-		if(!agregar) {
-			
-			Listado listado = new Listado();
-			controladorListado controladorListado = new controladorListado(listado);
-			listado.setVisible(true);
-			
-		}
-		
-		return "Error";
+		return false;
 	}
 
 }

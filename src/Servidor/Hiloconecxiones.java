@@ -65,7 +65,7 @@ public class Hiloconecxiones extends Thread{
 				String datos = entrada.readUTF();
 				ConsultaInicial ci = new ConsultaInicial(datos);
 				ci.separardatos();
-				salida.writeUTF(ci.CambiarVentana());
+				salida.writeBoolean(ci.CambiarVentana());
 				
 			} catch (IOException e) {
 				

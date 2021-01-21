@@ -21,17 +21,18 @@ import javax.swing.JButton;
 public class VentanaCliente extends JFrame {
 
 	private JPanel contentPane;
-	JLabel LBL1 = new JLabel("Desconectado");
+	public static enum enumAcciones {
+		ENTRAR,REGISTRO
+	}
 	private JTextField textField;
 	private JPasswordField passwordField;
+	private JButton btnEntrar;
+	private JButton btnRegistro;
 	
-	DataInputStream entrada = null;
-	DataOutputStream salida = null;
-
-	public VentanaCliente(DataInputStream in, DataOutputStream out) {
+	JLabel LBL1 = new JLabel("Desconectado");
+	public VentanaCliente() {
 		
-		entrada = in;
-		salida = out;
+		
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 569, 505);
@@ -61,76 +62,17 @@ public class VentanaCliente extends JFrame {
 		passwordField.setBounds(92, 126, 357, 20);
 		contentPane.add(passwordField);
 		
-		JButton btnNewButton = new JButton("Entrar");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				entrar();
-			}
-		});
-		btnNewButton.setBounds(93, 212, 89, 23);
-		contentPane.add(btnNewButton);
+		btnEntrar = new JButton("Entrar");
+		btnEntrar.setBounds(93, 212, 89, 23);
+		contentPane.add(btnEntrar);
 		
-		JButton btnNewButton_1 = new JButton("Registrate");
-		btnNewButton_1.setBounds(262, 212, 89, 23);
-		contentPane.add(btnNewButton_1);
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Registro reg = new Registro(entrada, salida);
-				reg.setVisible(true);
-			}
-		});
+		btnRegistro = new JButton("Registrate");
+		btnRegistro.setBounds(262, 212, 89, 23);
+		contentPane.add(btnRegistro);
 		
 	}
 	
-	public int entrar() {
-		String usuario = textField.getText();
-		char[] pass1 = passwordField.getPassword();
-
-		if(usuario.length() == 0) {
-			LBL1.setText("El campo de usuario no puede estar vacio");
-			return -1;
-		}
-		if(pass1.length == 0) {
-			LBL1.setText("El campo de Contrase�a no puede estar vacio");
-			return -1;
-		}
-		String res = "";
-		try {			
-			String resu ="";
-			String texto = new String(pass1);
-			MessageDigest md;
-			try {
-				md = MessageDigest.getInstance("SHA");
-				byte dataBytes[] = texto.getBytes();
-				md.update(dataBytes);
-				byte resumen[] = md.digest();
-				for(byte b : resumen){
-					resu += b;
-				}
-			} catch (NoSuchAlgorithmException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			salida.writeUTF("2");
-			salida.writeUTF(usuario+":"+ resu);
-			res = entrada.readUTF();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		if(res.equals("error")) {
-			LBL1.setText("Usuario o pass incorrectos");
-			dispose();
-			return -1;
-				
-		}else {
-			LBL1.setText(res);
-			return 1;
-		}
-
-		
-		
-	}
+	
 	
 	
 	public JLabel getLBL1() {
@@ -138,24 +80,70 @@ public class VentanaCliente extends JFrame {
 	}
 
 
-	public DataInputStream getEntrada() {
-		return entrada;
+
+
+	public JTextField getTextField() {
+		return textField;
 	}
 
 
-	public void setEntrada(DataInputStream entrada) {
-		this.entrada = entrada;
+
+
+	public void setTextField(JTextField textField) {
+		this.textField = textField;
 	}
 
 
-	public DataOutputStream getSalida() {
-		return salida;
+
+
+	public JPasswordField getPasswordField() {
+		return passwordField;
 	}
 
 
-	public void setSalida(DataOutputStream salida) {
-		this.salida = salida;
+
+
+	public void setPasswordField(JPasswordField passwordField) {
+		this.passwordField = passwordField;
 	}
+
+
+
+
+	public JButton getBtnEntrar() {
+		return btnEntrar;
+	}
+
+
+
+
+	public void setBtnEntrar(JButton btnEntrar) {
+		this.btnEntrar = btnEntrar;
+	}
+
+
+
+
+	public JButton getBtnRegistro() {
+		return btnRegistro;
+	}
+
+
+
+
+	public void setBtnRegistro(JButton btnRegistro) {
+		this.btnRegistro = btnRegistro;
+	}
+
+
+
+
+	public void setLBL1(JLabel lBL1) {
+		LBL1 = lBL1;
+	}
+
+
+	
 	
 	
 }
