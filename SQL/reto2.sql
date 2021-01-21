@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-01-2021 a las 15:38:42
--- Versión del servidor: 10.4.17-MariaDB
--- Versión de PHP: 8.0.0
+-- Tiempo de generación: 21-01-2021 a las 16:10:30
+-- Versión del servidor: 10.4.14-MariaDB
+-- Versión de PHP: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -146,7 +146,7 @@ CREATE TABLE `provincias` (
 CREATE TABLE `usuarios` (
   `Cod_Usuario` int(11) NOT NULL,
   `Nombre` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
-  `Pass` varchar(48) COLLATE utf8_spanish_ci NOT NULL
+  `Pass` longtext COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -220,13 +220,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `datos_calidad`
 --
 ALTER TABLE `datos_calidad`
-  MODIFY `Cod_Datos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=399;
+  MODIFY `Cod_Datos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67232;
 
 --
 -- AUTO_INCREMENT de la tabla `estaciones`
 --
 ALTER TABLE `estaciones`
-  MODIFY `Cod_Estacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=260;
+  MODIFY `Cod_Estacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=673;
 
 --
 -- AUTO_INCREMENT de la tabla `favoritos`
@@ -238,7 +238,7 @@ ALTER TABLE `favoritos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `Cod_Usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Cod_Usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas
