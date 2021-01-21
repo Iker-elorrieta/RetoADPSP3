@@ -20,7 +20,9 @@ public class Registro extends JFrame {
 	private JLabel lblNewLabel_3 = new JLabel("");
 	DataInputStream entrada = null;
 	DataOutputStream salida = null;
-	
+	public static enum enumAcciones {
+		Registrar
+	}
 	
 	public Registro(DataInputStream in, DataOutputStream out) {
 		

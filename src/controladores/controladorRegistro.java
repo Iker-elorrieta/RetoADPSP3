@@ -9,6 +9,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 import vistas.Registro;
+import vistas.VentanaCliente;
 
 public class controladorRegistro implements ActionListener {
 
@@ -16,15 +17,17 @@ public class controladorRegistro implements ActionListener {
 	DataInputStream entrada = null;
 	DataOutputStream salida = null;
 
-	public controladorRegistro(Registro vistaRegistro) {
+	public controladorRegistro(Registro vistaRegistro,DataInputStream in, DataOutputStream out) {
 
 		this.vistaRegistro = vistaRegistro;
+		entrada = in;
+		salida = out;
 		iniciarControlador();
 	}
 	
 	private void iniciarControlador() {
 		this.vistaRegistro.getBtnNewButton().addActionListener(this);
-		this.vistaRegistro.getBtnNewButton().setActionCommand("");
+		this.vistaRegistro.getBtnNewButton().setActionCommand(Registro.enumAcciones.Registrar.toString());
 	}
 
 	
@@ -98,6 +101,17 @@ public class controladorRegistro implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
+		Registro.enumAcciones accion = Registro.enumAcciones.valueOf(e.getActionCommand());
+		switch(accion) {
+		case Registrar:
+				
+				if(ValidarDatos() == 1) {
+					VentanaCliente vistaCliente = new VentanaCliente();
+					controladorVentanaCliente controladorCliente = new controladorVentanaCliente(vistaCliente, entrada, salida);
+					vistaCliente.setVisible(true);
+					this.vistaRegistro.dispose();
+				}
+			break;
+		}
 	}
 }
