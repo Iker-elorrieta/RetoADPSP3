@@ -1,5 +1,5 @@
 package Tablas;
-// Generated 11-ene-2021 15:35:54 by Hibernate Tools 5.4.18.Final
+// Generated 19-ene-2021 15:28:32 by Hibernate Tools 5.4.18.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,53 +9,44 @@ import java.util.Set;
  */
 public class EspaciosNaturales implements java.io.Serializable {
 
-	private Integer codEspacio;
+	private int codEspacio;
 	private String nombreEspacio;
 	private String marca;
 	private String natureType;
 	private float latwgs84;
 	private float longwgs84;
-	private String municipality;
-	private int municipalityCode;
-	private String territory;
-	private int territoryCode;
 	private Set estaEns = new HashSet(0);
 
 	public EspaciosNaturales() {
 	}
 
-	public EspaciosNaturales(String nombreEspacio, String marca, String natureType, float latwgs84, float longwgs84,
-			String municipality, int municipalityCode, String territory, int territoryCode) {
+
+	public EspaciosNaturales(int codEspacio, String nombreEspacio, String marca, String natureType, float latwgs84,
+			float longwgs84) {
+		this.codEspacio = codEspacio;
 		this.nombreEspacio = nombreEspacio;
 		this.marca = marca;
 		this.natureType = natureType;
 		this.latwgs84 = latwgs84;
 		this.longwgs84 = longwgs84;
-		this.municipality = municipality;
-		this.municipalityCode = municipalityCode;
-		this.territory = territory;
-		this.territoryCode = territoryCode;
 	}
 
-	public EspaciosNaturales(String nombreEspacio, String marca, String natureType, float latwgs84, float longwgs84,
-			String municipality, int municipalityCode, String territory, int territoryCode, Set estaEns) {
+	public EspaciosNaturales(int codEspacio, String nombreEspacio, String marca, String natureType, float latwgs84,
+			float longwgs84, Set estaEns) {
+		this.codEspacio = codEspacio;
 		this.nombreEspacio = nombreEspacio;
 		this.marca = marca;
 		this.natureType = natureType;
 		this.latwgs84 = latwgs84;
 		this.longwgs84 = longwgs84;
-		this.municipality = municipality;
-		this.municipalityCode = municipalityCode;
-		this.territory = territory;
-		this.territoryCode = territoryCode;
 		this.estaEns = estaEns;
 	}
 
-	public Integer getCodEspacio() {
+	public int getCodEspacio() {
 		return this.codEspacio;
 	}
 
-	public void setCodEspacio(Integer codEspacio) {
+	public void setCodEspacio(int codEspacio) {
 		this.codEspacio = codEspacio;
 	}
 
@@ -97,38 +88,6 @@ public class EspaciosNaturales implements java.io.Serializable {
 
 	public void setLongwgs84(float longwgs84) {
 		this.longwgs84 = longwgs84;
-	}
-
-	public String getMunicipality() {
-		return this.municipality;
-	}
-
-	public void setMunicipality(String municipality) {
-		this.municipality = municipality;
-	}
-
-	public int getMunicipalityCode() {
-		return this.municipalityCode;
-	}
-
-	public void setMunicipalityCode(int municipalityCode) {
-		this.municipalityCode = municipalityCode;
-	}
-
-	public String getTerritory() {
-		return this.territory;
-	}
-
-	public void setTerritory(String territory) {
-		this.territory = territory;
-	}
-
-	public int getTerritoryCode() {
-		return this.territoryCode;
-	}
-
-	public void setTerritoryCode(int territoryCode) {
-		this.territoryCode = territoryCode;
 	}
 
 	public Set getEstaEns() {

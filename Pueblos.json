@@ -1,0 +1,2511 @@
+[ {
+  "documentName" : "Abadiño",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Abadiño Abadiño Abadiño Abadiño Abadiño Abadiño Abadiño",
+  "municipalitycode" : "001 001 001 001 001 001 001",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Abaltzisketa",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.0475822",
+  "lonwgs84" : "-2.1053881",
+  "municipality" : "Abaltzisketa",
+  "municipalitycode" : "1",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Abanto y Ciérvana-Abanto Zierbena",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena Abanto y Ciérvana-Abanto Zierbena",
+  "municipalitycode" : "002 002 002 002 002 002 002 002 002 002 002 002 002 002 002 002 002 002",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Aduna",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.2037922",
+  "lonwgs84" : "-2.0500787",
+  "municipality" : "Aduna",
+  "municipalitycode" : "2",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Aia",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca,Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Aia Aia Aia Aia Aia Aia Aia Aia Aia Aia Aia Aia",
+  "municipalitycode" : "016 016 016 016 016 016 016 016 016 016 016 016",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20 20 20 20 20 20 20"
+}, {
+  "documentName" : "Aizarnazabal",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Aizarnazabal Aizarnazabal Aizarnazabal Aizarnazabal Aizarnazabal",
+  "municipalitycode" : "003 003 003 003 003",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20"
+}, {
+  "documentName" : "Ajangiz",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Ajangiz Ajangiz",
+  "municipalitycode" : "911 911",
+  "territory" : "Bizkaia Bizkaia",
+  "territorycode" : "48 48"
+}, {
+  "documentName" : "Albiztur",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.1297228",
+  "lonwgs84" : "-2.1371801",
+  "municipality" : "Albiztur",
+  "municipalitycode" : "4",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Alegia",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Alegia Alegia Alegia",
+  "municipalitycode" : "005 005 005",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20"
+}, {
+  "documentName" : "Alegría-Dulantzi",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Alegría-Dulantzi Alegría-Dulantzi",
+  "municipalitycode" : "001 001",
+  "territory" : "Araba/Álava Araba/Álava",
+  "territorycode" : "01 01"
+}, {
+  "documentName" : "Alkiza",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.1724342",
+  "lonwgs84" : "-2.1094362",
+  "municipality" : "Alkiza",
+  "municipalitycode" : "6",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Alonsotegi",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Alonsotegi Alonsotegi Alonsotegi",
+  "municipalitycode" : "912 912 912",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Altzaga",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.06449",
+  "lonwgs84" : "-2.153833",
+  "municipality" : "Altzaga",
+  "municipalitycode" : "906",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Altzo",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.1000723",
+  "lonwgs84" : "-2.0839046",
+  "municipality" : "Altzo",
+  "municipalitycode" : "7",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Amezketa",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Amezketa Amezketa Amezketa",
+  "municipalitycode" : "008 008 008",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20"
+}, {
+  "documentName" : "Amorebieta-Etxano",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Amorebieta-Etxano Amorebieta-Etxano Amorebieta-Etxano Amorebieta-Etxano Amorebieta-Etxano Amorebieta-Etxano Amorebieta-Etxano Amorebieta-Etxano Amorebieta-Etxano",
+  "municipalitycode" : "003 003 003 003 003 003 003 003 003",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Amoroto",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Amoroto Amoroto Amoroto Amoroto",
+  "municipalitycode" : "004 004 004 004",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Amurrio",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Amurrio Amurrio Amurrio Amurrio Amurrio Amurrio Amurrio Amurrio Amurrio Amurrio",
+  "municipalitycode" : "002 002 002 002 002 002 002 002 002 002",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Andoain",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Andoain Andoain Andoain Andoain Andoain",
+  "municipalitycode" : "009 009 009 009 009",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20"
+}, {
+  "documentName" : "Anoeta",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.1614674",
+  "lonwgs84" : "-2.0706951",
+  "municipality" : "Anoeta",
+  "municipalitycode" : "10",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Antzuola",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.0994407",
+  "lonwgs84" : "-2.3817472",
+  "municipality" : "Antzuola",
+  "municipalitycode" : "11",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Arakaldo",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.152904",
+  "lonwgs84" : "-2.940295",
+  "municipality" : "Arakaldo",
+  "municipalitycode" : "5",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Arama",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.0636373",
+  "lonwgs84" : "-2.1655576",
+  "municipality" : "Arama",
+  "municipalitycode" : "12",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Aramaio",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Aramaio Aramaio Aramaio Aramaio Aramaio Aramaio Aramaio Aramaio Aramaio",
+  "municipalitycode" : "003 003 003 003 003 003 003 003 003",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Arantzazu",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Arantzazu Arantzazu Arantzazu",
+  "municipalitycode" : "006 006 006",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Areatza",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Areatza Areatza Areatza",
+  "municipalitycode" : "093 093 093",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Aretxabaleta",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Aretxabaleta Aretxabaleta Aretxabaleta Aretxabaleta Aretxabaleta Aretxabaleta Aretxabaleta Aretxabaleta Aretxabaleta Aretxabaleta",
+  "municipalitycode" : "013 013 013 013 013 013 013 013 013 013",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20 20 20 20 20"
+}, {
+  "documentName" : "Armiñón",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Armiñón Armiñón Armiñón",
+  "municipalitycode" : "006 006 006",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01"
+}, {
+  "documentName" : "Arraia-Maeztu",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Arraia-Maeztu Arraia-Maeztu Arraia-Maeztu Arraia-Maeztu Arraia-Maeztu Arraia-Maeztu Arraia-Maeztu Arraia-Maeztu Arraia-Maeztu Arraia-Maeztu Arraia-Maeztu Arraia-Maeztu Arraia-Maeztu Arraia-Maeztu Arraia-Maeztu Arraia-Maeztu",
+  "municipalitycode" : "037 037 037 037 037 037 037 037 037 037 037 037 037 037 037 037",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Arrankudiaga",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Arrankudiaga Arrankudiaga Arrankudiaga Arrankudiaga Arrankudiaga",
+  "municipalitycode" : "009 009 009 009 009",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48"
+}, {
+  "documentName" : "Arrasate/Mondragón",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Arrasate/Mondragón Arrasate/Mondragón Arrasate/Mondragón Arrasate/Mondragón Arrasate/Mondragón Arrasate/Mondragón",
+  "municipalitycode" : "055 055 055 055 055 055",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20"
+}, {
+  "documentName" : "Arratzu",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Arratzu Arratzu",
+  "municipalitycode" : "914 914",
+  "territory" : "Bizkaia Bizkaia",
+  "territorycode" : "48 48"
+}, {
+  "documentName" : "Arrazua-Ubarrundia",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Arratzua-Ubarrundia Arratzua-Ubarrundia Arratzua-Ubarrundia Arratzua-Ubarrundia Arratzua-Ubarrundia Arratzua-Ubarrundia Arratzua-Ubarrundia Arratzua-Ubarrundia Arratzua-Ubarrundia Arratzua-Ubarrundia Arratzua-Ubarrundia",
+  "municipalitycode" : "008 008 008 008 008 008 008 008 008 008 008",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Arrieta",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Arrieta Arrieta Arrieta Arrieta",
+  "municipalitycode" : "010 010 010 010",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Arrigorriaga",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Arrigorriaga Arrigorriaga Arrigorriaga Arrigorriaga",
+  "municipalitycode" : "011 011 011 011",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Artea",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Artea Artea Artea Artea Artea Artea",
+  "municipalitycode" : "023 023 023 023 023 023",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48"
+}, {
+  "documentName" : "Artzentales",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Artzentales Artzentales Artzentales Artzentales Artzentales",
+  "municipalitycode" : "008 008 008 008 008",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48"
+}, {
+  "documentName" : "Artziniega",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Artziniega Artziniega Artziniega Artziniega Artziniega Artziniega Artziniega",
+  "municipalitycode" : "004 004 004 004 004 004 004",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Asparrena",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Asparrena Asparrena Asparrena Asparrena Asparrena Asparrena Asparrena Asparrena Asparrena Asparrena",
+  "municipalitycode" : "009 009 009 009 009 009 009 009 009 009",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Asteasu",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Asteasu Asteasu Asteasu Asteasu Asteasu Asteasu",
+  "municipalitycode" : "014 014 014 014 014 014",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20"
+}, {
+  "documentName" : "Astigarraga",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos,San Sebastián",
+  "latwgs84" : "43.28066802127562",
+  "lonwgs84" : "-1.947645730688464",
+  "municipality" : "Astigarraga",
+  "municipalitycode" : "903",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Ataun",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Ataun Ataun Ataun",
+  "municipalitycode" : "015 015 015",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20"
+}, {
+  "documentName" : "Atxondo",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Atxondo Atxondo Atxondo Atxondo Atxondo Atxondo",
+  "municipalitycode" : "091 091 091 091 091 091",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48"
+}, {
+  "documentName" : "Aulesti",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Aulesti Aulesti Aulesti",
+  "municipalitycode" : "070 070 070",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Ayala/Aiara",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara Ayala/Aiara",
+  "municipalitycode" : "010 010 010 010 010 010 010 010 010 010 010 010 010 010 010 010 010 010 010 010 010 010 010 010",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Azkoitia",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Azkoitia Azkoitia Azkoitia Azkoitia",
+  "municipalitycode" : "017 017 017 017",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20"
+}, {
+  "documentName" : "Azpeitia",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Azpeitia Azpeitia Azpeitia Azpeitia",
+  "municipalitycode" : "018 018 018 018",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20"
+}, {
+  "documentName" : "Añana",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Añana Añana",
+  "municipalitycode" : "049 049",
+  "territory" : "Araba/Álava Araba/Álava",
+  "territorycode" : "01 01"
+}, {
+  "documentName" : "Bakio",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Bakio Bakio Bakio Bakio Bakio Bakio",
+  "municipalitycode" : "012 012 012 012 012 012",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48"
+}, {
+  "documentName" : "Baliarrain",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.069306",
+  "lonwgs84" : "-2.1292347",
+  "municipality" : "Baliarrain",
+  "municipalitycode" : "904",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Balmaseda",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Balmaseda Balmaseda Balmaseda",
+  "municipalitycode" : "090 090 090",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Barakaldo",
+  "templateType" : "Localidades",
+  "marks" : "Bilbao",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Barakaldo Barakaldo",
+  "municipalitycode" : "013 013",
+  "territory" : "Bizkaia Bizkaia",
+  "territorycode" : "48 48"
+}, {
+  "documentName" : "Barrika",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Barrika Barrika",
+  "municipalitycode" : "014 014",
+  "territory" : "Bizkaia Bizkaia",
+  "territorycode" : "48 48"
+}, {
+  "documentName" : "Barrundia",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Barrundia Barrundia Barrundia Barrundia Barrundia Barrundia Barrundia Barrundia Barrundia Barrundia Barrundia Barrundia Barrundia Barrundia",
+  "municipalitycode" : "013 013 013 013 013 013 013 013 013 013 013 013 013 013",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Basauri",
+  "templateType" : "Localidades",
+  "marks" : "Bilbao",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Basauri Basauri Basauri",
+  "municipalitycode" : "015 015 015",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Baños de Ebro/Mañueta",
+  "templateType" : "Localidades",
+  "marks" : "Rioja Alavesa",
+  "latwgs84" : "42.53029",
+  "lonwgs84" : "-2.679144",
+  "municipality" : "Baños de Ebro/Mañueta",
+  "municipalitycode" : "11",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Beasain",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Beasain Beasain Beasain Beasain Beasain Beasain Beasain Beasain Beasain Beasain Beasain Beasain",
+  "municipalitycode" : "019 019 019 019 019 019 019 019 019 019 019 019",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20 20 20 20 20 20 20"
+}, {
+  "documentName" : "Bedia",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Bedia Bedia Bedia Bedia Bedia Bedia Bedia Bedia Bedia",
+  "municipalitycode" : "092 092 092 092 092 092 092 092 092",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Beizama",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.1341913",
+  "lonwgs84" : "-2.2001131",
+  "municipality" : "Beizama",
+  "municipalitycode" : "20",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Belauntza",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.1352829",
+  "lonwgs84" : "-2.0507054",
+  "municipality" : "Belauntza",
+  "municipalitycode" : "21",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Berango",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Berango Berango",
+  "municipalitycode" : "016 016",
+  "territory" : "Bizkaia Bizkaia",
+  "territorycode" : "48 48"
+}, {
+  "documentName" : "Berantevilla",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Berantevilla Berantevilla Berantevilla Berantevilla Berantevilla Berantevilla Berantevilla Berantevilla",
+  "municipalitycode" : "014 014 014 014 014 014 014 014",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Berastegi",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Berastegi Berastegi",
+  "municipalitycode" : "022 022",
+  "territory" : "Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20"
+}, {
+  "documentName" : "Bergara",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Bergara Bergara Bergara Bergara Bergara Bergara Bergara",
+  "municipalitycode" : "074 074 074 074 074 074 074",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20 20"
+}, {
+  "documentName" : "Bermeo",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Bermeo Bermeo Bermeo Bermeo Bermeo Bermeo Bermeo Bermeo Bermeo Bermeo",
+  "municipalitycode" : "017 017 017 017 017 017 017 017 017 017",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Bernedo",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Bernedo Bernedo Bernedo Bernedo Bernedo Bernedo Bernedo Bernedo Bernedo Bernedo Bernedo Bernedo Bernedo",
+  "municipalitycode" : "016 016 016 016 016 016 016 016 016 016 016 016 016",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Berriatua",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Berriatua Berriatua Berriatua Berriatua",
+  "municipalitycode" : "018 018 018 018",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Berriz",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Berriz Berriz Berriz Berriz Berriz Berriz Berriz",
+  "municipalitycode" : "019 019 019 019 019 019 019",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Berrobi",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.1454785",
+  "lonwgs84" : "-2.0263738",
+  "municipality" : "Berrobi",
+  "municipalitycode" : "23",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Bidegoian",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Bidania-Goiatz Bidania-Goiatz",
+  "municipalitycode" : "024 024",
+  "territory" : "Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20"
+}, {
+  "documentName" : "Bilbao",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca,Bilbao",
+  "latwgs84" : "43.256961046580166",
+  "lonwgs84" : "-2.923446364418055",
+  "municipality" : "Bilbao",
+  "municipalitycode" : "20",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Busturia",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca,Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Busturia Busturia",
+  "municipalitycode" : "021 021",
+  "territory" : "Bizkaia Bizkaia",
+  "territorycode" : "48 48"
+}, {
+  "documentName" : "Campezo/Kanpezu",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Campezo/Kanpezu Campezo/Kanpezu Campezo/Kanpezu Campezo/Kanpezu Campezo/Kanpezu",
+  "municipalitycode" : "017 017 017 017 017",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01"
+}, {
+  "documentName" : "Deba",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Deba Deba Deba",
+  "municipalitycode" : "029 029 029",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20"
+}, {
+  "documentName" : "Derio",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Derio Derio Derio Derio Derio Derio",
+  "municipalitycode" : "901 901 901 901 901 901",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48"
+}, {
+  "documentName" : "Dima",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Dima Dima Dima Dima Dima Dima Dima Dima Dima",
+  "municipalitycode" : "026 026 026 026 026 026 026 026 026",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Durango",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.169068",
+  "lonwgs84" : "-2.632655",
+  "municipality" : "Durango",
+  "municipalitycode" : "27",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Ea",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Ea Ea Ea",
+  "municipalitycode" : "028 028 028",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Eibar",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Eibar Eibar Eibar Eibar",
+  "municipalitycode" : "030 030 030 030",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20"
+}, {
+  "documentName" : "Elantxobe",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.403422",
+  "lonwgs84" : "-2.6398",
+  "municipality" : "Elantxobe",
+  "municipalitycode" : "31",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Elburgo/Burgelu",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Elburgo/Burgelu Elburgo/Burgelu Elburgo/Burgelu Elburgo/Burgelu Elburgo/Burgelu Elburgo/Burgelu",
+  "municipalitycode" : "021 021 021 021 021 021",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01"
+}, {
+  "documentName" : "Elciego",
+  "templateType" : "Localidades",
+  "marks" : "Rioja Alavesa",
+  "latwgs84" : "42.515072",
+  "lonwgs84" : "-2.618277",
+  "municipality" : "Elciego",
+  "municipalitycode" : "22",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Elduain",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.140712",
+  "lonwgs84" : "-2.0004883",
+  "municipality" : "Elduain",
+  "municipalitycode" : "31",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Elgeta",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.1365716",
+  "lonwgs84" : "-2.4873921",
+  "municipality" : "Elgeta",
+  "municipalitycode" : "33",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Elgoibar",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Elgoibar Elgoibar Elgoibar Elgoibar Elgoibar Elgoibar",
+  "municipalitycode" : "032 032 032 032 032 032",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20"
+}, {
+  "documentName" : "Elorrio",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Elorrio Elorrio Elorrio Elorrio Elorrio Elorrio Elorrio Elorrio Elorrio Elorrio",
+  "municipalitycode" : "032 032 032 032 032 032 032 032 032 032",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Elvillar/Bilar",
+  "templateType" : "Localidades",
+  "marks" : "Rioja Alavesa",
+  "latwgs84" : "42.570497",
+  "lonwgs84" : "-2.544915",
+  "municipality" : "Elvillar/Bilar",
+  "municipalitycode" : "23",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Erandio",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Erandio Erandio Erandio Erandio Erandio Erandio Erandio",
+  "municipalitycode" : "902 902 902 902 902 902 902",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Ereño",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Ereño Ereño Ereño Ereño",
+  "municipalitycode" : "033 033 033 033",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Ermua",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.1866423",
+  "lonwgs84" : "-2.5026072",
+  "municipality" : "Ermua",
+  "municipalitycode" : "34",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Errenteria",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.312752",
+  "lonwgs84" : "-1.899633",
+  "municipality" : "Errenteria",
+  "municipalitycode" : "67",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Errezil",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Errezil Errezil Errezil Errezil Errezil Errezil Errezil",
+  "municipalitycode" : "066 066 066 066 066 066 066",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20 20"
+}, {
+  "documentName" : "Errigoiti",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Errigoiti Errigoiti Errigoiti Errigoiti",
+  "municipalitycode" : "079 079 079 079",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Eskoriatza",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Eskoriatza Eskoriatza Eskoriatza Eskoriatza Eskoriatza Eskoriatza Eskoriatza Eskoriatza",
+  "municipalitycode" : "034 034 034 034 034 034 034 034",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20 20 20"
+}, {
+  "documentName" : "Etxebarri",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Etxebarri Etxebarri Etxebarri",
+  "municipalitycode" : "029 029 029",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Etxebarria",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Etxebarria Etxebarria Etxebarria Etxebarria Etxebarria",
+  "municipalitycode" : "030 030 030 030 030",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48"
+}, {
+  "documentName" : "Ezkio",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Ezkio-Itsaso Ezkio-Itsaso Ezkio-Itsaso Ezkio-Itsaso Ezkio-Itsaso Ezkio-Itsaso",
+  "municipalitycode" : "035 035 035 035 035 035",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20"
+}, {
+  "documentName" : "Forua",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca,Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Forua Forua",
+  "municipalitycode" : "906 906",
+  "territory" : "Bizkaia Bizkaia",
+  "territorycode" : "48 48"
+}, {
+  "documentName" : "Fruiz",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Fruiz Fruiz Fruiz Fruiz",
+  "municipalitycode" : "035 035 035 035",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Gabiria",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Gabiria Gabiria Gabiria",
+  "municipalitycode" : "038 038 038",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20"
+}, {
+  "documentName" : "Gaintza",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.0526286",
+  "lonwgs84" : "-2.1323701",
+  "municipality" : "Gaintza",
+  "municipalitycode" : "37",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Galdakao",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Galdakao Galdakao Galdakao Galdakao Galdakao Galdakao",
+  "municipalitycode" : "036 036 036 036 036 036",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48"
+}, {
+  "documentName" : "Galdames",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Galdames Galdames Galdames Galdames Galdames",
+  "municipalitycode" : "037 037 037 037 037",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48"
+}, {
+  "documentName" : "Gamiz-Fika",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Gamiz-Fika Gamiz-Fika Gamiz-Fika Gamiz-Fika",
+  "municipalitycode" : "038 038 038 038",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Garai",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Garai Garai Garai",
+  "municipalitycode" : "039 039 039",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Gatika",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Gatika Gatika Gatika Gatika Gatika Gatika Gatika Gatika Gatika",
+  "municipalitycode" : "040 040 040 040 040 040 040 040 040",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Gautegiz Arteaga",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca,Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Gautegiz Arteaga Gautegiz Arteaga Gautegiz Arteaga Gautegiz Arteaga Gautegiz Arteaga",
+  "municipalitycode" : "041 041 041 041 041",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48"
+}, {
+  "documentName" : "Gaztelu",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.1165792",
+  "lonwgs84" : "-2.0222784",
+  "municipality" : "Gaztelu",
+  "municipalitycode" : "907",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Gernika-Lumo",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Gernika-Lumo Gernika-Lumo Gernika-Lumo Gernika-Lumo Gernika-Lumo",
+  "municipalitycode" : "046 046 046 046 046",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48"
+}, {
+  "documentName" : "Getaria",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Getaria Getaria Getaria Getaria Getaria",
+  "municipalitycode" : "039 039 039 039 039",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20"
+}, {
+  "documentName" : "Getxo",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Getxo Getxo Getxo",
+  "municipalitycode" : "044 044 044",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Gizaburuaga",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Gizaburuaga Gizaburuaga Gizaburuaga Gizaburuaga",
+  "municipalitycode" : "047 047 047 047",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Gordexola",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Gordexola Gordexola Gordexola Gordexola Gordexola",
+  "municipalitycode" : "042 042 042 042 042",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48"
+}, {
+  "documentName" : "Gorliz",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Gorliz Gorliz Gorliz Gorliz",
+  "municipalitycode" : "043 043 043 043",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Güeñes",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Güeñes Güeñes Güeñes Güeñes",
+  "municipalitycode" : "045 045 045 045",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Harana/Valle de Arana",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Harana/Valle de Arana Harana/Valle de Arana Harana/Valle de Arana Harana/Valle de Arana",
+  "municipalitycode" : "056 056 056 056",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01"
+}, {
+  "documentName" : "Hernani",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos,San Sebastián",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Hernani Hernani Hernani Hernani Hernani Hernani Hernani Hernani Hernani Hernani Hernani",
+  "municipalitycode" : "040 040 040 040 040 040 040 040 040 040 040",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20 20 20 20 20 20"
+}, {
+  "documentName" : "Hernialde",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.1544672",
+  "lonwgs84" : "-2.0850252",
+  "municipality" : "Hernialde",
+  "municipalitycode" : "41",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Hondarribia",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Hondarribia Hondarribia Hondarribia Hondarribia Hondarribia Hondarribia Hondarribia Hondarribia",
+  "municipalitycode" : "036 036 036 036 036 036 036 036",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20 20 20"
+}, {
+  "documentName" : "Ibarra",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.1323447",
+  "lonwgs84" : "-2.0654624",
+  "municipality" : "Ibarra",
+  "municipalitycode" : "42",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Ibarrangelu",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Ibarrangelu Ibarrangelu",
+  "municipalitycode" : "048 048",
+  "territory" : "Bizkaia Bizkaia",
+  "territorycode" : "48 48"
+}, {
+  "documentName" : "Idiazabal",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Idiazabal Idiazabal",
+  "municipalitycode" : "043 043",
+  "territory" : "Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20"
+}, {
+  "documentName" : "Igorre",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Igorre Igorre Igorre Igorre Igorre Igorre Igorre",
+  "municipalitycode" : "094 094 094 094 094 094 094",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Ikaztegieta",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.0949601",
+  "lonwgs84" : "-2.1238998",
+  "municipality" : "Ikaztegieta",
+  "municipalitycode" : "44",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Irun",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Irun Irun",
+  "municipalitycode" : "045 045",
+  "territory" : "Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20"
+}, {
+  "documentName" : "Irura",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.16512263158295",
+  "lonwgs84" : "-2.0654296875",
+  "municipality" : "Irura",
+  "municipalitycode" : "46",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Iruraiz-Gauna",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Iruraiz-Gauna Iruraiz-Gauna Iruraiz-Gauna Iruraiz-Gauna Iruraiz-Gauna Iruraiz-Gauna Iruraiz-Gauna Iruraiz-Gauna Iruraiz-Gauna Iruraiz-Gauna Iruraiz-Gauna",
+  "municipalitycode" : "027 027 027 027 027 027 027 027 027 027 027",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Iruña Oka /Iruña de Oca",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Iruña Oka/Iruña de Oca Iruña Oka/Iruña de Oca Iruña Oka/Iruña de Oca Iruña Oka/Iruña de Oca Iruña Oka/Iruña de Oca",
+  "municipalitycode" : "901 901 901 901 901",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01"
+}, {
+  "documentName" : "Ispaster",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca,Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Ispaster Ispaster Ispaster Ispaster Ispaster Ispaster Ispaster",
+  "municipalitycode" : "049 049 049 049 049 049 049",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Itsasondo",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.0669322",
+  "lonwgs84" : "-2.1673935",
+  "municipality" : "Itsasondo",
+  "municipalitycode" : "47",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Iurreta",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Iurreta Iurreta Iurreta Iurreta",
+  "municipalitycode" : "910 910 910 910",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Izurtza",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.152273",
+  "lonwgs84" : "-2.6419778",
+  "municipality" : "Izurtza",
+  "municipalitycode" : "50",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Kortezubi",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Kortezubi Kortezubi Kortezubi Kortezubi",
+  "municipalitycode" : "907 907 907 907",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Kripan",
+  "templateType" : "Localidades",
+  "marks" : "Rioja Alavesa",
+  "latwgs84" : "42.591666",
+  "lonwgs84" : "-2.516079",
+  "municipality" : "Kripan",
+  "municipalitycode" : "19",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Kuartango",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Kuartango Kuartango Kuartango Kuartango Kuartango Kuartango Kuartango Kuartango Kuartango Kuartango Kuartango Kuartango Kuartango Kuartango Kuartango Kuartango Kuartango Kuartango Kuartango Kuartango",
+  "municipalitycode" : "020 020 020 020 020 020 020 020 020 020 020 020 020 020 020 020 020 020 020 020",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Labastida",
+  "templateType" : "Localidades",
+  "marks" : "Rioja Alavesa",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Labastida/Bastida Labastida/Bastida",
+  "municipalitycode" : "028 028",
+  "territory" : "Araba/Álava Araba/Álava",
+  "territorycode" : "01 01"
+}, {
+  "documentName" : "Lagrán",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Lagrán Lagrán Lagrán",
+  "municipalitycode" : "030 030 030",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01"
+}, {
+  "documentName" : "Laguardia",
+  "templateType" : "Localidades",
+  "marks" : "Rioja Alavesa",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Laguardia Laguardia Laguardia Laguardia",
+  "municipalitycode" : "031 031 031 031",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01"
+}, {
+  "documentName" : "Lanciego/Lantziego",
+  "templateType" : "Localidades",
+  "marks" : "Rioja Alavesa",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Lanciego/Lantziego Lanciego/Lantziego Lanciego/Lantziego",
+  "municipalitycode" : "032 032 032",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01"
+}, {
+  "documentName" : "Lanestosa",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.221169",
+  "lonwgs84" : "-3.439148",
+  "municipality" : "Lanestosa",
+  "municipalitycode" : "51",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Lantarón",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Lantarón Lantarón Lantarón Lantarón Lantarón Lantarón Lantarón Lantarón Lantarón Lantarón Lantarón Lantarón",
+  "municipalitycode" : "902 902 902 902 902 902 902 902 902 902 902 902",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Lapuebla de Labarca",
+  "templateType" : "Localidades",
+  "marks" : "Rioja Alavesa",
+  "latwgs84" : "42.494702",
+  "lonwgs84" : "-2.575319",
+  "municipality" : "Lapuebla de Labarca",
+  "municipalitycode" : "33",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Larrabetzu",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Larrabetzu Larrabetzu Larrabetzu",
+  "municipalitycode" : "052 052 052",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Larraul",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.187739",
+  "lonwgs84" : "-2.102534",
+  "municipality" : "Larraul",
+  "municipalitycode" : "48",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Lasarte-Oria",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos,San Sebastián",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Lasarte-Oria Lasarte-Oria Lasarte-Oria Lasarte-Oria Lasarte-Oria",
+  "municipalitycode" : "902 902 902 902 902",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20"
+}, {
+  "documentName" : "Laukiz",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Laukiz Laukiz Laukiz Laukiz Laukiz",
+  "municipalitycode" : "053 053 053 053 053",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48"
+}, {
+  "documentName" : "Lazkao",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Lazkao Lazkao Lazkao Lazkao",
+  "municipalitycode" : "049 049 049 049",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20"
+}, {
+  "documentName" : "Leaburu",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Leaburu Leaburu",
+  "municipalitycode" : "050 050",
+  "territory" : "Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20"
+}, {
+  "documentName" : "Legazpi",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Legazpi Legazpi Legazpi",
+  "municipalitycode" : "051 051 051",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20"
+}, {
+  "documentName" : "Legorreta",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.0857943",
+  "lonwgs84" : "-2.1509094",
+  "municipality" : "Legorreta",
+  "municipalitycode" : "52",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Legutio",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Legutio Legutio Legutio Legutio Legutio",
+  "municipalitycode" : "058 058 058 058 058",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01"
+}, {
+  "documentName" : "Leintz-Gatzaga",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "42.987112",
+  "lonwgs84" : "-2.568626",
+  "municipality" : "Leintz Gatzaga",
+  "municipalitycode" : "68",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Leioa",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos,Bilbao",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Leioa Leioa Leioa",
+  "municipalitycode" : "054 054 054",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Lekeitio",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.362054399640236",
+  "lonwgs84" : "-2.4959401779099153",
+  "municipality" : "Lekeitio",
+  "municipalitycode" : "57",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Lemoa",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.2087592",
+  "lonwgs84" : "-2.7741164",
+  "municipality" : "Lemoa",
+  "municipalitycode" : "55",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Lemoiz",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Lemoiz Lemoiz Lemoiz Lemoiz",
+  "municipalitycode" : "056 056 056 056",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Leza",
+  "templateType" : "Localidades",
+  "marks" : "Rioja Alavesa",
+  "latwgs84" : "42.566068",
+  "lonwgs84" : "-2.633635",
+  "municipality" : "Leza",
+  "municipalitycode" : "34",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Lezama",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Lezama Lezama Lezama",
+  "municipalitycode" : "081 081 081",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Lezo",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca,Montes y Valles vascos",
+  "latwgs84" : "43.321127",
+  "lonwgs84" : "-1.898775",
+  "municipality" : "Lezo",
+  "municipalitycode" : "53",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Lizartza",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.1037203",
+  "lonwgs84" : "-2.0342544",
+  "municipality" : "Lizartza",
+  "municipalitycode" : "54",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Llodio/Laudio",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.14533599787141",
+  "lonwgs84" : "-2.965044936523441",
+  "municipality" : "Laudio/Llodio",
+  "municipalitycode" : "36",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Loiu",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Loiu Loiu Loiu Loiu",
+  "municipalitycode" : "903 903 903 903",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Mallabia",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Mallabia Mallabia Mallabia Mallabia Mallabia Mallabia Mallabia Mallabia",
+  "municipalitycode" : "058 058 058 058 058 058 058 058",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Markina-Xemein",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Markina-Xemein Markina-Xemein Markina-Xemein Markina-Xemein Markina-Xemein Markina-Xemein Markina-Xemein Markina-Xemein Markina-Xemein",
+  "municipalitycode" : "060 060 060 060 060 060 060 060 060",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Maruri-Jatabe",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Maruri-Jatabe Maruri-Jatabe",
+  "municipalitycode" : "061 061",
+  "territory" : "Bizkaia Bizkaia",
+  "territorycode" : "48 48"
+}, {
+  "documentName" : "Mañaria",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.1374845",
+  "lonwgs84" : "-2.6611352",
+  "municipality" : "Mañaria",
+  "municipalitycode" : "59",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Mendaro",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Mendaro Mendaro Mendaro Mendaro",
+  "municipalitycode" : "901 901 901 901",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20"
+}, {
+  "documentName" : "Mendata",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Mendata Mendata Mendata Mendata",
+  "municipalitycode" : "062 062 062 062",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Mendexa",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca,Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Mendexa Mendexa Mendexa Mendexa",
+  "municipalitycode" : "063 063 063 063",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Meñaka",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Meñaka Meñaka Meñaka Meñaka",
+  "municipalitycode" : "064 064 064 064",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Moreda de Álava",
+  "templateType" : "Localidades",
+  "marks" : "Rioja Alavesa",
+  "latwgs84" : "42.524572",
+  "lonwgs84" : "-2.40811",
+  "municipality" : "Moreda de Álava/Moreda Araba",
+  "municipalitycode" : "39",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Morga",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Morga Morga Morga Morga Morga Morga",
+  "municipalitycode" : "066 066 066 066 066 066",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48"
+}, {
+  "documentName" : "Mundaka",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Mundaka Mundaka Mundaka",
+  "municipalitycode" : "068 068 068",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Mungia",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Mungia Mungia Mungia Mungia Mungia Mungia",
+  "municipalitycode" : "069 069 069 069 069 069",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48"
+}, {
+  "documentName" : "Munitibar-Arbatzegi-Gerrikaitz",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Munitibar-Arbatzegi Gerrikaitz Munitibar-Arbatzegi Gerrikaitz Munitibar-Arbatzegi Gerrikaitz Munitibar-Arbatzegi Gerrikaitz Munitibar-Arbatzegi Gerrikaitz",
+  "municipalitycode" : "007 007 007 007 007",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48"
+}, {
+  "documentName" : "Murueta",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca,Montes y Valles vascos",
+  "latwgs84" : "43.354463",
+  "lonwgs84" : "-2.684153",
+  "municipality" : "Murueta",
+  "municipalitycode" : "908",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Muskiz",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Muskiz Muskiz Muskiz Muskiz Muskiz Muskiz",
+  "municipalitycode" : "071 071 071 071 071 071",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48"
+}, {
+  "documentName" : "Mutiloa",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.02238",
+  "lonwgs84" : "-2.272826",
+  "municipality" : "Mutiloa",
+  "municipalitycode" : "57",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Mutriku",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Mutriku Mutriku Mutriku Mutriku Mutriku Mutriku Mutriku Mutriku Mutriku Mutriku",
+  "municipalitycode" : "056 056 056 056 056 056 056 056 056 056",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20 20 20 20 20"
+}, {
+  "documentName" : "Muxika",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Muxika Muxika Muxika Muxika Muxika Muxika Muxika Muxika",
+  "municipalitycode" : "067 067 067 067 067 067 067 067",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Nabarniz",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Nabarniz Nabarniz Nabarniz Nabarniz Nabarniz Nabarniz",
+  "municipalitycode" : "909 909 909 909 909 909",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48"
+}, {
+  "documentName" : "Navaridas",
+  "templateType" : "Localidades",
+  "marks" : "Rioja Alavesa",
+  "latwgs84" : "42.545171",
+  "lonwgs84" : "-2.624532",
+  "municipality" : "Navaridas",
+  "municipalitycode" : "41",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Oiartzun",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Oiartzun Oiartzun Oiartzun Oiartzun Oiartzun Oiartzun Oiartzun",
+  "municipalitycode" : "063 063 063 063 063 063 063",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20 20"
+}, {
+  "documentName" : "Okondo",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Okondo Okondo Okondo Okondo Okondo Okondo",
+  "municipalitycode" : "042 042 042 042 042 042",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01"
+}, {
+  "documentName" : "Olaberria",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Olaberria Olaberria",
+  "municipalitycode" : "058 058",
+  "territory" : "Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20"
+}, {
+  "documentName" : "Ondarroa",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.320698",
+  "lonwgs84" : "-2.420475",
+  "municipality" : "Ondarroa",
+  "municipalitycode" : "73",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Ordizia",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.0541983",
+  "lonwgs84" : "-2.1781155",
+  "municipality" : "Ordizia",
+  "municipalitycode" : "76",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Orduña",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Urduña/Orduña Urduña/Orduña Urduña/Orduña Urduña/Orduña Urduña/Orduña Urduña/Orduña",
+  "municipalitycode" : "074 074 074 074 074 074",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48"
+}, {
+  "documentName" : "Orendain",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.079721",
+  "lonwgs84" : "-2.1142902",
+  "municipality" : "Orendain",
+  "municipalitycode" : "905",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Orexa",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.0938813",
+  "lonwgs84" : "-2.0113921",
+  "municipality" : "Orexa",
+  "municipalitycode" : "60",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Orio",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.278322",
+  "lonwgs84" : "-2.126597",
+  "municipality" : "Orio",
+  "municipalitycode" : "61",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Ormaiztegi",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.0427347",
+  "lonwgs84" : "-2.2558477",
+  "municipality" : "Ormaiztegi",
+  "municipalitycode" : "62",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Orozko",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Orozko Orozko Orozko Orozko Orozko Orozko Orozko Orozko",
+  "municipalitycode" : "075 075 075 075 075 075 075 075",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Ortuella",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Ortuella Ortuella Ortuella Ortuella Ortuella Ortuella",
+  "municipalitycode" : "083 083 083 083 083 083",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48"
+}, {
+  "documentName" : "Otxandio",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Otxandio Otxandio Otxandio",
+  "municipalitycode" : "072 072 072",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Oyón-Oion",
+  "templateType" : "Localidades",
+  "marks" : "Rioja Alavesa",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Oyón-Oion Oyón-Oion Oyón-Oion",
+  "municipalitycode" : "043 043 043",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01"
+}, {
+  "documentName" : "Oñati",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Oñati Oñati Oñati Oñati Oñati Oñati Oñati Oñati Oñati Oñati Oñati Oñati Oñati Oñati Oñati Oñati Oñati",
+  "municipalitycode" : "059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20"
+}, {
+  "documentName" : "Pasaia",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Pasaia Pasaia Pasaia",
+  "municipalitycode" : "064 064 064",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20"
+}, {
+  "documentName" : "Peñacerrada-Urizaharra",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Peñacerrada-Urizaharra Peñacerrada-Urizaharra Peñacerrada-Urizaharra Peñacerrada-Urizaharra Peñacerrada-Urizaharra Peñacerrada-Urizaharra",
+  "municipalitycode" : "044 044 044 044 044 044",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01"
+}, {
+  "documentName" : "Plentzia",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Plentzia Plentzia Plentzia Plentzia",
+  "municipalitycode" : "077 077 077 077",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Portugalete",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca,Bilbao",
+  "latwgs84" : "43.320624",
+  "lonwgs84" : "-3.020331",
+  "municipality" : "Portugalete",
+  "municipalitycode" : "78",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Ribera Alta",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta Erriberagoitia/Ribera Alta",
+  "municipalitycode" : "046 046 046 046 046 046 046 046 046 046 046 046 046 046 046 046 046 046 046 046 046 046 046 046 046",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Ribera Baja/Erriberabeitia",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Erriberabeitia Erriberabeitia Erriberabeitia Erriberabeitia Erriberabeitia Erriberabeitia",
+  "municipalitycode" : "047 047 047 047 047 047",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01"
+}, {
+  "documentName" : "Salvatierra/Agurain",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Agurain/Salvatierra Agurain/Salvatierra Agurain/Salvatierra Agurain/Salvatierra Agurain/Salvatierra Agurain/Salvatierra",
+  "municipalitycode" : "051 051 051 051 051 051",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01"
+}, {
+  "documentName" : "Samaniego",
+  "templateType" : "Localidades",
+  "marks" : "Rioja Alavesa",
+  "latwgs84" : "42.569853",
+  "lonwgs84" : "-2.680179",
+  "municipality" : "Samaniego",
+  "municipalitycode" : "52",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "San Millán",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "San Millán/Donemiliaga San Millán/Donemiliaga San Millán/Donemiliaga San Millán/Donemiliaga San Millán/Donemiliaga San Millán/Donemiliaga San Millán/Donemiliaga San Millán/Donemiliaga San Millán/Donemiliaga San Millán/Donemiliaga San Millán/Donemiliaga San Millán/Donemiliaga San Millán/Donemiliaga San Millán/Donemiliaga San Millán/Donemiliaga",
+  "municipalitycode" : "053 053 053 053 053 053 053 053 053 053 053 053 053 053 053",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "San Sebastián",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca,San Sebastián",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Donostia / San Sebastián Donostia / San Sebastián Donostia / San Sebastián Donostia / San Sebastián Donostia / San Sebastián",
+  "municipalitycode" : "069 069 069 069 069",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20"
+}, {
+  "documentName" : "Santurtzi",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Santurtzi Santurtzi Santurtzi",
+  "municipalitycode" : "082 082 082",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Segura",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.0092164",
+  "lonwgs84" : "-2.2525193",
+  "municipality" : "Segura",
+  "municipalitycode" : "70",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Sestao",
+  "templateType" : "Localidades",
+  "marks" : "Bilbao",
+  "latwgs84" : "43.3096349",
+  "lonwgs84" : "-3.0069397",
+  "municipality" : "Sestao",
+  "municipalitycode" : "84",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Sondika",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Sondika Sondika Sondika Sondika",
+  "municipalitycode" : "904 904 904 904",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Sopela",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Sopela Sopela",
+  "municipalitycode" : "085 085",
+  "territory" : "Bizkaia Bizkaia",
+  "territorycode" : "48 48"
+}, {
+  "documentName" : "Sopuerta",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Sopuerta Sopuerta Sopuerta Sopuerta Sopuerta Sopuerta Sopuerta Sopuerta Sopuerta Sopuerta Sopuerta Sopuerta",
+  "municipalitycode" : "086 086 086 086 086 086 086 086 086 086 086 086",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Soraluze-Placencia de las Armas",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.1754299",
+  "lonwgs84" : "-2.4124943",
+  "municipality" : "Soraluze-Placencia de las Armas",
+  "municipalitycode" : "65",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Sukarrieta",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca,Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Sukarrieta Sukarrieta Sukarrieta Sukarrieta",
+  "municipalitycode" : "076 076 076 076",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Tolosa",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Tolosa Tolosa Tolosa Tolosa Tolosa Tolosa Tolosa Tolosa Tolosa Tolosa",
+  "municipalitycode" : "071 071 071 071 071 071 071 071 071 071",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20 20 20 20 20"
+}, {
+  "documentName" : "Trucios-Turtzioz",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Trucios-Turtzioz Trucios-Turtzioz Trucios-Turtzioz Trucios-Turtzioz",
+  "municipalitycode" : "087 087 087 087",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Ubide",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Ubide Ubide",
+  "municipalitycode" : "088 088",
+  "territory" : "Bizkaia Bizkaia",
+  "territorycode" : "48 48"
+}, {
+  "documentName" : "Ugao-Miraballes",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Ugao-Miraballes Ugao-Miraballes Ugao-Miraballes",
+  "municipalitycode" : "065 065 065",
+  "territory" : "Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48"
+}, {
+  "documentName" : "Urduliz",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Urduliz Urduliz Urduliz Urduliz Urduliz",
+  "municipalitycode" : "089 089 089 089 089",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48"
+}, {
+  "documentName" : "Urkabustaiz",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Urkabustaiz Urkabustaiz Urkabustaiz Urkabustaiz Urkabustaiz Urkabustaiz Urkabustaiz Urkabustaiz Urkabustaiz Urkabustaiz",
+  "municipalitycode" : "054 054 054 054 054 054 054 054 054 054",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Urnieta",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.2481997",
+  "lonwgs84" : "-1.9905166",
+  "municipality" : "Urnieta",
+  "municipalitycode" : "72",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Urretxu",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.092282",
+  "lonwgs84" : "-2.314383",
+  "municipality" : "Urretxu",
+  "municipalitycode" : "77",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Usurbil",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Usurbil Usurbil Usurbil Usurbil Usurbil Usurbil",
+  "municipalitycode" : "073 073 073 073 073 073",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20"
+}, {
+  "documentName" : "Valdegovía",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea Valdegovía/Gaubea",
+  "municipalitycode" : "055 055 055 055 055 055 055 055 055 055 055 055 055 055 055 055 055 055 055 055 055 055 055 055 055 055 055 055 055 055",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Valle de Carranza",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza Karrantza Harana/Valle de Carranza",
+  "municipalitycode" : "022 022 022 022 022 022 022 022 022 022 022 022 022 022 022 022 022 022 022 022 022 022 022 022 022 022",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Valle de Trápaga-Trapagaran",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Valle de Trápaga-Trapagaran Valle de Trápaga-Trapagaran Valle de Trápaga-Trapagaran Valle de Trápaga-Trapagaran Valle de Trápaga-Trapagaran Valle de Trápaga-Trapagaran Valle de Trápaga-Trapagaran Valle de Trápaga-Trapagaran Valle de Trápaga-Trapagaran Valle de Trápaga-Trapagaran",
+  "municipalitycode" : "080 080 080 080 080 080 080 080 080 080",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Villabona",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Villabona Villabona",
+  "municipalitycode" : "075 075",
+  "territory" : "Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20"
+}, {
+  "documentName" : "Villabuena de Álava",
+  "templateType" : "Localidades",
+  "marks" : "Rioja Alavesa",
+  "latwgs84" : "42.546724",
+  "lonwgs84" : "-2.664435",
+  "municipality" : "Villabuena de Álava/Eskuernaga",
+  "municipalitycode" : "57",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Vitoria-Gasteiz",
+  "templateType" : "Localidades",
+  "marks" : "Vitoria-Gasteiz",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz Vitoria-Gasteiz",
+  "municipalitycode" : "059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059 059",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Yécora",
+  "templateType" : "Localidades",
+  "marks" : "Rioja Alavesa",
+  "latwgs84" : "42.569303",
+  "lonwgs84" : "-2.4700643",
+  "municipality" : "Yécora/Iekora",
+  "municipalitycode" : "60",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Zaldibar",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zaldibar Zaldibar Zaldibar Zaldibar",
+  "municipalitycode" : "095 095 095 095",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Zaldibia",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.0379638",
+  "lonwgs84" : "-2.1508942",
+  "municipality" : "Zaldibia",
+  "municipalitycode" : "78",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Zalduondo",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "42.885626",
+  "lonwgs84" : "-2.347254",
+  "municipality" : "Zalduondo",
+  "municipalitycode" : "61",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Zalla",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zalla Zalla Zalla Zalla Zalla",
+  "municipalitycode" : "096 096 096 096 096",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48"
+}, {
+  "documentName" : "Zambrana",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zambrana Zambrana Zambrana Zambrana",
+  "municipalitycode" : "062 062 062 062",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01"
+}, {
+  "documentName" : "Zamudio",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zamudio Zamudio Zamudio Zamudio",
+  "municipalitycode" : "905 905 905 905",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48"
+}, {
+  "documentName" : "Zaratamo",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zaratamo Zaratamo Zaratamo Zaratamo Zaratamo",
+  "municipalitycode" : "097 097 097 097 097",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48"
+}, {
+  "documentName" : "Zarautz",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zarautz Zarautz Zarautz Zarautz",
+  "municipalitycode" : "079 079 079 079",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20"
+}, {
+  "documentName" : "Zeanuri",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zeanuri Zeanuri Zeanuri Zeanuri Zeanuri Zeanuri Zeanuri Zeanuri Zeanuri",
+  "municipalitycode" : "024 024 024 024 024 024 024 024 024",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Zeberio",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zeberio Zeberio Zeberio Zeberio Zeberio Zeberio Zeberio Zeberio Zeberio Zeberio",
+  "municipalitycode" : "025 025 025 025 025 025 025 025 025 025",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48 48 48 48 48"
+}, {
+  "documentName" : "Zegama",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zegama Zegama Zegama Zegama Zegama",
+  "municipalitycode" : "025 025 025 025 025",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20"
+}, {
+  "documentName" : "Zerain",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.0121191",
+  "lonwgs84" : "-2.2741177",
+  "municipality" : "Zerain",
+  "municipalitycode" : "26",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Zestoa",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zestoa Zestoa Zestoa Zestoa Zestoa Zestoa Zestoa",
+  "municipalitycode" : "027 027 027 027 027 027 027",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20 20 20 20 20"
+}, {
+  "documentName" : "Zierbena",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zierbena Zierbena Zierbena Zierbena Zierbena Zierbena",
+  "municipalitycode" : "913 913 913 913 913 913",
+  "territory" : "Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia Bizkaia",
+  "territorycode" : "48 48 48 48 48 48"
+}, {
+  "documentName" : "Zigoitia",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zigoitia Zigoitia Zigoitia Zigoitia Zigoitia Zigoitia Zigoitia Zigoitia Zigoitia Zigoitia Zigoitia Zigoitia Zigoitia Zigoitia Zigoitia Zigoitia Zigoitia Zigoitia",
+  "municipalitycode" : "018 018 018 018 018 018 018 018 018 018 018 018 018 018 018 018 018 018",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Ziortza-Bolibar",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Ziortza-Bolibar Ziortza-Bolibar",
+  "municipalitycode" : "915 915",
+  "territory" : "Bizkaia Bizkaia",
+  "territorycode" : "48 48"
+}, {
+  "documentName" : "Zizurkil",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zizurkil Zizurkil",
+  "municipalitycode" : "028 028",
+  "territory" : "Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20"
+}, {
+  "documentName" : "Zuia",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zuia Zuia Zuia Zuia Zuia Zuia Zuia Zuia Zuia Zuia Zuia Zuia Zuia",
+  "municipalitycode" : "063 063 063 063 063 063 063 063 063 063 063 063 063",
+  "territory" : "Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "01 01 01 01 01 01 01 01 01 01 01 01 01"
+}, {
+  "documentName" : "Zumaia",
+  "templateType" : "Localidades",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zumaia Zumaia Zumaia",
+  "municipalitycode" : "081 081 081",
+  "territory" : "Gipuzkoa Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20 20"
+}, {
+  "documentName" : "Zumarraga",
+  "templateType" : "Localidades",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zumarraga Zumarraga",
+  "municipalitycode" : "080 080",
+  "territory" : "Gipuzkoa Gipuzkoa",
+  "territorycode" : "20 20"
+} ]

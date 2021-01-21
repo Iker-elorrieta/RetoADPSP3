@@ -1,12 +1,24 @@
 package principal;
 
+import java.util.ArrayList;
+
+import org.hibernate.engine.internal.JoinSequence.Join;
+
 import Insert.Consultas;
+import hilos.Control;
+import hilos.HiloActualizarBaseDeDatos;
 
 public class init {
-
+	private static ArrayList<Objetos.Links> links;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		iniciarTodo();
+		
+		
+
+		
+		/*
 		Consultas consultas = new Consultas();
 		
 		//INSERTAR PROVINCIAS
@@ -39,10 +51,25 @@ public class init {
 		
 		//INSERTAR HASH
 		consultas.insertHash();
+		*/
+		
 
 		//INSERTAR ESTA EN
-		consultas.insertEstaEn();
+	//	consultas.insertEstaEn();
 
+	}
+	public static boolean iniciarTodo() {
+		links=new ArrayList<Objetos.Links>();
+		HiloActualizarBaseDeDatos Actualizar = new HiloActualizarBaseDeDatos(links);
+		Actualizar.start();
+		while(Actualizar.isAlive()){
+			
+		}
+		Control ControlTiempo = new Control(links);
+		ControlTiempo.start();
+		System.out.println("fin de programa");
+		
+		return true;
 	}
 
 }

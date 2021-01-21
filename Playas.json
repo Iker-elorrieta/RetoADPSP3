@@ -1,0 +1,541 @@
+[ {
+  "documentName" : "Embalse de Maroño",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.0468126377076",
+  "lonwgs84" : "-3.05986404418945",
+  "municipality" : "Ayala/Aiara",
+  "municipalitycode" : "10",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Embalse de Ullíbarri-Gamboa",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "42.9260115266427",
+  "lonwgs84" : "-2.56977081298828",
+  "municipality" : "Arratzua-Ubarrundia",
+  "municipalitycode" : "8",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Embalse de Urkulu",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.019567",
+  "lonwgs84" : "-2.476983",
+  "municipality" : "Aretxabaleta",
+  "municipalitycode" : "13",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Embalse de Urrúnaga",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Otxandio Legutio Legutio Legutio",
+  "municipalitycode" : "072 058 058 058",
+  "territory" : "Bizkaia Araba/Álava Araba/Álava Araba/Álava",
+  "territorycode" : "48 01 01 01"
+}, {
+  "documentName" : "La Arboleda",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "43.284928",
+  "lonwgs84" : "-3.05386",
+  "municipality" : "Valle de Trápaga-Trapagaran",
+  "municipalitycode" : "80",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Piscinas fluviales de Espejo",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "42.809638",
+  "lonwgs84" : "-3.046388",
+  "municipality" : "Valdegovía/Gaubea",
+  "municipalitycode" : "55",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Piscinas fluviales de Fresnedo",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Montes y Valles vascos",
+  "latwgs84" : "42.6762516761553",
+  "lonwgs84" : "-2.37030029296875",
+  "municipality" : "Campezo/Kanpezu",
+  "municipalitycode" : "17",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Playa Santiago de Deba",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.2983184172804",
+  "lonwgs84" : "-2.354269509262167",
+  "municipality" : "Deba",
+  "municipalitycode" : "29",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Playa de Alkolea",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.30762578068058",
+  "lonwgs84" : "-2.3710132372955286",
+  "municipality" : "Mutriku",
+  "municipalitycode" : "56",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Playa de Antilla",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.288723",
+  "lonwgs84" : "-2.127956",
+  "municipality" : "Orio",
+  "municipalitycode" : "61",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Playa de Aritxatxu",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.428484",
+  "lonwgs84" : "-2.737924",
+  "municipality" : "Bermeo",
+  "municipalitycode" : "17",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Armintza",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.43321809894",
+  "lonwgs84" : "-2.898966690000634",
+  "municipality" : "Lemoiz",
+  "municipalitycode" : "56",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Arrigorri",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.32285365608519",
+  "lonwgs84" : "-2.4192082803955373",
+  "municipality" : "Ondarroa",
+  "municipalitycode" : "73",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Arrigunaga",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca,Bilbao",
+  "latwgs84" : "43.358253",
+  "lonwgs84" : "-3.018707",
+  "municipality" : "Getxo",
+  "municipalitycode" : "44",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Bakio",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.4302345617966",
+  "lonwgs84" : "-2.80576229095459",
+  "municipality" : "Bakio",
+  "municipalitycode" : "12",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Barinatxe",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca,Bilbao",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Getxo Sopela",
+  "municipalitycode" : "044 085",
+  "territory" : "Bizkaia Bizkaia",
+  "territorycode" : "48 48"
+}, {
+  "documentName" : "Playa de Barrika",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.40545839853304",
+  "lonwgs84" : "-2.972990221309601",
+  "municipality" : "Barrika",
+  "municipalitycode" : "14",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Ea",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.380135",
+  "lonwgs84" : "-2.585593",
+  "municipality" : "Ea",
+  "municipalitycode" : "28",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Ereaga",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca,Bilbao",
+  "latwgs84" : "43.34189",
+  "lonwgs84" : "-3.013635",
+  "municipality" : "Getxo",
+  "municipalitycode" : "44",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Gaztetape",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.303655403374485",
+  "lonwgs84" : "-2.206051341625198",
+  "municipality" : "Getaria",
+  "municipalitycode" : "39",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Playa de Gorliz",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.4183904607326",
+  "lonwgs84" : "-2.94570922851563",
+  "municipality" : "Gorliz",
+  "municipalitycode" : "43",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Gorrondatxe (Azkorri)",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca,Bilbao",
+  "latwgs84" : "43.3791013350026",
+  "lonwgs84" : "-3.02021026611328",
+  "municipality" : "Getxo",
+  "municipalitycode" : "44",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Hondarribia",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.3797889",
+  "lonwgs84" : "-1.7945024000000558",
+  "municipality" : "Hondarribia",
+  "municipalitycode" : "36",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Playa de Hondartzape",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.407335",
+  "lonwgs84" : "-2.698322",
+  "municipality" : "Mundaka",
+  "municipalitycode" : "68",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Isuntza",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.3632537512373",
+  "lonwgs84" : "-2.50110626220703",
+  "municipality" : "Lekeitio",
+  "municipalitycode" : "57",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Itzurun",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.30055372541465",
+  "lonwgs84" : "-2.2604322519287052",
+  "municipality" : "Zumaia",
+  "municipalitycode" : "81",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Playa de Kanala",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.3845908706076",
+  "lonwgs84" : "-2.68117904663086",
+  "municipality" : "Gautegiz Arteaga",
+  "municipalitycode" : "41",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Kanalape",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.381846164937",
+  "lonwgs84" : "-2.67851829528809",
+  "municipality" : "Gautegiz Arteaga",
+  "municipalitycode" : "41",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Karraspio",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.3628169481706",
+  "lonwgs84" : "-2.49423980712891",
+  "municipality" : "Mendexa",
+  "municipalitycode" : "63",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de La Arena",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Zierbena Muskiz",
+  "municipalitycode" : "913 071",
+  "territory" : "Bizkaia Bizkaia",
+  "territorycode" : "48 48"
+}, {
+  "documentName" : "Playa de La Concha",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca,San Sebastián",
+  "latwgs84" : "43.3181840687112",
+  "lonwgs84" : "-1.98646545410156",
+  "municipality" : "Donostia / San Sebastián",
+  "municipalitycode" : "69",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Playa de Laga",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.4090382177706",
+  "lonwgs84" : "-2.65663146972656",
+  "municipality" : "Ibarrangelu",
+  "municipalitycode" : "48",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Laida",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.39957539567573",
+  "lonwgs84" : "-2.6856207847595215",
+  "municipality" : "Ibarrangelu",
+  "municipalitycode" : "48",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Laidatxu",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.4049851306295",
+  "lonwgs84" : "-2.69937515258789",
+  "municipality" : "Mundaka",
+  "municipalitycode" : "68",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Landa",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Vitoria-Gasteiz",
+  "latwgs84" : "42.9400128416397",
+  "lonwgs84" : "-2.6054306386230337",
+  "municipality" : "Arratzua-Ubarrundia",
+  "municipalitycode" : "8",
+  "territory" : "Araba/Álava",
+  "territorycode" : "1"
+}, {
+  "documentName" : "Playa de Las Arenas",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca,Bilbao",
+  "latwgs84" : "43.3264264544351",
+  "lonwgs84" : "-3.0177640914917",
+  "municipality" : "Getxo",
+  "municipalitycode" : "44",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Malkorbe",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.301297",
+  "lonwgs84" : "-2.2021",
+  "municipality" : "Getaria",
+  "municipalitycode" : "39",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Playa de Meñakoz",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.3951630640074",
+  "lonwgs84" : "-2.98562049865723",
+  "municipality" : "Barrika",
+  "municipalitycode" : "14",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Muriola",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.4130286847514",
+  "lonwgs84" : "-2.95995712280273",
+  "municipality" : "Barrika",
+  "municipalitycode" : "14",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Ogeia",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.3732369638364",
+  "lonwgs84" : "-2.54573822021484",
+  "municipality" : "Ispaster",
+  "municipalitycode" : "49",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Ondarbeltz",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.301412",
+  "lonwgs84" : "-2.357451",
+  "municipality" : "Mutriku",
+  "municipalitycode" : "56",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Playa de Ondarreta",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca,San Sebastián",
+  "latwgs84" : "43.317184915667",
+  "lonwgs84" : "-2.00277328491211",
+  "municipality" : "Donostia / San Sebastián",
+  "municipalitycode" : "69",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Playa de Plentzia",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.4112828877988",
+  "lonwgs84" : "-2.94708251953125",
+  "municipality" : "Plentzia",
+  "municipalitycode" : "77",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de San Antonio",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Sukarrieta Busturia",
+  "municipalitycode" : "076 021",
+  "territory" : "Bizkaia Bizkaia",
+  "territorycode" : "48 48"
+}, {
+  "documentName" : "Playa de Santiago",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.30194579605323",
+  "lonwgs84" : "-2.2511672973632812",
+  "municipality" : "Zumaia",
+  "municipalitycode" : "81",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Playa de Saturraran",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.3218058607707",
+  "lonwgs84" : "-2.41098403930664",
+  "municipality" : "Mutriku",
+  "municipalitycode" : "56",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Playa de Toña",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.3910778627597",
+  "lonwgs84" : "-2.69182205200195",
+  "municipality" : "Sukarrieta",
+  "municipalitycode" : "76",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playa de Zarautz",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.28770636426836",
+  "lonwgs84" : "-2.1728876364929874",
+  "municipality" : "Zarautz",
+  "municipalitycode" : "79",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Playa de la Isla de Santa Clara",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca,San Sebastián",
+  "latwgs84" : "43.32071050956413",
+  "lonwgs84" : "-1.9996527338684018",
+  "municipality" : "Donostia / San Sebastián",
+  "municipalitycode" : "69",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Playa de la Zurriola",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca,San Sebastián",
+  "latwgs84" : "43.327175706778",
+  "lonwgs84" : "-1.97359085083008",
+  "municipality" : "Donostia / San Sebastián",
+  "municipalitycode" : "69",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Playa del Puerto (Mutriku)",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.310945042006956",
+  "lonwgs84" : "-2.380482422584464",
+  "municipality" : "Mutriku",
+  "municipalitycode" : "56",
+  "territory" : "Gipuzkoa",
+  "territorycode" : "20"
+}, {
+  "documentName" : "Playas de Arrietara y Atxabiribil",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.389749",
+  "lonwgs84" : "-2.992836",
+  "municipality" : "Sopela",
+  "municipalitycode" : "85",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+}, {
+  "documentName" : "Playas de Garaio",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Vitoria-Gasteiz",
+  "latwgs84" : "",
+  "lonwgs84" : "",
+  "municipality" : "Barrundia Elburgo/Burgelu",
+  "municipalitycode" : "013 021",
+  "territory" : "Araba/Álava Araba/Álava",
+  "territorycode" : "01 01"
+}, {
+  "documentName" : "Zierbena-Puerto",
+  "templateType" : "Playas, pantanos y ríos",
+  "marks" : "Costa Vasca",
+  "latwgs84" : "43.350007",
+  "lonwgs84" : "-3.077422",
+  "municipality" : "Zierbena",
+  "municipalitycode" : "913",
+  "territory" : "Bizkaia",
+  "territorycode" : "48"
+} ]

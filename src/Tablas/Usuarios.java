@@ -1,5 +1,5 @@
 package Tablas;
-// Generated 11-ene-2021 15:35:54 by Hibernate Tools 5.4.18.Final
+// Generated 19-ene-2021 15:28:32 by Hibernate Tools 5.4.18.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,7 +9,7 @@ import java.util.Set;
  */
 public class Usuarios implements java.io.Serializable {
 
-	private int codUsuario;
+	private Integer codUsuario;
 	private String nombre;
 	private String pass;
 	private Set favoritoses = new HashSet(0);
@@ -17,24 +17,22 @@ public class Usuarios implements java.io.Serializable {
 	public Usuarios() {
 	}
 
-	public Usuarios(int codUsuario, String nombre, String pass) {
-		this.codUsuario = codUsuario;
+	public Usuarios(String nombre, String pass) {
 		this.nombre = nombre;
 		this.pass = pass;
 	}
 
-	public Usuarios(int codUsuario, String nombre, String pass, Set favoritoses) {
-		this.codUsuario = codUsuario;
+	public Usuarios(String nombre, String pass, Set favoritoses) {
 		this.nombre = nombre;
 		this.pass = pass;
 		this.favoritoses = favoritoses;
 	}
 
-	public int getCodUsuario() {
+	public Integer getCodUsuario() {
 		return this.codUsuario;
 	}
 
-	public void setCodUsuario(int codUsuario) {
+	public void setCodUsuario(Integer codUsuario) {
 		this.codUsuario = codUsuario;
 	}
 
