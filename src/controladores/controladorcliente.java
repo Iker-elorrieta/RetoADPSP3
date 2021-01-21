@@ -20,8 +20,9 @@ public class controladorcliente {
 
 	public controladorcliente() {
 		
-		ventana = new VentanaCliente(entrada, salida);
+		ventana = new VentanaCliente();
 		conectar();
+		controladorVentanaCliente controladorVentanaCliente = new controladorVentanaCliente(ventana,entrada,salida);
 		ventana.setVisible(true);
 	}
 	
@@ -32,9 +33,6 @@ public class controladorcliente {
 			ventana.getLBL1().setText("conectado con el servidor");
 			entrada = new DataInputStream(cliente.getInputStream());
 			salida = new DataOutputStream (cliente.getOutputStream());
-			
-			ventana.setEntrada(entrada);
-			ventana.setSalida(salida);
 			
 			String mensage = entrada.readUTF();
 			ventana.getLBL1().setText(mensage);

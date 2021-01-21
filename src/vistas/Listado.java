@@ -13,12 +13,15 @@ import javax.swing.JTable;
 
 public class Listado extends JFrame {
 
+
 	private JPanel contentPane;
 	private JTable table;
 	private JTable table_1;
 	private JComboBox comboBoxMunicipio,comboBoxEstaciones;
 	private JButton btnBizkaia,btnGipuzkoa,btnArabalaba;
-	
+	public static enum enumAcciones {
+		ARABA,GIPUZKOA,BIZKAIA
+	}
 	public Listado() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1120, 574);

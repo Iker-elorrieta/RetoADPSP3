@@ -109,7 +109,7 @@ public class TestConsultas {
 	Usuarios usu3 = new Usuarios("", null, null);
 
 	Registro registo = new Registro(null, null);
-	VentanaCliente venClien = new VentanaCliente(null, null);
+	VentanaCliente venClien = new VentanaCliente();
 	CrearUsuario crearusuario = new CrearUsuario("Hola:Adios");
 	ConsultaInicial consultaInicial = new ConsultaInicial("Hola:Adios");
 	ConsultaInicial consultaInicial2 = new ConsultaInicial("Hola:Adios2");
