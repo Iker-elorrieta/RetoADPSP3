@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import vistas.Listado;
@@ -16,12 +17,13 @@ public class controladorVentanaCliente implements ActionListener {
 	VentanaCliente vistaCliente;
 	DataInputStream entrada = null;
 	DataOutputStream salida = null;
+	ObjectInputStream entradaf=null;
 	
-	
-	public controladorVentanaCliente(VentanaCliente vistaCliente,DataInputStream in, DataOutputStream out) {
+	public controladorVentanaCliente(VentanaCliente vistaCliente,DataInputStream in, DataOutputStream out,ObjectInputStream inf) {
 		super();
 		entrada = in;
 		salida = out;
+		entradaf = inf;
 		this.vistaCliente = vistaCliente;
 		iniciarControlador();
 	}
@@ -62,6 +64,7 @@ public class controladorVentanaCliente implements ActionListener {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			System.out.println("hola");
 			salida.writeUTF("2");
 			salida.writeUTF(usuario+":"+ resu);
 			res = entrada.readBoolean();
@@ -69,15 +72,16 @@ public class controladorVentanaCliente implements ActionListener {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if(res) {
+		if(!res) {
 			vistaCliente.getLBL1().setText("Usuario o pass incorrectos");
-			vistaCliente.dispose();
+			
 			return -1;
 				
 		}else {
 			Listado listado = new Listado();
-			controladorListado controladorListado = new controladorListado(listado,entrada,salida);
-			
+			controladorListado controladorListado = new controladorListado(listado,entrada,salida,entradaf);
+			vistaCliente.dispose();
+			listado.setVisible(true);
 			return 1;
 		}
 
@@ -94,7 +98,8 @@ public class controladorVentanaCliente implements ActionListener {
 			entrar();
 			break;
 		case REGISTRO:
-			Registro reg = new Registro(entrada, salida);
+			Registro reg = new Registro();
+			controladorRegistro controladorRegistro = new controladorRegistro(reg, entrada, salida);
 			reg.setVisible(true);
 			break;
 		}

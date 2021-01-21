@@ -58,15 +58,18 @@ public class ConsultaInicial {
 	
 	public boolean CambiarVentana() {
 		
-		boolean cambiar = true;
-		String hql= "From Usuarios where nombre='"+usuario+"'";
+		boolean agregar = true;
+		String hql= "From Usuarios";
 		Query q= (Query) session.createQuery(hql);
-		Usuarios dep= (Usuarios) q.uniqueResult();
+		List <Usuarios> dep= q.list();
 		
-		
-			if(dep.getNombre().equals(usuario) && dep.getPass().equals(pass) ) {
+		for(Tablas.Usuarios usu : dep) {
+			
+			if(usu.getNombre().equals(usuario) && usu.getPass().equals(pass) ) {
 				return true;
 			}
+		}
+		
 		return false;
 	}
 

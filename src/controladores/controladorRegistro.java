@@ -106,9 +106,7 @@ public class controladorRegistro implements ActionListener {
 		case Registrar:
 				
 				if(ValidarDatos() == 1) {
-					VentanaCliente vistaCliente = new VentanaCliente();
-					controladorVentanaCliente controladorCliente = new controladorVentanaCliente(vistaCliente, entrada, salida);
-					vistaCliente.setVisible(true);
+					
 					this.vistaRegistro.dispose();
 				}
 			break;

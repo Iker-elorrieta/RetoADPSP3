@@ -5,16 +5,22 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+
+import Insert.ConsultaMunicipios;
+import Tablas.Municipios;
 
 public class Hiloconecxiones extends Thread{
 	
 	DataInputStream entrada = null;
 	DataOutputStream salida = null;
+	ObjectOutputStream salidaf = null;
 	boolean activo = true;
 	
-	public Hiloconecxiones(DataInputStream in, DataOutputStream out){
+	public Hiloconecxiones(DataInputStream in, DataOutputStream out,ObjectOutputStream outf){
 		entrada = in;
 		salida = out;
+		salidaf = outf;
 	}
 	
 	@Override
@@ -23,6 +29,7 @@ public class Hiloconecxiones extends Thread{
 			salida.writeUTF("Bienvenido al servidor del equipo 3");
 			while(activo) {
 				String cod = entrada.readUTF();
+				System.out.println(cod);
 				accion(cod);
 			}
 			
@@ -40,7 +47,7 @@ public class Hiloconecxiones extends Thread{
 			}
 		}
 	}
-	
+	private ArrayList<Municipios> muni;
 	public void accion(String codigo) {
 		int cod = Integer.parseInt(codigo);
 		switch (cod) {
@@ -84,10 +91,24 @@ public class Hiloconecxiones extends Thread{
 				e.printStackTrace();
 			}
 			break;//	case 3
-		case 4: // Carga las provincias en el jcombobox 
-			
+		case 4: // Tras seleccionar una provincia Cargamos el nombre de los espacios correspondientes
+			try {
+				muni = new ArrayList <Municipios>();
+				String datos = entrada.readUTF();
+				ConsultaMunicipios consulta = new ConsultaMunicipios();
+				consulta.recogermunicipios(muni,datos);
+				for(Municipios municipio : muni) {
+					salidaf.writeObject(municipio);
+				}
+				salidaf.writeObject(null);
+//				salida.writeUTF(ci.CambiarVentana());
+				
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
 			break;//	case 4
-		case 5: // Tras seleccionar una provincia Cargamos el nombre de los espacios correspondientes
+		case 5: // 
 			
 			break;//	case 5
 		case 6: // Tras seleccionar el boton de buscar Cargaremos los datos del espacio natural para mostrarlo;

@@ -3,6 +3,7 @@ package controladores;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.net.Socket;
 
 import vistas.VentanaCliente;
@@ -12,9 +13,9 @@ public class controladorcliente {
 	private final static int PUERTO = 5000;
 	private final static String IP = "127.0.0.1";
 	Socket cliente = null;
-	DataInputStream entrada = null;
-	DataOutputStream salida = null;
-	
+	private DataInputStream entrada = null;
+	private DataOutputStream salida = null;
+	private ObjectInputStream entradaf = null;
 	VentanaCliente ventana ;
 	boolean activo = true;
 
@@ -22,7 +23,7 @@ public class controladorcliente {
 		
 		ventana = new VentanaCliente();
 		conectar();
-		controladorVentanaCliente controladorVentanaCliente = new controladorVentanaCliente(ventana,entrada,salida);
+		controladorVentanaCliente controladorVentanaCliente = new controladorVentanaCliente(ventana,entrada,salida,entradaf);
 		ventana.setVisible(true);
 	}
 	
@@ -33,7 +34,7 @@ public class controladorcliente {
 			ventana.getLBL1().setText("conectado con el servidor");
 			entrada = new DataInputStream(cliente.getInputStream());
 			salida = new DataOutputStream (cliente.getOutputStream());
-			
+			entradaf = new ObjectInputStream(cliente.getInputStream());
 			String mensage = entrada.readUTF();
 			ventana.getLBL1().setText(mensage);
 			System.out.println("mensage: " + mensage);

@@ -18,16 +18,12 @@ public class Registro extends JFrame {
 	private JPasswordField passwordField_1;
 	private JButton btnNewButton = new JButton("Registrar");
 	private JLabel lblNewLabel_3 = new JLabel("");
-	DataInputStream entrada = null;
-	DataOutputStream salida = null;
 	public static enum enumAcciones {
 		Registrar
 	}
 	
-	public Registro(DataInputStream in, DataOutputStream out) {
+	public Registro() {
 		
-		entrada = in;
-		salida = out;
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -71,14 +67,6 @@ public class Registro extends JFrame {
 	}
 
 
-	public JPanel getContentPane() {
-		return contentPane;
-	}
-
-
-	public void setContentPane(JPanel contentPane) {
-		this.contentPane = contentPane;
-	}
 
 
 	public JTextField getTextField() {
@@ -131,24 +119,6 @@ public class Registro extends JFrame {
 	}
 
 
-	public DataInputStream getEntrada() {
-		return entrada;
-	}
-
-
-	public void setEntrada(DataInputStream entrada) {
-		this.entrada = entrada;
-	}
-
-
-	public DataOutputStream getSalida() {
-		return salida;
-	}
-
-
-	public void setSalida(DataOutputStream salida) {
-		this.salida = salida;
-	}
 	
 	
 	

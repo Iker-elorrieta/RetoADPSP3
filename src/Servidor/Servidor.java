@@ -22,7 +22,7 @@ public static void iniciar() {
 		Socket cliente = null;
 		DataInputStream entrada = null;
 		DataOutputStream salida = null;
-	
+		ObjectOutputStream salidaf = null;
 		
 		try {
 			servidor = new ServerSocket(PUERTO);
@@ -33,8 +33,8 @@ public static void iniciar() {
 				System.out.println("Cliente conectado");
 				salida = new DataOutputStream (cliente.getOutputStream());
 				entrada = new DataInputStream(cliente.getInputStream());
-				
-				Hiloconecxiones hr = new Hiloconecxiones(entrada, salida);
+				salidaf = new ObjectOutputStream(cliente.getOutputStream());
+				Hiloconecxiones hr = new Hiloconecxiones(entrada, salida,salidaf);
 				Thread h1 = new Thread(hr);
 				h1.start();
 				

@@ -108,12 +108,12 @@ public class TestConsultas {
 	Usuarios usu2 = new Usuarios("", null);
 	Usuarios usu3 = new Usuarios("", null, null);
 
-	Registro registo = new Registro(null, null);
+	Registro registo = new Registro();
 	VentanaCliente venClien = new VentanaCliente();
 	CrearUsuario crearusuario = new CrearUsuario("Hola:Adios");
 	ConsultaInicial consultaInicial = new ConsultaInicial("Hola:Adios");
 	ConsultaInicial consultaInicial2 = new ConsultaInicial("Hola:Adios2");
-	Hiloconecxiones hiloConexiones = new Hiloconecxiones(null, null);
+	Hiloconecxiones hiloConexiones = new Hiloconecxiones(null, null,null);
 	Servidor servidor2 = new Servidor();
 	borrarBaseDeDatos.borrar borrar = new borrarBaseDeDatos.borrar();
 
