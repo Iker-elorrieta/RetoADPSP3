@@ -10,7 +10,11 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.util.ArrayList;
 
+import javax.swing.JTable;
+
+import Tablas.DatosCalidad;
 import Tablas.Estaciones;
 import Tablas.Municipios;
 import vistas.Listado;
@@ -42,13 +46,15 @@ public class controladorListado implements ActionListener {
 				}
 		});
 		
-		vistaListado.getComboBoxMunicipio().addPropertyChangeListener(new PropertyChangeListener() {
-			public void propertyChange(PropertyChangeEvent evt) {
+		vistaListado.getComboBoxEstaciones().addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent e) {
 				if(!rellenandoBoxEsta) {
-					RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
+					RellenarTabla(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),vistaListado.getComboBoxEstaciones().getSelectedItem().toString());
 					}
-			}
+				}
 		});
+		
+		
 		
 		this.vistaListado.getBtnArabalaba().addActionListener(this);
 		this.vistaListado.getBtnArabalaba().setActionCommand(Listado.enumAcciones.ARABA.toString());
@@ -83,8 +89,8 @@ public class controladorListado implements ActionListener {
 	}
 	
 	public void rellenarComboBoxMuni(String Nombre) {
-		vistaListado.getComboBoxMunicipio().removeAllItems();
 		rellenandoBoxMuni = true;
+		vistaListado.getComboBoxMunicipio().removeAllItems();
 		try {
 			salida.writeUTF("4");
 			salida.writeUTF(Nombre);
@@ -107,8 +113,8 @@ public class controladorListado implements ActionListener {
 	private boolean rellenandoBoxMuni = true;
 	private boolean rellenandoBoxEsta = true;
 	public void RellenarComboBoxEstac(String Nombre){
-		vistaListado.getComboBoxEstaciones().removeAllItems();
 		rellenandoBoxEsta = true;
+		vistaListado.getComboBoxEstaciones().removeAllItems();
 		try {
 			
 			salida.writeUTF("5");
@@ -119,6 +125,114 @@ public class controladorListado implements ActionListener {
 				 esta = (Estaciones)entradaf.readObject();
 			}
 			rellenandoBoxEsta=false;
+			RellenarTabla(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),vistaListado.getComboBoxEstaciones().getSelectedItem().toString());
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+	}
+	ArrayList<String> tipoDeDato = new ArrayList<String>();
+	ArrayList<String> Calculos = new ArrayList<String>();
+	String[] titulo = {"Tipo De Dato","Calculos"};
+	private JTable tabla;
+	public void RellenarTabla(String Nombre,String Nombre2){
+		int contador=0;
+		rellenandoBoxEsta = true;
+		try {
+			salida.writeUTF("6");
+			salida.writeUTF(Nombre+":"+Nombre2);
+			DatosCalidad datosCali= (DatosCalidad) entradaf.readObject();
+			
+			if(datosCali.getFecha()!=null) {
+				tipoDeDato.add("Fecha") ;
+				Calculos.add(datosCali.getFecha().toString());
+				contador++;
+			}
+			if(datosCali.getHora()!=null) {
+				tipoDeDato.add("Hora") ;
+				Calculos.add(datosCali.getHora().toString());
+				contador++;
+			}
+			if(datosCali.getComgM3()!=null) {
+				tipoDeDato.add("ComgM3") ;
+				Calculos.add(datosCali.getComgM3().toString());
+				contador++;
+			}
+			if(datosCali.getCo8hmgM3()!=null) {
+				tipoDeDato.add("Co8hmgM3") ;
+				Calculos.add(datosCali.getCo8hmgM3().toString());
+				contador++;
+			}
+			if(datosCali.getNogm3()!=null) {
+				tipoDeDato.add("NOgm3") ;
+				Calculos.add(datosCali.getNogm3().toString());
+				contador++;
+			}
+			if(datosCali.getNo2()!=null) {
+				tipoDeDato.add("NO2") ;
+				Calculos.add(datosCali.getNo2().toString());
+				contador++;
+			}
+			if(datosCali.getNo2ica()!=null) {
+				tipoDeDato.add("NO2ICA") ;
+				Calculos.add(datosCali.getNo2ica().toString());
+				contador++;
+			}
+			if(datosCali.getNoxgm3()!=null) {
+				tipoDeDato.add("NOXgm3") ;
+				Calculos.add(datosCali.getNoxgm3().toString());
+				contador++;
+			}
+			if(datosCali.getPm10()!=null) {
+				tipoDeDato.add("PM10") ;
+				Calculos.add(datosCali.getPm10().toString());
+				contador++;
+			}
+			if(datosCali.getPm10ica()!=null) {
+				tipoDeDato.add("PM10ICA") ;
+				Calculos.add(datosCali.getPm10ica().toString());
+				contador++;
+			}
+			if(datosCali.getPm25()!=null) {
+				tipoDeDato.add("PM25") ;
+				Calculos.add(datosCali.getPm25().toString());
+				contador++;
+			}
+			if(datosCali.getPm25ica()!=null) {
+				tipoDeDato.add("PM25ICA") ;
+				Calculos.add(datosCali.getNo2().toString());
+				contador++;
+			}
+			if(datosCali.getSo2()!=null) {
+				tipoDeDato.add("SO2") ;
+				Calculos.add(datosCali.getSo2().toString());
+				contador++;
+			}
+			if(datosCali.getSo2ica()!=null) {
+				tipoDeDato.add("SO2ICA") ;
+				Calculos.add(datosCali.getSo2ica().toString());
+				contador++;
+			}
+			if(datosCali.getIcastation()!=null) {
+				tipoDeDato.add("ICAStation") ;
+				Calculos.add(datosCali.getIcastation().toString());
+				contador++;
+			}
+			
+			String[][] dato = new String[tipoDeDato.size()][Calculos.size()];
+			System.out.println("aqui si");
+			for(int x=0;x<tipoDeDato.size()-1;x++) {
+				dato[x][0]=tipoDeDato.get(x);
+				dato[x][1]=Calculos.get(x);
+				System.out.println("estoy aqui");
+				System.out.println(Calculos.get(x));
+			}
+			tabla =new JTable(dato,titulo);
+			vistaListado.setTable_1(tabla);
+			
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -128,4 +242,12 @@ public class controladorListado implements ActionListener {
 		}
 	}
 	
+	public void cerrarServer(){
+		try {
+			salida.writeUTF("0");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

@@ -1,6 +1,7 @@
 package vistas;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -14,6 +15,8 @@ import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
+import javax.swing.border.BevelBorder;
+import javax.swing.JTextArea;
 
 public class Listado extends JFrame {
 
@@ -55,11 +58,23 @@ public class Listado extends JFrame {
 		contentPane.add(comboBoxEstaciones);
 		
 		JScrollPane scrollPane_1 = new JScrollPane();
+		scrollPane_1.setViewportBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		scrollPane_1.setBounds(761, 66, 227, 343);
 		contentPane.add(scrollPane_1);
 		
+		
 		table_1 = new JTable();
+		table_1.setShowHorizontalLines( false );
+		table_1.setRowSelectionAllowed( true );
+		table_1.setColumnSelectionAllowed( true );
+	    // Cambiamos el color de la zona seleccionada (rojo/blanco)
+		table_1.setSelectionForeground( Color.white );
+		table_1.setSelectionBackground( Color.red );
+	    // Incorporamos la tabla a un panel que incorpora ya una barra
+	    // de desplazamiento, para que la visibilidad de la tabla sea
+	    // automática
 		scrollPane_1.setViewportView(table_1);
+		contentPane.add(table_1);
 	}
 
 	public JTable getTable_1() {
@@ -68,6 +83,7 @@ public class Listado extends JFrame {
 
 	public void setTable_1(JTable table_1) {
 		this.table_1 = table_1;
+		
 	}
 
 	public JComboBox getComboBoxMunicipio() {
@@ -109,10 +125,4 @@ public class Listado extends JFrame {
 	public void setBtnArabalaba(JButton btnArabalaba) {
 		this.btnArabalaba = btnArabalaba;
 	}
-	
-	
-	
-	
-	
-	
 }
