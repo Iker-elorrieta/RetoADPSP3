@@ -227,11 +227,12 @@ public class controladorListado implements ActionListener {
 			for(int x=0;x<tipoDeDato.size()-1;x++) {
 				dato[x][0]=tipoDeDato.get(x);
 				dato[x][1]=Calculos.get(x);
-				System.out.println("estoy aqui");
-				System.out.println(Calculos.get(x));
+				/*System.out.println("estoy aqui");
+				System.out.println(Calculos.get(x));*/
+				this.vistaListado.getTextArea().append(dato[x][0] + " : " + dato[x][1] + "\n");
 			}
-			tabla =new JTable(dato,titulo);
-			vistaListado.setTable_1(tabla);
+			/*tabla =new JTable(dato,titulo);
+			vistaListado.setTable_1(tabla);*/
 			
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block

@@ -25,6 +25,7 @@ public class Listado extends JFrame {
 	private JTable table_1;
 	private JComboBox comboBoxMunicipio,comboBoxEstaciones;
 	private JButton btnBizkaia,btnGipuzkoa,btnArabalaba;
+	private JTextArea textArea;
 	public static enum enumAcciones {
 		ARABA,GIPUZKOA,BIZKAIA
 	}
@@ -57,13 +58,13 @@ public class Listado extends JFrame {
 		comboBoxEstaciones.setBounds(550, 227, 148, 20);
 		contentPane.add(comboBoxEstaciones);
 		
-		JScrollPane scrollPane_1 = new JScrollPane();
-		scrollPane_1.setViewportBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		scrollPane_1.setBounds(761, 66, 227, 343);
-		contentPane.add(scrollPane_1);
+		textArea = new JTextArea();
+		textArea.setEditable(false);
+		textArea.setBounds(746, 130, 285, 253);
+		contentPane.add(textArea);
 		
-		
-		table_1 = new JTable();
+	}
+		/*table_1 = new JTable();
 		table_1.setShowHorizontalLines( false );
 		table_1.setRowSelectionAllowed( true );
 		table_1.setColumnSelectionAllowed( true );
@@ -84,7 +85,7 @@ public class Listado extends JFrame {
 	public void setTable_1(JTable table_1) {
 		this.table_1 = table_1;
 		
-	}
+	}*/
 
 	public JComboBox getComboBoxMunicipio() {
 		return comboBoxMunicipio;
@@ -125,4 +126,14 @@ public class Listado extends JFrame {
 	public void setBtnArabalaba(JButton btnArabalaba) {
 		this.btnArabalaba = btnArabalaba;
 	}
+
+	public JTextArea getTextArea() {
+		return textArea;
+	}
+
+	public void setTextArea(JTextArea textArea) {
+		this.textArea = textArea;
+	}
+	
 }
+
