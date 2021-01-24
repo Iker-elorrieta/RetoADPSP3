@@ -2,11 +2,16 @@ package controladores;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
+import Tablas.Estaciones;
 import Tablas.Municipios;
 import vistas.Listado;
 import vistas.Registro;
@@ -29,6 +34,21 @@ public class controladorListado implements ActionListener {
 	
 	private void iniciarControlador() {
 		
+		vistaListado.getComboBoxMunicipio().addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent e) {
+				if(!rellenandoBoxMuni) {
+					RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
+					}
+				}
+		});
+		
+		vistaListado.getComboBoxMunicipio().addPropertyChangeListener(new PropertyChangeListener() {
+			public void propertyChange(PropertyChangeEvent evt) {
+				if(!rellenandoBoxEsta) {
+					RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
+					}
+			}
+		});
 		
 		this.vistaListado.getBtnArabalaba().addActionListener(this);
 		this.vistaListado.getBtnArabalaba().setActionCommand(Listado.enumAcciones.ARABA.toString());
@@ -40,65 +60,71 @@ public class controladorListado implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		vistaListado.getComboBoxMunicipio().removeAllItems();
+		
+		
 		Listado.enumAcciones accion = Listado.enumAcciones.valueOf(e.getActionCommand());
+		
+		
+		
+		
+		
 
 		switch (accion) {
 		case ARABA:
-			try {
-				salida.writeUTF("4");
-				salida.writeUTF("Araba/Álava");
-				Municipios muni = (Municipios)entradaf.readObject();
-				while(muni!=null) {
-					vistaListado.getComboBoxMunicipio().addItem(muni.getNombre());
-					 muni = (Municipios)entradaf.readObject();
-				}
-			} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			} catch (ClassNotFoundException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-			
+			rellenarComboBoxMuni("Araba/Álava");			
 			break;
 		case BIZKAIA:
-			try {
-				salida.writeUTF("4");
-				salida.writeUTF("Bizkaia");
-				Municipios muni = (Municipios)entradaf.readObject();
-				while(muni!=null) {
-					vistaListado.getComboBoxMunicipio().addItem(muni.getNombre());
-					 muni = (Municipios)entradaf.readObject();
-				}
-			} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			} catch (ClassNotFoundException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-			
+			rellenarComboBoxMuni("Bizkaia");
 			break;
 		case GIPUZKOA:
-			try {
-				salida.writeUTF("4");
-				salida.writeUTF("Gipuzkoa");
-				Municipios muni = (Municipios)entradaf.readObject();
-				
-				while(muni!=null) {
-					vistaListado.getComboBoxMunicipio().addItem(muni.getNombre());
-					 muni = (Municipios)entradaf.readObject();
-				}
-			} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			} catch (ClassNotFoundException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
+			rellenarComboBoxMuni("Gipuzkoa");
+				break;
+		}
+	}
+	
+	public void rellenarComboBoxMuni(String Nombre) {
+		vistaListado.getComboBoxMunicipio().removeAllItems();
+		rellenandoBoxMuni = true;
+		try {
+			salida.writeUTF("4");
+			salida.writeUTF(Nombre);
+			Municipios muni = (Municipios)entradaf.readObject();
+			while(muni!=null) {
+				vistaListado.getComboBoxMunicipio().addItem(muni.getNombre());
+				 muni = (Municipios)entradaf.readObject();
 			}
+			rellenandoBoxMuni=false;
+			RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+	}
+	private boolean rellenandoBoxMuni = true;
+	private boolean rellenandoBoxEsta = true;
+	public void RellenarComboBoxEstac(String Nombre){
+		vistaListado.getComboBoxEstaciones().removeAllItems();
+		rellenandoBoxEsta = true;
+		try {
 			
-			break;
+			salida.writeUTF("5");
+			salida.writeUTF(Nombre);
+			Estaciones esta = (Estaciones)entradaf.readObject();
+			while(esta!=null) {
+				vistaListado.getComboBoxEstaciones().addItem(esta.getNombre());
+				 esta = (Estaciones)entradaf.readObject();
+			}
+			rellenandoBoxEsta=false;
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
 	}
 	

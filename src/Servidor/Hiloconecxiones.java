@@ -8,6 +8,8 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 import Insert.ConsultaMunicipios;
+import Insert.ConsultasEstaciones;
+import Tablas.Estaciones;
 import Tablas.Municipios;
 
 public class Hiloconecxiones extends Thread{
@@ -48,6 +50,7 @@ public class Hiloconecxiones extends Thread{
 		}
 	}
 	private ArrayList<Municipios> muni;
+	private ArrayList<Estaciones> esta;
 	public void accion(String codigo) {
 		int cod = Integer.parseInt(codigo);
 		switch (cod) {
@@ -109,10 +112,28 @@ public class Hiloconecxiones extends Thread{
 			}
 			break;//	case 4
 		case 5: // 
-			
+			try {
+				esta = new ArrayList <Estaciones>();
+				String datos = entrada.readUTF();
+				ConsultasEstaciones consulta = new ConsultasEstaciones();
+				consulta.recogerEstaciones(esta,datos);
+				for(Estaciones estacion : esta) {
+					salidaf.writeObject(estacion);
+				}
+				salidaf.writeObject(null);
+//				salida.writeUTF(ci.CambiarVentana());
+				
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
 			break;//	case 5
+		
 		case 6: // Tras seleccionar el boton de buscar Cargaremos los datos del espacio natural para mostrarlo;
 			
+			break;
+		case 0://Cerrar
+			activo=false;
 			break;
 		}
 	}

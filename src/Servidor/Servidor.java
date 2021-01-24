@@ -14,6 +14,7 @@ public class Servidor {
 	static boolean activo = true;
 	
 	public static void main(String[] args) {
+		principal.init.iniciarTodo();
 		iniciar();
 	}
 	

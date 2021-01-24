@@ -50,7 +50,6 @@ public void recogermunicipios(ArrayList<Municipios> muni,String datos) {
 		municipio = new Municipios();
 		municipio = dep.get(i);
 		muni.add(municipio);
-		System.out.println(municipio.getCodMunicipio());		
 	}
 	
 }

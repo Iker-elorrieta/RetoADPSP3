@@ -10,12 +10,15 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import java.awt.event.ItemListener;
+import java.awt.event.ItemEvent;
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeEvent;
 
 public class Listado extends JFrame {
 
 
 	private JPanel contentPane;
-	private JTable table;
 	private JTable table_1;
 	private JComboBox comboBoxMunicipio,comboBoxEstaciones;
 	private JButton btnBizkaia,btnGipuzkoa,btnArabalaba;
@@ -46,31 +49,17 @@ public class Listado extends JFrame {
 		comboBoxMunicipio.setBounds(243, 227, 148, 20);
 		contentPane.add(comboBoxMunicipio);
 		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(416, 104, 190, 292);
-		contentPane.add(scrollPane);
-		
-		table = new JTable();
-		scrollPane.setViewportView(table);
-		
 		comboBoxEstaciones = new JComboBox();
-		comboBoxEstaciones.setBounds(630, 239, 148, 20);
+		
+		comboBoxEstaciones.setBounds(550, 227, 148, 20);
 		contentPane.add(comboBoxEstaciones);
 		
 		JScrollPane scrollPane_1 = new JScrollPane();
-		scrollPane_1.setBounds(828, 104, 190, 292);
+		scrollPane_1.setBounds(761, 66, 227, 343);
 		contentPane.add(scrollPane_1);
 		
 		table_1 = new JTable();
 		scrollPane_1.setViewportView(table_1);
-	}
-
-	public JTable getTable() {
-		return table;
-	}
-
-	public void setTable(JTable table) {
-		this.table = table;
 	}
 
 	public JTable getTable_1() {
