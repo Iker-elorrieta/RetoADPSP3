@@ -18,17 +18,20 @@ public class controladorcliente {
 	private ObjectInputStream entradaf = null;
 	VentanaCliente ventana ;
 	boolean activo = true;
-
-	public controladorcliente() {
-		
-		ventana = new VentanaCliente();
-		conectar();
-		controladorVentanaCliente controladorVentanaCliente = new controladorVentanaCliente(ventana,entrada,salida,entradaf);
-		ventana.setVisible(true);
-	}
+	controladorVentanaCliente controladorVentanaCliente;
 	
+	
+	
+	
+	public controladorcliente() {
+		conectar();
+	}
+
 	public void conectar() {
 		try {
+			ventana = new VentanaCliente();
+	
+		
 			cliente = new Socket(IP, PUERTO);
 			System.out.println("Conexión realizada con servidor");
 			ventana.getLBL1().setText("conectado con el servidor");
@@ -38,7 +41,8 @@ public class controladorcliente {
 			String mensage = entrada.readUTF();
 			ventana.getLBL1().setText(mensage);
 			System.out.println("mensage: " + mensage);
-			
+			controladorVentanaCliente = new controladorVentanaCliente(ventana,entrada,salida,entradaf);
+			ventana.setVisible(true);
 			
 		} catch (IOException e) {
 			System.out.println("Error: " + e.getMessage());
@@ -62,4 +66,15 @@ public class controladorcliente {
 		return true;
 	}
 	
+	public void pruebainiciarSesionCliente() {
+		controladorVentanaCliente.pruebainiciarSesion();
+	}
+	public void pruebaAñadirDatosCerrar() {
+		controladorVentanaCliente.pruebaAñadirDatosYCerrar();
+		desconectar();
+	}
+	
+	public void pruebaRegistro() {
+		controladorVentanaCliente.pruebaRegistro();
+	}
 }

@@ -112,4 +112,11 @@ public class controladorRegistro implements ActionListener {
 			break;
 		}
 	}
+	
+	public void pruebaRegistro() {
+		vistaRegistro.getTextField().setText("hola");
+		vistaRegistro.getPasswordField().setText("adios");
+		vistaRegistro.getPasswordField_1().setText("adios");
+		ValidarDatos();
+	}
 }

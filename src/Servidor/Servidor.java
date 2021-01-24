@@ -11,7 +11,7 @@ import java.net.Socket;
 
 public class Servidor {
 	private final static int PUERTO = 5000;
-	static boolean activo = true;
+	public static boolean activo = true;
 	
 	public static void main(String[] args) {
 		principal.init.iniciarTodo();
@@ -61,4 +61,5 @@ public static void iniciar() {
 		System.out.println("Fin servidor");
 		}
 	}
+
 }

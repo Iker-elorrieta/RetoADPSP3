@@ -152,6 +152,8 @@ public class Hiloconecxiones extends Thread{
 			break;//	case 6
 		case 0://Cerrar
 			activo=false;
+			Servidor.activo=false;
+			//Servidor.CerrarServer();
 			break;
 		}
 	}

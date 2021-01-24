@@ -102,11 +102,8 @@ public class controladorListado implements ActionListener {
 			rellenandoBoxMuni=false;
 			RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			
 		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
 		}
 		
 	}
@@ -134,13 +131,15 @@ public class controladorListado implements ActionListener {
 			e1.printStackTrace();
 		}
 	}
-	ArrayList<String> tipoDeDato = new ArrayList<String>();
-	ArrayList<String> Calculos = new ArrayList<String>();
+	
 	String[] titulo = {"Tipo De Dato","Calculos"};
 	private JTable tabla;
 	public void RellenarTabla(String Nombre,String Nombre2){
 		int contador=0;
 		rellenandoBoxEsta = true;
+		ArrayList<String> tipoDeDato = new ArrayList<String>();
+		ArrayList<String> Calculos = new ArrayList<String>();
+		this.vistaListado.getTextArea().setText("");
 		try {
 			salida.writeUTF("6");
 			salida.writeUTF(Nombre+":"+Nombre2);
@@ -151,6 +150,7 @@ public class controladorListado implements ActionListener {
 				Calculos.add(datosCali.getFecha().toString());
 				contador++;
 			}
+			System.out.println(datosCali.getHora());
 			if(datosCali.getHora()!=null) {
 				tipoDeDato.add("Hora") ;
 				Calculos.add(datosCali.getHora().toString());
@@ -224,7 +224,7 @@ public class controladorListado implements ActionListener {
 			
 			String[][] dato = new String[tipoDeDato.size()][Calculos.size()];
 			System.out.println("aqui si");
-			for(int x=0;x<tipoDeDato.size()-1;x++) {
+			for(int x=0;x<tipoDeDato.size();x++) {
 				dato[x][0]=tipoDeDato.get(x);
 				dato[x][1]=Calculos.get(x);
 				/*System.out.println("estoy aqui");
@@ -250,5 +250,9 @@ public class controladorListado implements ActionListener {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	public void pruebaMunicipiosDatos() {
+		rellenarComboBoxMuni("Bizkaia");
+		cerrarServer();
 	}
 }

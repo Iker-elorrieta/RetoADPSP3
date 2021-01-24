@@ -18,6 +18,7 @@ public class controladorVentanaCliente implements ActionListener {
 	DataInputStream entrada = null;
 	DataOutputStream salida = null;
 	ObjectInputStream entradaf=null;
+	controladorListado controladorListado;
 	
 	public controladorVentanaCliente(VentanaCliente vistaCliente,DataInputStream in, DataOutputStream out,ObjectInputStream inf) {
 		super();
@@ -79,7 +80,7 @@ public class controladorVentanaCliente implements ActionListener {
 				
 		}else {
 			Listado listado = new Listado();
-			controladorListado controladorListado = new controladorListado(listado,entrada,salida,entradaf);
+			controladorListado = new controladorListado(listado,entrada,salida,entradaf);
 			vistaCliente.dispose();
 			listado.setVisible(true);
 			return 1;
@@ -104,8 +105,22 @@ public class controladorVentanaCliente implements ActionListener {
 			break;
 		}
 		
+		
 	}
-	
+	public void pruebainiciarSesion() {
+			vistaCliente.getTextField().setText("hola");
+			vistaCliente.getPasswordField().setText("adios");
+			entrar();
+		}
+	public void pruebaAñadirDatosYCerrar() {
+		
+		controladorListado.pruebaMunicipiosDatos();
+	}
+public void pruebaRegistro() {
+	Registro reg = new Registro();
+	controladorRegistro controladorRegistro = new controladorRegistro(reg, entrada, salida);
+	controladorRegistro.pruebaRegistro();
+	}
 }
 
 

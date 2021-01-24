@@ -52,7 +52,7 @@ public class ConsultasDatosCalidad {
 		boolean agregar = true;
 		System.out.println(nombreEsta);
 		System.out.println(nombreMuni);
-		String hql= "From DatosCalidad where estaciones.nombre = '" + nombreEsta + "'";
+		String hql= "From DatosCalidad where estaciones.codEstacion = (select codEstacion from Estaciones where nombre='" + nombreEsta + "') and not nogm3 = 'null' order by fecha" ;
 		System.out.println("holaaaaaa");
 		Query q= (Query) session.createQuery(hql);
 		List <DatosCalidad> dep= q.list();

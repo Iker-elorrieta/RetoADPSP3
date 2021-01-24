@@ -140,8 +140,12 @@ public class Links {
 			}
 			
 		}
+		try {
 		while(crearDatos.isAlive()) {
 			
+		}
+		}catch(NullPointerException e1) {
+			System.out.println("El hilo no se ejecuta al no actualizar");
 		}
 		System.out.println("Datos de Calidad Actualizados");
 		return true;
