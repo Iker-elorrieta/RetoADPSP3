@@ -36,26 +36,26 @@ public class ConsultaInicial {
 		}
 		
 	}
-	
-	public Boolean CambiarContraseña() {
-		boolean agregar = true;
-		String hql= "From Usuarios";
-		Query q= (Query) session.createQuery(hql);
-		List <Usuarios> dep= q.list();
-		
-		for(int i=0;i<dep.size();i++) {
-			Usuarios d = dep.get(i);
-			if(d.getNombre().equals(usuario) && d.getPass().equals(pass) ) {
-				agregar = false;
-			}
-		}
-		if(!agregar) {
-			
-		return true;
-		}
-		return false;
-	}
-	
+//	
+//	public Boolean CambiarContraseña() {
+//		boolean agregar = true;
+//		String hql= "From Usuarios";
+//		Query q= (Query) session.createQuery(hql);
+//		List <Usuarios> dep= q.list();
+//		
+//		for(int i=0;i<dep.size();i++) {
+//			Usuarios d = dep.get(i);
+//			if(d.getNombre().equals(usuario) && d.getPass().equals(pass) ) {
+//				agregar = false;
+//			}
+//		}
+//		if(!agregar) {
+//			
+//		return true;
+//		}
+//		return false;
+//	}
+//	
 	public boolean CambiarVentana() {
 		
 		boolean agregar = true;

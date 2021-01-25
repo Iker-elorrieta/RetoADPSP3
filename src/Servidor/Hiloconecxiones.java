@@ -85,18 +85,18 @@ public class Hiloconecxiones extends Thread{
 				e.printStackTrace();
 			}
 			break; //	case 2
-		case 3: //tras comprobar usuario y contraseña correcta cambia la contraseña
-			try {
-				String datos = entrada.readUTF();
-				ConsultaInicial ci = new ConsultaInicial(datos);
-				ci.separardatos();
-//				salida.writeUTF(ci.CambiarVentana());
-				
-			} catch (IOException e) {
-				
-				e.printStackTrace();
-			}
-			break;//	case 3
+//		case 3: //tras comprobar usuario y contraseña correcta cambia la contraseña
+//			try {
+//				String datos = entrada.readUTF();
+//				ConsultaInicial ci = new ConsultaInicial(datos);
+//				ci.separardatos();
+////				salida.writeUTF(ci.CambiarVentana());
+//				
+//			} catch (IOException e) {
+//				
+//				e.printStackTrace();
+//			}
+//			break;//	case 3
 		case 4: // Tras seleccionar una provincia Cargamos el nombre de los espacios correspondientes
 			try {
 				muni = new ArrayList <Municipios>();

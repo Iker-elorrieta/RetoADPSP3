@@ -63,7 +63,7 @@ public class controladorVentanaCliente implements ActionListener {
 				}
 			} catch (NoSuchAlgorithmException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				
 			}
 			System.out.println("hola");
 			salida.writeUTF("2");
@@ -71,7 +71,7 @@ public class controladorVentanaCliente implements ActionListener {
 			res = entrada.readBoolean();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			
 		}
 		if(!res) {
 			vistaCliente.getLBL1().setText("Usuario o pass incorrectos");
