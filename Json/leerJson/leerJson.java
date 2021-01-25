@@ -63,8 +63,9 @@ public class leerJson {
 	final private String SO2 = "SO2";
 	final private String SO2ICA = "SO2ICA";
 	final private String ICAEstacion = "ICAEstacion";
-	
-	
+	final private String O3gm3 = "O3gm3";
+	final private String O3ICA = "O3ICA";
+	final private String O38hgm3 = "O38hgm3";
 	public String LeerJsonDiarios(JsonElement elemento, ArrayList<Links> enlazes, String nombre) {
 
 		Links link = new Links();
@@ -514,6 +515,15 @@ public class leerJson {
 							break;
 						case ICAEstacion:
 							datosDeCalidad.setIcastation(valor.getAsString());
+							break;
+						case O3gm3:
+							datosDeCalidad.setNogm3(valor.getAsInt());
+							break;
+						case O3ICA:
+							datosDeCalidad.setNo2ica(valor.getAsString());
+							break;
+						case O38hgm3:
+							datosDeCalidad.setCo8hmgM3(Float.parseFloat(valor.getAsString().replace(",", ".")));
 							break;
 
 						}

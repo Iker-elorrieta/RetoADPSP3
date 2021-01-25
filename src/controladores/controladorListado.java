@@ -125,10 +125,10 @@ public class controladorListado implements ActionListener {
 			RellenarTabla(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),vistaListado.getComboBoxEstaciones().getSelectedItem().toString());
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			
 		} catch (ClassNotFoundException e1) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			
 		}
 	}
 	
@@ -236,10 +236,10 @@ public class controladorListado implements ActionListener {
 			
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			
 		} catch (ClassNotFoundException e1) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			
 		}
 	}
 	
@@ -248,11 +248,13 @@ public class controladorListado implements ActionListener {
 			salida.writeUTF("0");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			
 		}
 	}
 	public void pruebaMunicipiosDatos() {
+		rellenarComboBoxMuni("Araba/Álava");
 		rellenarComboBoxMuni("Bizkaia");
+		rellenarComboBoxMuni("Gipuzkoa");
 		cerrarServer();
 	}
 }

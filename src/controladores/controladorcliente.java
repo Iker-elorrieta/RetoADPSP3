@@ -71,7 +71,7 @@ public class controladorcliente {
 	}
 	public void pruebaAñadirDatosCerrar() {
 		controladorVentanaCliente.pruebaAñadirDatosYCerrar();
-		desconectar();
+		
 	}
 	
 	public void pruebaRegistro() {

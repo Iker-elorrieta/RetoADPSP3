@@ -48,6 +48,9 @@ public class escribirJson {
 	final private String SO2ICA = "SO2ICA";
 	final private String ICAEstacion = "ICAEstacion";
 	final private String URL = "url";
+	final private String O3gm3 = "O3gm3";
+	final private String O3ICA = "O3ICA";
+	final private String O38hgm3 = "O38hgm3";
 	//Ibai revisa con contains para agregar los datos que quieres guardar.
 	public void escribirJsonDiarios(String urlmandado, String NombreFichero) {
 
@@ -206,6 +209,12 @@ public class escribirJson {
 					}else if (linea.contains(SO2ICA)) {
 						pw.println(linea);
 					}else if (linea.contains(ICAEstacion)) {
+						pw.println(linea);
+					}else if (linea.contains(O3gm3)) {
+						pw.println(linea);
+					}else if (linea.contains(O3ICA)) {
+						pw.println(linea);
+					}else if (linea.contains(O38hgm3)) {
 						pw.println(linea);
 					}
 				}
