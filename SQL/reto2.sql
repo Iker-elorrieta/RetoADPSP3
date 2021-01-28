@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-01-2021 a las 16:18:33
--- Versión del servidor: 10.4.17-MariaDB
--- Versión de PHP: 8.0.0
+-- Tiempo de generación: 28-01-2021 a las 19:50:48
+-- Versión del servidor: 10.4.16-MariaDB
+-- Versión de PHP: 7.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -106,6 +106,19 @@ CREATE TABLE `favoritos` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `fotos`
+--
+
+CREATE TABLE `fotos` (
+  `codigo_foto` int(11) NOT NULL,
+  `datos_foto` longblob NOT NULL,
+  `tipo_ubicacion` tinyint(4) NOT NULL,
+  `codigo_ubicacion` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `hash_json`
 --
 
@@ -188,6 +201,12 @@ ALTER TABLE `favoritos`
   ADD KEY `FK_usu_fav` (`Cod_Usuario`);
 
 --
+-- Indices de la tabla `fotos`
+--
+ALTER TABLE `fotos`
+  ADD PRIMARY KEY (`codigo_foto`);
+
+--
 -- Indices de la tabla `hash_json`
 --
 ALTER TABLE `hash_json`
@@ -220,25 +239,31 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `datos_calidad`
 --
 ALTER TABLE `datos_calidad`
-  MODIFY `Cod_Datos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70679;
+  MODIFY `Cod_Datos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92661;
 
 --
 -- AUTO_INCREMENT de la tabla `estaciones`
 --
 ALTER TABLE `estaciones`
-  MODIFY `Cod_Estacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=673;
+  MODIFY `Cod_Estacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=732;
 
 --
 -- AUTO_INCREMENT de la tabla `favoritos`
 --
 ALTER TABLE `favoritos`
-  MODIFY `Cod_Favorito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `Cod_Favorito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
+-- AUTO_INCREMENT de la tabla `fotos`
+--
+ALTER TABLE `fotos`
+  MODIFY `codigo_foto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `Cod_Usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Cod_Usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Restricciones para tablas volcadas
