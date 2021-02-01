@@ -11,7 +11,7 @@ import Tablas.DatosCalidad;
 import Tablas.Estaciones;
 
 public class ConsultasDatosCalidad {
-	String nombreMuni,nombreEsta,Fecha;
+	String nombreMuni,nombreEsta,Fecha,Hora;
 	
 	public int separardatos(String dat) {
 		try {
@@ -30,6 +30,19 @@ public class ConsultasDatosCalidad {
 			nombreMuni = inf[0];
 			nombreEsta = inf[1];
 			Fecha = inf[2];
+			return 1;
+		} catch (Exception e) {
+			return -1;
+		}
+
+	}
+	public int separardatos3(String dat) {
+		try {
+			String inf[] = dat.split("_");
+			nombreMuni = inf[0];
+			nombreEsta = inf[1];
+			Fecha = inf[2];
+			Hora = inf[3];
 			return 1;
 		} catch (Exception e) {
 			return -1;
@@ -62,10 +75,9 @@ public class ConsultasDatosCalidad {
 		SessionFactory sesion = HibernateUtil.getSessionFactory();
 		Session session = sesion.openSession();
 		boolean agregar = true;
-		System.out.println(nombreEsta);
-		System.out.println(nombreMuni);
-		String hql= "From DatosCalidad where estaciones.codEstacion = (select codEstacion from Estaciones where nombre='" + nombreEsta + "')";
-		System.out.println("holaaaaaa");
+	
+		String hql= "From DatosCalidad where estaciones.municipios.nombre= '"+ nombreMuni +"' and estaciones.nombre = '" + nombreEsta + "' and fecha = '" + Fecha + "' and hora = '" + Hora + "'" ;
+		System.out.println(hql);
 		Query q= (Query) session.createQuery(hql);
 		return q.list();
 		
@@ -78,9 +90,20 @@ public class ConsultasDatosCalidad {
 		SessionFactory sesion = HibernateUtil.getSessionFactory();
 		Session session = sesion.openSession();
 		boolean agregar = true;
-		System.out.println(nombreEsta);
-		System.out.println(nombreMuni);
-		String hql= "From DatosCalidad where estaciones.codEstacion = (select codEstacion from Estaciones where nombre='" + nombreEsta + "') and fecha=" + Fecha ;
+		String hql= "From DatosCalidad where estaciones.municipios.nombre= '"+ nombreMuni +"' and estaciones.nombre = '" + nombreEsta + "' and fecha = '" + Fecha + "'" ;
+		
+		Query q= (Query) session.createQuery(hql);
+		return q.list();
+		
+			
+		
+		
+	}
+	public List recogerDatosCalidadFecha(ArrayList<DatosCalidad> datos) {
+		SessionFactory sesion = HibernateUtil.getSessionFactory();
+		Session session = sesion.openSession();
+		boolean agregar = true;
+		String hql= "From DatosCalidad where estaciones.municipios.nombre= '"+ nombreMuni +"' and estaciones.nombre ='" + nombreEsta + "')";
 		
 		Query q= (Query) session.createQuery(hql);
 		return q.list();

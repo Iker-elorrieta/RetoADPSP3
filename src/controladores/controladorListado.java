@@ -29,7 +29,8 @@ public class controladorListado implements ActionListener {
 	DataInputStream entrada = null;
 	DataOutputStream salida = null;
 	ObjectInputStream entradaf = null;
-	public controladorListado(Listado vistaListado,DataInputStream in,DataOutputStream out,ObjectInputStream inf) {
+
+	public controladorListado(Listado vistaListado, DataInputStream in, DataOutputStream out, ObjectInputStream inf) {
 		super();
 		this.vistaListado = vistaListado;
 		entrada = in;
@@ -37,298 +38,401 @@ public class controladorListado implements ActionListener {
 		entradaf = inf;
 		iniciarControlador();
 	}
-	
+
 	private void iniciarControlador() {
-		
+
 		vistaListado.getComboBoxMunicipio().addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
-				if(!rellenandoBoxMuni) {
+				if (!rellenandoBoxMuni) {
 					RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
-					}
 				}
+			}
 		});
-		
+
 		vistaListado.getComboBoxEstaciones().addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
-				if(!rellenandoBoxEsta) {
-					RellenarComboFecha(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),vistaListado.getComboBoxEstaciones().getSelectedItem().toString());
-					}
+				if (!rellenandoBoxEsta) {
+					RellenarComboFecha(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),
+							vistaListado.getComboBoxEstaciones().getSelectedItem().toString());
 				}
+			}
 		});
-		
+
 		vistaListado.getComboBoxFecha().addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
-				if(!rellenandoBoxHora) {
-					RellenarComboHora(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),vistaListado.getComboBoxEstaciones().getSelectedItem().toString(),vistaListado.getComboBoxFecha().getSelectedItem().toString());
-					}
+				if (!rellenandoBoxFecha) {
+					RellenarComboHora(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),
+							vistaListado.getComboBoxEstaciones().getSelectedItem().toString(),
+							vistaListado.getComboBoxFecha().getSelectedItem().toString());
 				}
+			}
 		});
-		
-		
-		
+
+		vistaListado.getComboBoxHora().addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent e) {
+				if (!rellenandoBoxHora) {
+					RellenarTabla(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),
+							vistaListado.getComboBoxEstaciones().getSelectedItem().toString(),
+							vistaListado.getComboBoxFecha().getSelectedItem().toString(),
+							vistaListado.getComboBoxHora().getSelectedItem().toString());
+				}
+			}
+		});
+
 		this.vistaListado.getBtnArabalaba().addActionListener(this);
 		this.vistaListado.getBtnArabalaba().setActionCommand(Listado.enumAcciones.ARABA.toString());
 		this.vistaListado.getBtnBizkaia().addActionListener(this);
 		this.vistaListado.getBtnBizkaia().setActionCommand(Listado.enumAcciones.BIZKAIA.toString());
 		this.vistaListado.getBtnGipuzkoa().addActionListener(this);
 		this.vistaListado.getBtnGipuzkoa().setActionCommand(Listado.enumAcciones.GIPUZKOA.toString());
+		this.vistaListado.getBtnTop().addActionListener(this);
+		this.vistaListado.getBtnTop().setActionCommand(Listado.enumAcciones.TOP.toString());
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
-		
+
 		Listado.enumAcciones accion = Listado.enumAcciones.valueOf(e.getActionCommand());
-		
-		
-		
-		
-		
 
 		switch (accion) {
 		case ARABA:
-			rellenarComboBoxMuni("Araba/Álava");			
+			rellenarComboBoxMuni("Araba/Álava");
+			//recogerDatosTopProvincia(vistaListado.getBoxTipoDeDato().getSelectedItem().toString(), "Araba/Álava");
 			break;
 		case BIZKAIA:
 			rellenarComboBoxMuni("Bizkaia");
 			break;
 		case GIPUZKOA:
 			rellenarComboBoxMuni("Gipuzkoa");
-				break;
+			break;
+//		case TOP:
+//			recogerDatosTop(vistaListado.getBoxTipoDeDato().getSelectedItem().toString());
+//			break;
 		}
 	}
-	
+
 	public void rellenarComboBoxMuni(String Nombre) {
 		rellenandoBoxMuni = true;
 		vistaListado.getComboBoxMunicipio().removeAllItems();
 		try {
 			salida.writeUTF("4");
 			salida.writeUTF(Nombre);
-			List <Tablas.Municipios> munis = (List <Tablas.Municipios>) entradaf.readObject();
-			for(Municipios muni : munis) {
-				vistaListado.getComboBoxMunicipio().addItem(muni.getNombre());
+			List<Tablas.Municipios> munis = (List<Tablas.Municipios>) entradaf.readObject();
+			for (Municipios muni : munis) {
+				vistaListado.getComboBoxMunicipio().addItem(muni);
+
 			}
-			rellenandoBoxMuni=false;
+			rellenandoBoxMuni = false;
 			RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
 		} catch (IOException e1) {
-			
+
 		} catch (ClassNotFoundException e1) {
 		}
-		
+
 	}
+//	public void recogerDatosTopProvincia(String datos,String provincia) {
+//		rellenandoBoxMuni = true;
+//		String Hql = "";
+//		try {
+//		salida.writeUTF("9");
+//		if (vistaListado.getBoxTipoDeDato().getSelectedItem().toString().contains("ica")) {
+//			Hql = "FROM DatosCalidad where " + datos
+//					+ " = 'Muy bueno / Oso ona' and estaciones.municipios.provincias.nombre = '" + provincia + "' ORDER BY NOgm3 DESC";
+//			System.out.println(Hql);
+//			
+//		} else {
+//			Hql = "FROM DatosCalidad where estaciones.municipios.provincias.nombre = '" + provincia + "' ORDER BY " + datos + " DESC";
+//			
+//			System.out.println(Hql);
+//			
+//		}
+//		salida.writeUTF(Hql);
+//		ArrayList<String> nombres = (ArrayList<String>) entradaf.readObject();
+//		vistaListado.getComboBoxMunicipio().removeAllItems();
+//		for(String nombre:nombres) {
+//			vistaListado.getComboBoxMunicipio().addItem(nombre);
+//		}
+//	 
+//		
+//		rellenandoBoxMuni = false;
+//		RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (ClassNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}	
+//		
+//	}
+
+//	public void recogerDatosTop(String datos) {
+//		rellenandoBoxMuni = true;
+//		String Hql = "";
+//		try {
+//		salida.writeUTF("9");
+//		if (vistaListado.getBoxTipoDeDato().getSelectedItem().toString().contains("ica")) {
+//			Hql = "FROM DatosCalidad where " + datos
+//					+ " = 'Muy bueno / Oso ona' ORDER BY NOgm3 DESC";
+//			System.out.println(Hql);
+//			
+//		} else {
+//			Hql = "FROM DatosCalidad ORDER BY " + datos + " DESC";
+//			
+//			System.out.println(Hql);
+//			
+//		}
+//		salida.writeUTF(Hql);
+//		ArrayList<String> nombres = (ArrayList<String>) entradaf.readObject();
+//		vistaListado.getComboBoxMunicipio().removeAllItems();
+//		for(String nombre:nombres) {
+//			vistaListado.getComboBoxMunicipio().addItem(nombre);
+//		}
+//	 
+//		
+//		rellenandoBoxMuni = false;
+//		RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (ClassNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}	
+//		
+//	}
+
 	private boolean rellenandoBoxMuni = true;
 	private boolean rellenandoBoxEsta = true;
 	private boolean rellenandoBoxHora = true;
-	public void RellenarComboBoxEstac(String Nombre){
+	private boolean rellenandoBoxFecha = true;
+
+	public void RellenarComboBoxEstac(String Nombre) {
 		rellenandoBoxEsta = true;
 		vistaListado.getComboBoxEstaciones().removeAllItems();
 		try {
-			
+
 			salida.writeUTF("5");
 			salida.writeUTF(Nombre);
-			List<Tablas.Estaciones> estac = (List<Tablas.Estaciones>)entradaf.readObject();
-			for(Estaciones esta : estac) {
+			List<Tablas.Estaciones> estac = (List<Tablas.Estaciones>) entradaf.readObject();
+			for (Estaciones esta : estac) {
 				vistaListado.getComboBoxEstaciones().addItem(esta.getNombre());
-				
+
 			}
-			rellenandoBoxEsta=false;
-			RellenarComboFecha(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),vistaListado.getComboBoxEstaciones().getSelectedItem().toString());
+			rellenandoBoxEsta = false;
+			RellenarComboFecha(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),
+					vistaListado.getComboBoxEstaciones().getSelectedItem().toString());
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
-			
+
 		} catch (ClassNotFoundException e1) {
 			// TODO Auto-generated catch block
-			
+
 		}
 	}
-	
-	String[] titulo = {"Tipo De Dato","Calculos"};
+
+	String[] titulo = { "Tipo De Dato", "Calculos" };
 	private JTable tabla;
-	public void RellenarTabla(String Nombre,String Nombre2){
-		int contador=0;
-	
+
+	public void RellenarTabla(String Nombre, String Nombre2, String Nombre3, String Nombre4) {
+		int contador = 0;
+
 		ArrayList<String> tipoDeDato = new ArrayList<String>();
 		ArrayList<String> Calculos = new ArrayList<String>();
 		this.vistaListado.getTextArea().setText("");
 		try {
-			salida.writeUTF("6");
-			salida.writeUTF(Nombre+":"+Nombre2);
-			DatosCalidad datosCali= (DatosCalidad) entradaf.readObject();
-			
-			if(datosCali.getFecha()!=null) {
-				tipoDeDato.add("Fecha") ;
-				Calculos.add(datosCali.getFecha().toString());
-				contador++;
+			salida.writeUTF("8");
+			salida.writeUTF(Nombre + "_" + Nombre2 + "_" + Nombre3 + "_" + Nombre4);
+			List<DatosCalidad> datosCalid = (List<DatosCalidad>) entradaf.readObject();
+			System.out.println(datosCalid.size());
+			for (DatosCalidad datosCali : datosCalid) {
+
+				if (datosCali.getFecha() != null) {
+					tipoDeDato.add("Fecha");
+					Calculos.add(datosCali.getFecha().toString());
+					contador++;
+				}
+				System.out.println(datosCali.getHora());
+				if (datosCali.getHora() != null) {
+					tipoDeDato.add("Hora");
+					Calculos.add(datosCali.getHora().toString());
+					contador++;
+				}
+				if (datosCali.getComgM3() != null) {
+					tipoDeDato.add("ComgM3");
+					Calculos.add(datosCali.getComgM3().toString());
+					contador++;
+				}
+				if (datosCali.getCo8hmgM3() != null) {
+					tipoDeDato.add("Co8hmgM3");
+					Calculos.add(datosCali.getCo8hmgM3().toString());
+					contador++;
+				}
+				if (datosCali.getNogm3() != null) {
+					tipoDeDato.add("NOgm3");
+					Calculos.add(datosCali.getNogm3().toString());
+					contador++;
+				}
+				if (datosCali.getNo2() != null) {
+					tipoDeDato.add("NO2");
+					Calculos.add(datosCali.getNo2().toString());
+					contador++;
+				}
+				if (datosCali.getNo2ica() != null) {
+					tipoDeDato.add("NO2ICA");
+					Calculos.add(datosCali.getNo2ica().toString());
+					contador++;
+				}
+				if (datosCali.getNoxgm3() != null) {
+					tipoDeDato.add("NOXgm3");
+					Calculos.add(datosCali.getNoxgm3().toString());
+					contador++;
+				}
+				if (datosCali.getPm10() != null) {
+					tipoDeDato.add("PM10");
+					Calculos.add(datosCali.getPm10().toString());
+					contador++;
+				}
+				if (datosCali.getPm10ica() != null) {
+					tipoDeDato.add("PM10ICA");
+					Calculos.add(datosCali.getPm10ica().toString());
+					contador++;
+				}
+				if (datosCali.getPm25() != null) {
+					tipoDeDato.add("PM25");
+					Calculos.add(datosCali.getPm25().toString());
+					contador++;
+				}
+				if (datosCali.getPm25ica() != null) {
+					tipoDeDato.add("PM25ICA");
+					Calculos.add(datosCali.getNo2().toString());
+					contador++;
+				}
+				if (datosCali.getSo2() != null) {
+					tipoDeDato.add("SO2");
+					Calculos.add(datosCali.getSo2().toString());
+					contador++;
+				}
+				if (datosCali.getSo2ica() != null) {
+					tipoDeDato.add("SO2ICA");
+					Calculos.add(datosCali.getSo2ica().toString());
+					contador++;
+				}
+				if (datosCali.getIcastation() != null) {
+					tipoDeDato.add("ICAStation");
+					Calculos.add(datosCali.getIcastation().toString());
+					contador++;
+				}
+				break;
 			}
-			System.out.println(datosCali.getHora());
-			if(datosCali.getHora()!=null) {
-				tipoDeDato.add("Hora") ;
-				Calculos.add(datosCali.getHora().toString());
-				contador++;
-			}
-			if(datosCali.getComgM3()!=null) {
-				tipoDeDato.add("ComgM3") ;
-				Calculos.add(datosCali.getComgM3().toString());
-				contador++;
-			}
-			if(datosCali.getCo8hmgM3()!=null) {
-				tipoDeDato.add("Co8hmgM3") ;
-				Calculos.add(datosCali.getCo8hmgM3().toString());
-				contador++;
-			}
-			if(datosCali.getNogm3()!=null) {
-				tipoDeDato.add("NOgm3") ;
-				Calculos.add(datosCali.getNogm3().toString());
-				contador++;
-			}
-			if(datosCali.getNo2()!=null) {
-				tipoDeDato.add("NO2") ;
-				Calculos.add(datosCali.getNo2().toString());
-				contador++;
-			}
-			if(datosCali.getNo2ica()!=null) {
-				tipoDeDato.add("NO2ICA") ;
-				Calculos.add(datosCali.getNo2ica().toString());
-				contador++;
-			}
-			if(datosCali.getNoxgm3()!=null) {
-				tipoDeDato.add("NOXgm3") ;
-				Calculos.add(datosCali.getNoxgm3().toString());
-				contador++;
-			}
-			if(datosCali.getPm10()!=null) {
-				tipoDeDato.add("PM10") ;
-				Calculos.add(datosCali.getPm10().toString());
-				contador++;
-			}
-			if(datosCali.getPm10ica()!=null) {
-				tipoDeDato.add("PM10ICA") ;
-				Calculos.add(datosCali.getPm10ica().toString());
-				contador++;
-			}
-			if(datosCali.getPm25()!=null) {
-				tipoDeDato.add("PM25") ;
-				Calculos.add(datosCali.getPm25().toString());
-				contador++;
-			}
-			if(datosCali.getPm25ica()!=null) {
-				tipoDeDato.add("PM25ICA") ;
-				Calculos.add(datosCali.getNo2().toString());
-				contador++;
-			}
-			if(datosCali.getSo2()!=null) {
-				tipoDeDato.add("SO2") ;
-				Calculos.add(datosCali.getSo2().toString());
-				contador++;
-			}
-			if(datosCali.getSo2ica()!=null) {
-				tipoDeDato.add("SO2ICA") ;
-				Calculos.add(datosCali.getSo2ica().toString());
-				contador++;
-			}
-			if(datosCali.getIcastation()!=null) {
-				tipoDeDato.add("ICAStation") ;
-				Calculos.add(datosCali.getIcastation().toString());
-				contador++;
-			}
-			
 			String[][] dato = new String[tipoDeDato.size()][Calculos.size()];
 			System.out.println("aqui si");
-			for(int x=0;x<tipoDeDato.size();x++) {
-				dato[x][0]=tipoDeDato.get(x);
-				dato[x][1]=Calculos.get(x);
-				/*System.out.println("estoy aqui");
-				System.out.println(Calculos.get(x));*/
+			for (int x = 0; x < tipoDeDato.size(); x++) {
+				dato[x][0] = tipoDeDato.get(x);
+				dato[x][1] = Calculos.get(x);
+				/*
+				 * System.out.println("estoy aqui"); System.out.println(Calculos.get(x));
+				 */
 				this.vistaListado.getTextArea().append(dato[x][0] + " : " + dato[x][1] + "\n");
 			}
-			/*tabla =new JTable(dato,titulo);
-			vistaListado.setTable_1(tabla);*/
-			
+			/*
+			 * tabla =new JTable(dato,titulo); vistaListado.setTable_1(tabla);
+			 */
+
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
-			
+
 		} catch (ClassNotFoundException e1) {
 			// TODO Auto-generated catch block
-			
+
 		}
 	}
-	private java.util.Date Fecha=null;	
-	public void RellenarComboFecha(String Nombre,String Nombre2){
-		rellenandoBoxHora=true;
-		int contador=0;
-	
+
+	private java.util.Date Fecha = null;
+
+	public void RellenarComboFecha(String Nombre, String Nombre2) {
+		rellenandoBoxFecha = true;
+		int contador = 0;
+
 		this.vistaListado.getTextArea().setText("");
 		try {
 			salida.writeUTF("6");
-			salida.writeUTF(Nombre+":"+Nombre2);
-			List<Tablas.DatosCalidad> datosCali= (List<Tablas.DatosCalidad>) entradaf.readObject();
-			
-			for(DatosCalidad datoCal:datosCali) {
-				
+			salida.writeUTF(Nombre + ":" + Nombre2);
+			List<Tablas.DatosCalidad> datosCali = (List<Tablas.DatosCalidad>) entradaf.readObject();
+
+			for (DatosCalidad datoCal : datosCali) {
+
 				if (Fecha == null) {
 					Fecha = datoCal.getFecha();
 					vistaListado.getComboBoxFecha().addItem(datoCal.getFecha());
 				}
-				
-				else if(!Fecha.toString().equals(datoCal.getFecha().toString())) {
+
+				else if (!Fecha.toString().equals(datoCal.getFecha().toString())) {
 					Fecha = datoCal.getFecha();
-				vistaListado.getComboBoxFecha().addItem(datoCal.getFecha());
+					vistaListado.getComboBoxFecha().addItem(datoCal.getFecha());
 				}
 			}
-			/*tabla =new JTable(dato,titulo);
-			vistaListado.setTable_1(tabla);*/
-			
+			/*
+			 * tabla =new JTable(dato,titulo); vistaListado.setTable_1(tabla);
+			 */
+
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
-			
+
 		} catch (ClassNotFoundException e1) {
 			// TODO Auto-generated catch block
-			
+
 		}
-		rellenandoBoxHora=false;
-		RellenarComboHora(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),vistaListado.getComboBoxEstaciones().getSelectedItem().toString(),vistaListado.getComboBoxFecha().getSelectedItem().toString());
+		rellenandoBoxFecha = false;
+		RellenarComboHora(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),
+				vistaListado.getComboBoxEstaciones().getSelectedItem().toString(),
+				vistaListado.getComboBoxFecha().getSelectedItem().toString());
 	}
-	public void RellenarComboHora(String Nombre,String Nombre2,String Nombre3){
-		int contador=0;
+
+	public void RellenarComboHora(String Nombre, String Nombre2, String Nombre3) {
+		rellenandoBoxHora = true;
+		int contador = 0;
 		rellenandoBoxEsta = true;
 		this.vistaListado.getTextArea().setText("");
 		try {
 			salida.writeUTF("7");
-			salida.writeUTF(Nombre+":"+Nombre2 + ":" + Nombre3);
-			List<Tablas.DatosCalidad> datosCali= (List<Tablas.DatosCalidad>) entradaf.readObject();
-			
-			for(DatosCalidad datoCal:datosCali) {
-				
+			salida.writeUTF(Nombre + ":" + Nombre2 + ":" + Nombre3);
+			List<Tablas.DatosCalidad> datosCali = (List<Tablas.DatosCalidad>) entradaf.readObject();
+			for (DatosCalidad datoCal : datosCali) {
+
 				if (Fecha == null) {
 					Fecha = datoCal.getHora();
 					vistaListado.getComboBoxHora().addItem(datoCal.getHora());
 				}
-				
-				else if(!Fecha.toString().equals(datoCal.getHora().toString())) {
+
+				else if (!Fecha.toString().equals(datoCal.getHora().toString())) {
 					Fecha = datoCal.getHora();
-				vistaListado.getComboBoxHora().addItem(datoCal.getHora());
+					vistaListado.getComboBoxHora().addItem(datoCal.getHora());
 				}
 			}
-			/*tabla =new JTable(dato,titulo);
-			vistaListado.setTable_1(tabla);*/
-			
+			/*
+			 * tabla =new JTable(dato,titulo); vistaListado.setTable_1(tabla);
+			 */
+
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
-			
+
 		} catch (ClassNotFoundException e1) {
 			// TODO Auto-generated catch block
-			
+
 		}
+		rellenandoBoxHora = false;
 	}
-	
-	public void cerrarServer(){
+
+	public void cerrarServer() {
 		try {
 			salida.writeUTF("0");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			
+
 		}
 	}
+
 	public void pruebaMunicipiosDatos() {
 		rellenarComboBoxMuni("Araba/Álava");
 		rellenarComboBoxMuni("Bizkaia");

@@ -7,6 +7,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+import Tablas.DatosCalidad;
 import Tablas.Municipios;
 import Tablas.Usuarios;
 
@@ -43,9 +44,20 @@ public List recogermunicipios(ArrayList<Municipios> muni,String datos) {
 	Session session = sesion.openSession();
 	boolean agregar = true;
 	String hql= "From Municipios where codMunicipio in (select municipios.codMunicipio from Estaciones) and provincias.nombre = '"+ datos +"'";
-	System.out.println("holaaaaaa");
 	Query q= (Query) session.createQuery(hql);
 	return q.list();
+	
+	
+}
+public List recogermunicipiosTop(String datos) {
+	System.out.println(datos);
+	SessionFactory sesion = HibernateUtil.getSessionFactory();
+	Session session = sesion.openSession();
+	boolean agregar = true;
+	Query q= (Query) session.createQuery(datos);
+	List<DatosCalidad> muni = q.list();
+	System.out.println(muni.get(0).getHora());
+	return muni;
 	
 	
 }

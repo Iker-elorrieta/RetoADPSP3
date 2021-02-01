@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 import Insert.ConsultaMunicipios;
 import Insert.ConsultasDatosCalidad;
@@ -32,8 +33,7 @@ public class Hiloconecxiones extends Thread {
 		try {
 			salida.writeUTF("Bienvenido al servidor del equipo 3");
 			while (activo) {
-				String cod = entrada.readUTF();
-				System.out.println(cod);
+				String cod = entrada.readUTF();		
 				accion(cod);
 			}
 
@@ -129,14 +129,14 @@ public class Hiloconecxiones extends Thread {
 			}
 			break;// case 5
 
-		case 6: // Tras seleccionar la estacion cargaremos la informacion;
+		case 6: // Tras seleccionar la estacion cargaremos la Fecha;
 			try {
 				dato = new ArrayList<DatosCalidad>();
 				String datos = entrada.readUTF();
 				ConsultasDatosCalidad consulta = new ConsultasDatosCalidad();
 				consulta.separardatos(datos);
 
-				salidaf.writeObject(consulta.recogerDatosCalidad(dato));
+				salidaf.writeObject(consulta.recogerDatosCalidadFecha(dato));
 
 //				salida.writeUTF(ci.CambiarVentana());
 
@@ -145,7 +145,7 @@ public class Hiloconecxiones extends Thread {
 				e.printStackTrace();
 			}
 			break;// case 6
-		case 7: // Tras seleccionar la estacion cargaremos la informacion;
+		case 7: // Tras seleccionar la fecha cargaremos la informacion;
 			try {
 				dato = new ArrayList<DatosCalidad>();
 				String datos = entrada.readUTF();
@@ -160,7 +160,63 @@ public class Hiloconecxiones extends Thread {
 
 				e.printStackTrace();
 			}
-			break;// case 6
+			break;// case 7
+		case 8: // Tras seleccionar la Hora cargaremos los Datos;
+			try {
+				dato = new ArrayList<DatosCalidad>();
+				String datos = entrada.readUTF();
+				ConsultasDatosCalidad consulta = new ConsultasDatosCalidad();
+				consulta.separardatos3(datos);
+
+				salidaf.writeObject(consulta.recogerDatosCalidad(dato));
+
+//				salida.writeUTF(ci.CambiarVentana());
+
+			} catch (IOException e) {
+
+				e.printStackTrace();
+			}
+			break;// case 8
+//		case 9: // Cargamos el top
+//			try {
+//				
+//				String datos = entrada.readUTF();
+//				
+//				ConsultaMunicipios consulta = new ConsultaMunicipios();
+//
+//				List<DatosCalidad> datosCali = consulta.recogermunicipiosTop(datos);
+//				 int x=0;
+//				 int contador = 0;
+//				 ArrayList<String> nombresMuni = new ArrayList<String>();
+//				 boolean mismoNombre = false;
+//				while (x<datosCali.size() -1 && contador<5) {
+//					mismoNombre=false;
+//					for(int y = 0;y<nombresMuni.size();y++) {
+//						
+//						if(nombresMuni.get(y).equals(datosCali.get(x).getEstaciones().getMunicipios().getNombre())) {
+//							mismoNombre=true;
+//						}
+//					}
+//					
+//					
+//					if(!mismoNombre) {
+//					
+//					contador++;
+//					nombresMuni.add(datosCali.get(x).getEstaciones().getMunicipios().getNombre().toString());
+//					}
+//					
+//					x++;
+//				}
+//				salidaf.writeObject(nombresMuni);
+//
+////				salida.writeUTF(ci.CambiarVentana());
+//
+//			} catch (IOException e) {
+//
+//				e.printStackTrace();
+//			}
+//			break;// case 9
+		
 		case 0:// Cerrar
 			activo = false;
 			Servidor.activo = false;

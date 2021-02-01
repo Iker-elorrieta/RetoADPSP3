@@ -72,4 +72,9 @@ public class Municipios implements java.io.Serializable {
 		this.estaEns = estaEns;
 	}
 
+	@Override
+	public String toString() {
+		return nombre;
+	}
+
 }

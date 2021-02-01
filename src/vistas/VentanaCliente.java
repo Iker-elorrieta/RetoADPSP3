@@ -51,7 +51,7 @@ public class VentanaCliente extends JFrame {
 		textField.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("Usuario:");
-		lblNewLabel.setBounds(10, 97, 46, 14);
+		lblNewLabel.setBounds(10, 97, 73, 14);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Contrase\u00F1a");

@@ -7,6 +7,7 @@ import com.google.gson.JsonElement;
 import Insert.ConsultasDatosCalidad;
 import Tablas.DatosCalidad;
 import Tablas.Estaciones;
+import borrarBaseDeDatos.borrar;
 import leerJson.leerJson;
 
 public class HiloAnadirDatosCalidad extends Thread{
@@ -18,6 +19,7 @@ public class HiloAnadirDatosCalidad extends Thread{
 
 
 	public HiloAnadirDatosCalidad(JsonElement elemento, Estaciones estaciones) {
+		
 		super();
 		this.elemento = elemento;
 		this.estaciones = estaciones;
@@ -27,6 +29,7 @@ public class HiloAnadirDatosCalidad extends Thread{
 
 
 	public void run() {
+		//borrar.borrar(estaciones.getNombre());
 		leer.LeerJsonLinks(elemento, "", estaciones);
 	}
 }

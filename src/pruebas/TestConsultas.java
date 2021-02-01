@@ -115,12 +115,7 @@ public class TestConsultas {
 	ConsultaInicial consultaInicial2 = new ConsultaInicial("Hola:Adios2");
 	Hiloconecxiones hiloConexiones = new Hiloconecxiones(null, null,null);
 	Servidor servidor2 = new Servidor();
-//	borrarBaseDeDatos.borrar borrar = new borrarBaseDeDatos.borrar();
-//
-//	@Test
-//	public void Prueba8BorrarBaseDeDatos() {
-//		assertTrue(borrar.borrado());
-//	}
+	
 
 	@Test	
 	public void Prueba1IniciarTodoPrueba() {

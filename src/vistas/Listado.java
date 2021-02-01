@@ -18,6 +18,9 @@ import java.beans.PropertyChangeEvent;
 import javax.swing.border.BevelBorder;
 import javax.swing.JTextArea;
 import javax.swing.JLabel;
+import javax.swing.DefaultComboBoxModel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Listado extends JFrame {
 
@@ -28,9 +31,11 @@ public class Listado extends JFrame {
 	private JButton btnBizkaia,btnGipuzkoa,btnArabalaba;
 	private JTextArea textArea;
 	private JComboBox comboBoxFecha,comboBoxHora;
-	
+	private JButton btnTop;
+	private JButton btnNewButton;
+	private JComboBox BoxTipoDeDato;
 	public static enum enumAcciones {
-		ARABA,GIPUZKOA,BIZKAIA
+		ARABA,GIPUZKOA,BIZKAIA,TOP
 	}
 	public Listado() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -41,15 +46,15 @@ public class Listado extends JFrame {
 		contentPane.setLayout(null);
 		
 		 btnBizkaia = new JButton("Bizkaia");
-		btnBizkaia.setBounds(10, 66, 159, 69);
+		btnBizkaia.setBounds(10, 64, 159, 69);
 		contentPane.add(btnBizkaia);
 		
 		btnGipuzkoa = new JButton("Gipuzkoa");
-		btnGipuzkoa.setBounds(10, 203, 159, 69);
+		btnGipuzkoa.setBounds(10, 176, 159, 69);
 		contentPane.add(btnGipuzkoa);
 		
 		btnArabalaba = new JButton("Araba/Álaba");
-		btnArabalaba.setBounds(10, 340, 159, 69);
+		btnArabalaba.setBounds(10, 277, 159, 69);
 		contentPane.add(btnArabalaba);
 		
 		comboBoxMunicipio = new JComboBox();
@@ -75,20 +80,33 @@ public class Listado extends JFrame {
 		contentPane.add(comboBoxHora);
 		
 		JLabel lblNewLabel = new JLabel("Municipio");
-		lblNewLabel.setBounds(249, 203, 46, 14);
+		lblNewLabel.setBounds(249, 203, 80, 14);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblEstaciones = new JLabel("Estaciones");
-		lblEstaciones.setBounds(243, 353, 61, 14);
+		lblEstaciones.setBounds(243, 353, 104, 14);
 		contentPane.add(lblEstaciones);
 		
 		JLabel lblFecha = new JLabel("Fecha");
-		lblFecha.setBounds(550, 202, 46, 14);
+		lblFecha.setBounds(550, 202, 104, 14);
 		contentPane.add(lblFecha);
 		
 		JLabel lblHora = new JLabel("Hora");
-		lblHora.setBounds(550, 350, 46, 14);
+		lblHora.setBounds(550, 350, 104, 14);
 		contentPane.add(lblHora);
+		
+		btnTop = new JButton("Top_5");	
+		btnTop.setBounds(10, 378, 159, 69);
+		contentPane.add(btnTop);
+		
+		btnNewButton = new JButton("Espacios Naturales");
+		btnNewButton.setBounds(817, 449, 148, 64);
+		contentPane.add(btnNewButton);
+		
+		BoxTipoDeDato = new JComboBox();
+		BoxTipoDeDato.setModel(new DefaultComboBoxModel(new String[] {"comgM3", "co8hmgM3", "nogm3", "no2", "no2ica", "noxgm3", "pm10", "pm10ica", "pm25", "pm25ica", "so2", "so2ica", "icastation"}));
+		BoxTipoDeDato.setBounds(10, 458, 159, 22);
+		contentPane.add(BoxTipoDeDato);
 		
 	}
 		/*table_1 = new JTable();
@@ -134,6 +152,40 @@ public class Listado extends JFrame {
 
 	public JComboBox getComboBoxHora() {
 		return comboBoxHora;
+	}
+
+
+
+	public JButton getBtnTop() {
+		return btnTop;
+	}
+
+
+
+	public void setBtnTop(JButton btnTop) {
+		this.btnTop = btnTop;
+	}
+
+
+
+	public JComboBox getBoxTipoDeDato() {
+		return BoxTipoDeDato;
+	}
+
+
+
+	public void setBoxTipoDeDato(JComboBox boxTipoDeDato) {
+		BoxTipoDeDato = boxTipoDeDato;
+	}
+
+	public JButton getBtnNewButton() {
+		return btnNewButton;
+	}
+
+
+
+	public void setBtnNewButton(JButton btnNewButton) {
+		this.btnNewButton = btnNewButton;
 	}
 
 
