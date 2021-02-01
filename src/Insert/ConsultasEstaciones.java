@@ -30,19 +30,14 @@ public class ConsultasEstaciones {
 
 		}
 	Estaciones estacion;
-	public void recogerEstaciones(ArrayList<Estaciones> esta,String datos) {
+	public List recogerEstaciones(ArrayList<Estaciones> esta,String datos) {
 		SessionFactory sesion = HibernateUtil.getSessionFactory();
 		Session session = sesion.openSession();
 		boolean agregar = true;
 		String hql= "From Estaciones where municipios.codMunicipio = (Select codMunicipio from Municipios where nombre ='" + datos + "')";
 		System.out.println("holaaaaaa");
 		Query q= (Query) session.createQuery(hql);
-		List <Estaciones> dep= q.list();
-		for(int i=0;i<dep.size();i++) {
-			estacion = new Estaciones();
-			estacion = dep.get(i);
-			esta.add(estacion);
-		}
+		return q.list();
 		
 	}
 }

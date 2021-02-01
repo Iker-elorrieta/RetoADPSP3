@@ -38,19 +38,15 @@ public boolean insertMunicipio(ArrayList<Tablas.Municipios> municipios) {
 
 	}
 Municipios municipio;
-public void recogermunicipios(ArrayList<Municipios> muni,String datos) {
+public List recogermunicipios(ArrayList<Municipios> muni,String datos) {
 	SessionFactory sesion = HibernateUtil.getSessionFactory();
 	Session session = sesion.openSession();
 	boolean agregar = true;
 	String hql= "From Municipios where codMunicipio in (select municipios.codMunicipio from Estaciones) and provincias.nombre = '"+ datos +"'";
 	System.out.println("holaaaaaa");
 	Query q= (Query) session.createQuery(hql);
-	List <Municipios> dep= q.list();
-	for(int i=0;i<dep.size();i++) {
-		municipio = new Municipios();
-		municipio = dep.get(i);
-		muni.add(municipio);
-	}
+	return q.list();
+	
 	
 }
 }

@@ -11,13 +11,25 @@ import Tablas.DatosCalidad;
 import Tablas.Estaciones;
 
 public class ConsultasDatosCalidad {
-	String nombreMuni,nombreEsta;
+	String nombreMuni,nombreEsta,Fecha;
 	
 	public int separardatos(String dat) {
 		try {
 			String inf[] = dat.split(":");
 			nombreMuni = inf[0];
 			nombreEsta = inf[1];
+			return 1;
+		} catch (Exception e) {
+			return -1;
+		}
+
+	}
+	public int separardatos2(String dat) {
+		try {
+			String inf[] = dat.split(":");
+			nombreMuni = inf[0];
+			nombreEsta = inf[1];
+			Fecha = inf[2];
 			return 1;
 		} catch (Exception e) {
 			return -1;
@@ -46,21 +58,34 @@ public class ConsultasDatosCalidad {
 
 	}
 	DatosCalidad dato;
-	public void recogerDatosCalidad(ArrayList<DatosCalidad> datos) {
+	public List recogerDatosCalidad(ArrayList<DatosCalidad> datos) {
 		SessionFactory sesion = HibernateUtil.getSessionFactory();
 		Session session = sesion.openSession();
 		boolean agregar = true;
 		System.out.println(nombreEsta);
 		System.out.println(nombreMuni);
-		String hql= "From DatosCalidad where estaciones.codEstacion = (select codEstacion from Estaciones where nombre='" + nombreEsta + "') and not nogm3 = 'null' order by fecha" ;
+		String hql= "From DatosCalidad where estaciones.codEstacion = (select codEstacion from Estaciones where nombre='" + nombreEsta + "')";
 		System.out.println("holaaaaaa");
 		Query q= (Query) session.createQuery(hql);
-		List <DatosCalidad> dep= q.list();
+		return q.list();
 		
-			dato = new DatosCalidad();
-			dato = dep.get(0);
-			dato.getFecha();
-			datos.add(dato);
+			
+		
+		
+	}
+	
+	public List recogerDatosCalidadHora(ArrayList<DatosCalidad> datos) {
+		SessionFactory sesion = HibernateUtil.getSessionFactory();
+		Session session = sesion.openSession();
+		boolean agregar = true;
+		System.out.println(nombreEsta);
+		System.out.println(nombreMuni);
+		String hql= "From DatosCalidad where estaciones.codEstacion = (select codEstacion from Estaciones where nombre='" + nombreEsta + "') and fecha=" + Fecha ;
+		
+		Query q= (Query) session.createQuery(hql);
+		return q.list();
+		
+			
 		
 		
 	}

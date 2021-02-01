@@ -17,6 +17,7 @@ import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
 import javax.swing.border.BevelBorder;
 import javax.swing.JTextArea;
+import javax.swing.JLabel;
 
 public class Listado extends JFrame {
 
@@ -26,6 +27,8 @@ public class Listado extends JFrame {
 	private JComboBox comboBoxMunicipio,comboBoxEstaciones;
 	private JButton btnBizkaia,btnGipuzkoa,btnArabalaba;
 	private JTextArea textArea;
+	private JComboBox comboBoxFecha,comboBoxHora;
+	
 	public static enum enumAcciones {
 		ARABA,GIPUZKOA,BIZKAIA
 	}
@@ -55,13 +58,37 @@ public class Listado extends JFrame {
 		
 		comboBoxEstaciones = new JComboBox();
 		
-		comboBoxEstaciones.setBounds(550, 227, 148, 20);
+		comboBoxEstaciones.setBounds(243, 378, 148, 20);
 		contentPane.add(comboBoxEstaciones);
 		
 		textArea = new JTextArea();
 		textArea.setEditable(false);
 		textArea.setBounds(746, 130, 285, 253);
 		contentPane.add(textArea);
+		
+		comboBoxFecha = new JComboBox();
+		comboBoxFecha.setBounds(550, 227, 148, 20);
+		contentPane.add(comboBoxFecha);
+		
+		comboBoxHora = new JComboBox();
+		comboBoxHora.setBounds(550, 375, 148, 20);
+		contentPane.add(comboBoxHora);
+		
+		JLabel lblNewLabel = new JLabel("Municipio");
+		lblNewLabel.setBounds(249, 203, 46, 14);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblEstaciones = new JLabel("Estaciones");
+		lblEstaciones.setBounds(243, 353, 61, 14);
+		contentPane.add(lblEstaciones);
+		
+		JLabel lblFecha = new JLabel("Fecha");
+		lblFecha.setBounds(550, 202, 46, 14);
+		contentPane.add(lblFecha);
+		
+		JLabel lblHora = new JLabel("Hora");
+		lblHora.setBounds(550, 350, 46, 14);
+		contentPane.add(lblHora);
 		
 	}
 		/*table_1 = new JTable();
@@ -86,10 +113,36 @@ public class Listado extends JFrame {
 		this.table_1 = table_1;
 		
 	}*/
+	
+	
 
 	public JComboBox getComboBoxMunicipio() {
 		return comboBoxMunicipio;
 	}
+
+	public JComboBox getComboBoxFecha() {
+		return comboBoxFecha;
+	}
+
+
+
+	public void setComboBoxFecha(JComboBox comboBoxFecha) {
+		this.comboBoxFecha = comboBoxFecha;
+	}
+
+
+
+	public JComboBox getComboBoxHora() {
+		return comboBoxHora;
+	}
+
+
+
+	public void setComboBoxHora(JComboBox comboBoxHora) {
+		this.comboBoxHora = comboBoxHora;
+	}
+
+
 
 	public void setComboBoxMunicipio(JComboBox comboBoxMunicipio) {
 		this.comboBoxMunicipio = comboBoxMunicipio;
@@ -134,6 +187,5 @@ public class Listado extends JFrame {
 	public void setTextArea(JTextArea textArea) {
 		this.textArea = textArea;
 	}
-	
 }
 

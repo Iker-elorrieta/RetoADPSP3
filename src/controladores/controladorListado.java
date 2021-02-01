@@ -10,7 +10,9 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.sql.Date;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JTable;
 
@@ -49,7 +51,15 @@ public class controladorListado implements ActionListener {
 		vistaListado.getComboBoxEstaciones().addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
 				if(!rellenandoBoxEsta) {
-					RellenarTabla(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),vistaListado.getComboBoxEstaciones().getSelectedItem().toString());
+					RellenarComboFecha(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),vistaListado.getComboBoxEstaciones().getSelectedItem().toString());
+					}
+				}
+		});
+		
+		vistaListado.getComboBoxFecha().addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent e) {
+				if(!rellenandoBoxHora) {
+					RellenarComboHora(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),vistaListado.getComboBoxEstaciones().getSelectedItem().toString(),vistaListado.getComboBoxFecha().getSelectedItem().toString());
 					}
 				}
 		});
@@ -94,10 +104,9 @@ public class controladorListado implements ActionListener {
 		try {
 			salida.writeUTF("4");
 			salida.writeUTF(Nombre);
-			Municipios muni = (Municipios)entradaf.readObject();
-			while(muni!=null) {
+			List <Tablas.Municipios> munis = (List <Tablas.Municipios>) entradaf.readObject();
+			for(Municipios muni : munis) {
 				vistaListado.getComboBoxMunicipio().addItem(muni.getNombre());
-				 muni = (Municipios)entradaf.readObject();
 			}
 			rellenandoBoxMuni=false;
 			RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
@@ -109,6 +118,7 @@ public class controladorListado implements ActionListener {
 	}
 	private boolean rellenandoBoxMuni = true;
 	private boolean rellenandoBoxEsta = true;
+	private boolean rellenandoBoxHora = true;
 	public void RellenarComboBoxEstac(String Nombre){
 		rellenandoBoxEsta = true;
 		vistaListado.getComboBoxEstaciones().removeAllItems();
@@ -116,13 +126,13 @@ public class controladorListado implements ActionListener {
 			
 			salida.writeUTF("5");
 			salida.writeUTF(Nombre);
-			Estaciones esta = (Estaciones)entradaf.readObject();
-			while(esta!=null) {
+			List<Tablas.Estaciones> estac = (List<Tablas.Estaciones>)entradaf.readObject();
+			for(Estaciones esta : estac) {
 				vistaListado.getComboBoxEstaciones().addItem(esta.getNombre());
-				 esta = (Estaciones)entradaf.readObject();
+				
 			}
 			rellenandoBoxEsta=false;
-			RellenarTabla(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),vistaListado.getComboBoxEstaciones().getSelectedItem().toString());
+			RellenarComboFecha(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),vistaListado.getComboBoxEstaciones().getSelectedItem().toString());
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			
@@ -136,7 +146,7 @@ public class controladorListado implements ActionListener {
 	private JTable tabla;
 	public void RellenarTabla(String Nombre,String Nombre2){
 		int contador=0;
-		rellenandoBoxEsta = true;
+	
 		ArrayList<String> tipoDeDato = new ArrayList<String>();
 		ArrayList<String> Calculos = new ArrayList<String>();
 		this.vistaListado.getTextArea().setText("");
@@ -230,6 +240,74 @@ public class controladorListado implements ActionListener {
 				/*System.out.println("estoy aqui");
 				System.out.println(Calculos.get(x));*/
 				this.vistaListado.getTextArea().append(dato[x][0] + " : " + dato[x][1] + "\n");
+			}
+			/*tabla =new JTable(dato,titulo);
+			vistaListado.setTable_1(tabla);*/
+			
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			
+		}
+	}
+	private java.util.Date Fecha=null;	
+	public void RellenarComboFecha(String Nombre,String Nombre2){
+		rellenandoBoxHora=true;
+		int contador=0;
+	
+		this.vistaListado.getTextArea().setText("");
+		try {
+			salida.writeUTF("6");
+			salida.writeUTF(Nombre+":"+Nombre2);
+			List<Tablas.DatosCalidad> datosCali= (List<Tablas.DatosCalidad>) entradaf.readObject();
+			
+			for(DatosCalidad datoCal:datosCali) {
+				
+				if (Fecha == null) {
+					Fecha = datoCal.getFecha();
+					vistaListado.getComboBoxFecha().addItem(datoCal.getFecha());
+				}
+				
+				else if(!Fecha.toString().equals(datoCal.getFecha().toString())) {
+					Fecha = datoCal.getFecha();
+				vistaListado.getComboBoxFecha().addItem(datoCal.getFecha());
+				}
+			}
+			/*tabla =new JTable(dato,titulo);
+			vistaListado.setTable_1(tabla);*/
+			
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			
+		}
+		rellenandoBoxHora=false;
+		RellenarComboHora(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),vistaListado.getComboBoxEstaciones().getSelectedItem().toString(),vistaListado.getComboBoxFecha().getSelectedItem().toString());
+	}
+	public void RellenarComboHora(String Nombre,String Nombre2,String Nombre3){
+		int contador=0;
+		rellenandoBoxEsta = true;
+		this.vistaListado.getTextArea().setText("");
+		try {
+			salida.writeUTF("7");
+			salida.writeUTF(Nombre+":"+Nombre2 + ":" + Nombre3);
+			List<Tablas.DatosCalidad> datosCali= (List<Tablas.DatosCalidad>) entradaf.readObject();
+			
+			for(DatosCalidad datoCal:datosCali) {
+				
+				if (Fecha == null) {
+					Fecha = datoCal.getHora();
+					vistaListado.getComboBoxHora().addItem(datoCal.getHora());
+				}
+				
+				else if(!Fecha.toString().equals(datoCal.getHora().toString())) {
+					Fecha = datoCal.getHora();
+				vistaListado.getComboBoxHora().addItem(datoCal.getHora());
+				}
 			}
 			/*tabla =new JTable(dato,titulo);
 			vistaListado.setTable_1(tabla);*/
