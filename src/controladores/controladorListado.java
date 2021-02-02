@@ -20,6 +20,7 @@ import Tablas.DatosCalidad;
 import Tablas.Estaciones;
 import Tablas.Municipios;
 import vistas.Listado;
+import vistas.ListadoEspaciosNaturales;
 import vistas.Registro;
 import vistas.VentanaCliente;
 
@@ -36,14 +37,26 @@ public class controladorListado implements ActionListener {
 		entrada = in;
 		salida = out;
 		entradaf = inf;
+		vistaListado.getLblTop5().setVisible(false);
+		vistaListado.getComboBoxTopProv().setVisible(false);
 		iniciarControlador();
 	}
 
 	private void iniciarControlador() {
 
+		vistaListado.getComboBoxTopProv().addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent e) {
+				if (!rellenandoBoxMuni) {
+					seleciontop = true;
+					RellenarComboBoxEstac(vistaListado.getComboBoxTopProv().getSelectedItem().toString());
+				}
+			}
+		});
+
 		vistaListado.getComboBoxMunicipio().addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
 				if (!rellenandoBoxMuni) {
+					seleciontop = false;
 					RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
 				}
 			}
@@ -71,10 +84,17 @@ public class controladorListado implements ActionListener {
 		vistaListado.getComboBoxHora().addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
 				if (!rellenandoBoxHora) {
-					RellenarTabla(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),
-							vistaListado.getComboBoxEstaciones().getSelectedItem().toString(),
-							vistaListado.getComboBoxFecha().getSelectedItem().toString(),
-							vistaListado.getComboBoxHora().getSelectedItem().toString());
+					if (seleciontop) {
+						RellenarTabla(vistaListado.getComboBoxTopProv().getSelectedItem().toString(),
+								vistaListado.getComboBoxEstaciones().getSelectedItem().toString(),
+								vistaListado.getComboBoxFecha().getSelectedItem().toString(),
+								vistaListado.getComboBoxHora().getSelectedItem().toString());
+					} else {
+						RellenarTabla(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),
+								vistaListado.getComboBoxEstaciones().getSelectedItem().toString(),
+								vistaListado.getComboBoxFecha().getSelectedItem().toString(),
+								vistaListado.getComboBoxHora().getSelectedItem().toString());
+					}
 				}
 			}
 		});
@@ -87,6 +107,8 @@ public class controladorListado implements ActionListener {
 		this.vistaListado.getBtnGipuzkoa().setActionCommand(Listado.enumAcciones.GIPUZKOA.toString());
 		this.vistaListado.getBtnTop().addActionListener(this);
 		this.vistaListado.getBtnTop().setActionCommand(Listado.enumAcciones.TOP.toString());
+		this.vistaListado.getBtnNewButton().addActionListener(this);
+		this.vistaListado.getBtnNewButton().setActionCommand(Listado.enumAcciones.CAMBIAR.toString());
 	}
 
 	@Override
@@ -97,17 +119,27 @@ public class controladorListado implements ActionListener {
 		switch (accion) {
 		case ARABA:
 			rellenarComboBoxMuni("Araba/Álava");
-			//recogerDatosTopProvincia(vistaListado.getBoxTipoDeDato().getSelectedItem().toString(), "Araba/Álava");
+			recogerDatosTopProvincia(vistaListado.getBoxTipoDeDato().getSelectedItem().toString(), "Araba/Álava");
 			break;
 		case BIZKAIA:
 			rellenarComboBoxMuni("Bizkaia");
+			recogerDatosTopProvincia(vistaListado.getBoxTipoDeDato().getSelectedItem().toString(), "Bizkaia");
 			break;
 		case GIPUZKOA:
 			rellenarComboBoxMuni("Gipuzkoa");
+			recogerDatosTopProvincia(vistaListado.getBoxTipoDeDato().getSelectedItem().toString(), "Gipuzkoa");
 			break;
-//		case TOP:
-//			recogerDatosTop(vistaListado.getBoxTipoDeDato().getSelectedItem().toString());
-//			break;
+		case TOP:
+			recogerDatosTop(vistaListado.getBoxTipoDeDato().getSelectedItem().toString());
+			vistaListado.getLblTop5().setVisible(false);
+			vistaListado.getComboBoxTopProv().setVisible(false);
+			break;
+		case CAMBIAR:
+			ListadoEspaciosNaturales listado = new ListadoEspaciosNaturales();
+			controladorListadoEspacioNatural controladorListadoEspacioNatural = new controladorListadoEspacioNatural(listado,entrada,salida,entradaf);
+			vistaListado.dispose();
+			listado.setVisible(true);
+			break;
 		}
 	}
 
@@ -119,7 +151,7 @@ public class controladorListado implements ActionListener {
 			salida.writeUTF(Nombre);
 			List<Tablas.Municipios> munis = (List<Tablas.Municipios>) entradaf.readObject();
 			for (Municipios muni : munis) {
-				vistaListado.getComboBoxMunicipio().addItem(muni);
+				vistaListado.getComboBoxMunicipio().addItem(muni.getNombre().toString());
 
 			}
 			rellenandoBoxMuni = false;
@@ -130,77 +162,80 @@ public class controladorListado implements ActionListener {
 		}
 
 	}
-//	public void recogerDatosTopProvincia(String datos,String provincia) {
-//		rellenandoBoxMuni = true;
-//		String Hql = "";
-//		try {
-//		salida.writeUTF("9");
-//		if (vistaListado.getBoxTipoDeDato().getSelectedItem().toString().contains("ica")) {
-//			Hql = "FROM DatosCalidad where " + datos
-//					+ " = 'Muy bueno / Oso ona' and estaciones.municipios.provincias.nombre = '" + provincia + "' ORDER BY NOgm3 DESC";
-//			System.out.println(Hql);
-//			
-//		} else {
-//			Hql = "FROM DatosCalidad where estaciones.municipios.provincias.nombre = '" + provincia + "' ORDER BY " + datos + " DESC";
-//			
-//			System.out.println(Hql);
-//			
-//		}
-//		salida.writeUTF(Hql);
-//		ArrayList<String> nombres = (ArrayList<String>) entradaf.readObject();
-//		vistaListado.getComboBoxMunicipio().removeAllItems();
-//		for(String nombre:nombres) {
-//			vistaListado.getComboBoxMunicipio().addItem(nombre);
-//		}
-//	 
-//		
-//		rellenandoBoxMuni = false;
-//		RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (ClassNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}	
-//		
-//	}
 
-//	public void recogerDatosTop(String datos) {
-//		rellenandoBoxMuni = true;
-//		String Hql = "";
-//		try {
-//		salida.writeUTF("9");
-//		if (vistaListado.getBoxTipoDeDato().getSelectedItem().toString().contains("ica")) {
-//			Hql = "FROM DatosCalidad where " + datos
-//					+ " = 'Muy bueno / Oso ona' ORDER BY NOgm3 DESC";
-//			System.out.println(Hql);
-//			
-//		} else {
-//			Hql = "FROM DatosCalidad ORDER BY " + datos + " DESC";
-//			
-//			System.out.println(Hql);
-//			
-//		}
-//		salida.writeUTF(Hql);
-//		ArrayList<String> nombres = (ArrayList<String>) entradaf.readObject();
-//		vistaListado.getComboBoxMunicipio().removeAllItems();
-//		for(String nombre:nombres) {
-//			vistaListado.getComboBoxMunicipio().addItem(nombre);
-//		}
-//	 
-//		
-//		rellenandoBoxMuni = false;
-//		RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (ClassNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}	
-//		
-//	}
+	public void recogerDatosTopProvincia(String datos, String provincia) {
+		rellenandoBoxMuni = true;
+		vistaListado.getLblTop5().setVisible(true);
+		vistaListado.getComboBoxTopProv().setVisible(true);
+		vistaListado.getLblTop5().setText("Top 5 mejores Municipios de " + provincia);
+		String Hql = "";
+		try {
+			salida.writeUTF("9");
+			if (vistaListado.getBoxTipoDeDato().getSelectedItem().toString().contains("ica")) {
+				Hql = "FROM DatosCalidad where " + datos
+						+ " = 'Muy bueno / Oso ona' and estaciones.municipios.provincias.nombre = '" + provincia
+						+ "' ORDER BY NOgm3 DESC";
+				System.out.println(Hql);
+
+			} else {
+				Hql = "FROM DatosCalidad where estaciones.municipios.provincias.nombre = '" + provincia + "' ORDER BY "
+						+ datos + " DESC";
+
+				System.out.println(Hql);
+
+			}
+			salida.writeUTF(Hql);
+			ArrayList<String> nombres = (ArrayList<String>) entradaf.readObject();
+			vistaListado.getComboBoxTopProv().removeAllItems();
+			for (String nombre : nombres) {
+				vistaListado.getComboBoxTopProv().addItem(nombre);
+			}
+
+			rellenandoBoxMuni = false;
+			RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	public void recogerDatosTop(String datos) {
+		rellenandoBoxMuni = true;
+		String Hql = "";
+		try {
+			salida.writeUTF("9");
+			if (vistaListado.getBoxTipoDeDato().getSelectedItem().toString().contains("ica")) {
+				Hql = "FROM DatosCalidad where " + datos + " = 'Muy bueno / Oso ona' ORDER BY NOgm3 DESC";
+				System.out.println(Hql);
+
+			} else {
+				Hql = "FROM DatosCalidad ORDER BY " + datos + " DESC";
+
+				System.out.println(Hql);
+
+			}
+			salida.writeUTF(Hql);
+			ArrayList<String> nombres = (ArrayList<String>) entradaf.readObject();
+			vistaListado.getComboBoxMunicipio().removeAllItems();
+			for (String nombre : nombres) {
+				vistaListado.getComboBoxMunicipio().addItem(nombre);
+			}
+
+			rellenandoBoxMuni = false;
+			RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 
 	private boolean rellenandoBoxMuni = true;
 	private boolean rellenandoBoxEsta = true;
@@ -231,6 +266,7 @@ public class controladorListado implements ActionListener {
 		}
 	}
 
+	boolean seleciontop = false;
 	String[] titulo = { "Tipo De Dato", "Calculos" };
 	private JTable tabla;
 
@@ -422,6 +458,18 @@ public class controladorListado implements ActionListener {
 
 		}
 		rellenandoBoxHora = false;
+		if (seleciontop) {
+			RellenarTabla(vistaListado.getComboBoxTopProv().getSelectedItem().toString(),
+					vistaListado.getComboBoxEstaciones().getSelectedItem().toString(),
+					vistaListado.getComboBoxFecha().getSelectedItem().toString(),
+					vistaListado.getComboBoxHora().getSelectedItem().toString());
+		} else {
+			RellenarTabla(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),
+					vistaListado.getComboBoxEstaciones().getSelectedItem().toString(),
+					vistaListado.getComboBoxFecha().getSelectedItem().toString(),
+					vistaListado.getComboBoxHora().getSelectedItem().toString());
+
+		}
 	}
 
 	public void cerrarServer() {

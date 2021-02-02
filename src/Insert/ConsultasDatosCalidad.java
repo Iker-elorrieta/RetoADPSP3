@@ -86,6 +86,21 @@ public class ConsultasDatosCalidad {
 		
 	}
 	
+	public List recogerDatosEspacioCalidad(ArrayList<DatosCalidad> datos) {
+		SessionFactory sesion = HibernateUtil.getSessionFactory();
+		Session session = sesion.openSession();
+		boolean agregar = true;
+	
+		String hql= "From DatosCalidad where estaciones.municipios.nombre= (select municipios.nombre from EstaEn where espaciosNaturales.nombreEspacio = '"+ nombreMuni +"') and estaciones.nombre = '" + nombreEsta + "' and fecha = '" + Fecha + "' and hora = '" + Hora + "'" ;
+		System.out.println(hql);
+		Query q= (Query) session.createQuery(hql);
+		return q.list();
+		
+			
+		
+		
+	}
+	
 	public List recogerDatosCalidadHora(ArrayList<DatosCalidad> datos) {
 		SessionFactory sesion = HibernateUtil.getSessionFactory();
 		Session session = sesion.openSession();
@@ -99,11 +114,39 @@ public class ConsultasDatosCalidad {
 		
 		
 	}
+	
+	public List recogerDatosCalidadEspaciosHora(ArrayList<DatosCalidad> datos) {
+		SessionFactory sesion = HibernateUtil.getSessionFactory();
+		Session session = sesion.openSession();
+		boolean agregar = true;
+		String hql= "From DatosCalidad where estaciones.municipios.nombre= (select municipios.nombre from EstaEn where espaciosNaturales.nombreEspacio = '"+ nombreMuni +"') and estaciones.nombre = '" + nombreEsta + "' and fecha = '" + Fecha + "'" ;
+		
+		Query q= (Query) session.createQuery(hql);
+		return q.list();
+		
+			
+		
+		
+	}
 	public List recogerDatosCalidadFecha(ArrayList<DatosCalidad> datos) {
 		SessionFactory sesion = HibernateUtil.getSessionFactory();
 		Session session = sesion.openSession();
 		boolean agregar = true;
 		String hql= "From DatosCalidad where estaciones.municipios.nombre= '"+ nombreMuni +"' and estaciones.nombre ='" + nombreEsta + "')";
+		
+		Query q= (Query) session.createQuery(hql);
+		return q.list();
+		
+			
+		
+		
+	}
+	
+	public List recogerDatosCalidadEspacioNatFecha(ArrayList<DatosCalidad> datos) {
+		SessionFactory sesion = HibernateUtil.getSessionFactory();
+		Session session = sesion.openSession();
+		boolean agregar = true;
+		String hql= "From DatosCalidad where estaciones.municipios.nombre = (select municipios.nombre from EstaEn where espaciosNaturales.nombreEspacio = '"+ nombreMuni +"') and estaciones.nombre ='" + nombreEsta + "'";
 		
 		Query q= (Query) session.createQuery(hql);
 		return q.list();

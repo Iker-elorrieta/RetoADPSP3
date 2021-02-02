@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JPasswordField;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.awt.Color;
 
 public class Registro extends JFrame {
 
@@ -52,6 +53,7 @@ public class Registro extends JFrame {
 		
 		lblNewLabel_3.setBounds(10, 156, 500, 14);
 		contentPane.add(lblNewLabel_3);
+		btnNewButton.setBackground(Color.BLACK);
 
 		
 		btnNewButton.setBounds(335, 227, 89, 23);

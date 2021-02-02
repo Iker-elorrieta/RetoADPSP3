@@ -8,10 +8,12 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import Insert.ConsultaEspaciosNaturales;
 import Insert.ConsultaMunicipios;
 import Insert.ConsultasDatosCalidad;
 import Insert.ConsultasEstaciones;
 import Tablas.DatosCalidad;
+import Tablas.EstaEn;
 import Tablas.Estaciones;
 import Tablas.Municipios;
 
@@ -177,46 +179,126 @@ public class Hiloconecxiones extends Thread {
 				e.printStackTrace();
 			}
 			break;// case 8
-//		case 9: // Cargamos el top
-//			try {
-//				
-//				String datos = entrada.readUTF();
-//				
-//				ConsultaMunicipios consulta = new ConsultaMunicipios();
-//
-//				List<DatosCalidad> datosCali = consulta.recogermunicipiosTop(datos);
-//				 int x=0;
-//				 int contador = 0;
-//				 ArrayList<String> nombresMuni = new ArrayList<String>();
-//				 boolean mismoNombre = false;
-//				while (x<datosCali.size() -1 && contador<5) {
-//					mismoNombre=false;
-//					for(int y = 0;y<nombresMuni.size();y++) {
-//						
-//						if(nombresMuni.get(y).equals(datosCali.get(x).getEstaciones().getMunicipios().getNombre())) {
-//							mismoNombre=true;
-//						}
-//					}
-//					
-//					
-//					if(!mismoNombre) {
-//					
-//					contador++;
-//					nombresMuni.add(datosCali.get(x).getEstaciones().getMunicipios().getNombre().toString());
-//					}
-//					
-//					x++;
-//				}
-//				salidaf.writeObject(nombresMuni);
-//
-////				salida.writeUTF(ci.CambiarVentana());
-//
-//			} catch (IOException e) {
-//
-//				e.printStackTrace();
-//			}
-//			break;// case 9
-		
+		case 9: // Cargamos el top
+			try {
+				
+				String datos = entrada.readUTF();
+				
+				ConsultaMunicipios consulta = new ConsultaMunicipios();
+				
+				List<DatosCalidad> datosCali = consulta.recogermunicipiosTop(datos);
+				 int x=0;
+				 int contador = 0;
+				 ArrayList<String> nombresMuni = new ArrayList<String>();
+				 boolean mismoNombre = false;
+				while (x<datosCali.size() -1 && contador<5) {
+					mismoNombre=false;
+					for(int y = 0;y<nombresMuni.size();y++) {
+						
+						if(nombresMuni.get(y).equals(datosCali.get(x).getEstaciones().getMunicipios().getNombre())) {
+							mismoNombre=true;
+						}
+					}
+					
+					
+					if(!mismoNombre) {
+					
+					contador++;
+					nombresMuni.add(datosCali.get(x).getEstaciones().getMunicipios().getNombre().toString());
+					}
+					
+					x++;
+				}
+				salidaf.writeObject(nombresMuni);
+
+//				salida.writeUTF(ci.CambiarVentana());
+
+			} catch (IOException e) {
+
+				e.printStackTrace();
+			}
+			break;// case 9
+		case 10: // Tras seleccionar una provincia Cargamos el nombre de los espacios
+			// correspondientes
+		try {
+			muni = new ArrayList<Municipios>();
+			String datos = entrada.readUTF();
+			ConsultaEspaciosNaturales consulta = new ConsultaEspaciosNaturales();
+			List<EstaEn> estanEn = consulta.recogerEspaciosNaturales(muni, datos);
+			ArrayList<String> spNat = new ArrayList<String>();
+			for(EstaEn estaEn : estanEn) {
+				spNat.add(estaEn.getEspaciosNaturales().getNombreEspacio().toString());
+			}
+			salidaf.writeObject(spNat);
+//			salida.writeUTF(ci.CambiarVentana());
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+		break;// case 10
+		case 11: //
+			try {
+				esta = new ArrayList<Estaciones>();
+				String datos = entrada.readUTF();
+				ConsultasEstaciones consulta = new ConsultasEstaciones();
+
+				salidaf.writeObject(consulta.recogerEstacionesEspacios(esta, datos));
+//				salida.writeUTF(ci.CambiarVentana());
+
+			} catch (IOException e) {
+
+				e.printStackTrace();
+			}
+			break;// case 11
+		case 12: // Tras seleccionar la estacion cargaremos la Fecha;
+			try {
+				dato = new ArrayList<DatosCalidad>();
+				String datos = entrada.readUTF();
+				ConsultasDatosCalidad consulta = new ConsultasDatosCalidad();
+				consulta.separardatos(datos);
+
+				salidaf.writeObject(consulta.recogerDatosCalidadEspacioNatFecha(dato));
+
+//				salida.writeUTF(ci.CambiarVentana());
+
+			} catch (IOException e) {
+
+				e.printStackTrace();
+			}
+			break;// case 2
+		case 13: // Tras seleccionar la fecha cargaremos la informacion;
+			try {
+				dato = new ArrayList<DatosCalidad>();
+				String datos = entrada.readUTF();
+				ConsultasDatosCalidad consulta = new ConsultasDatosCalidad();
+				consulta.separardatos2(datos);
+
+				salidaf.writeObject(consulta.recogerDatosCalidadEspaciosHora(dato));
+
+//				salida.writeUTF(ci.CambiarVentana());
+
+			} catch (IOException e) {
+
+				e.printStackTrace();
+			}
+			break;// case 13
+		case 14: // Tras seleccionar la Hora cargaremos los Datos;
+			try {
+				dato = new ArrayList<DatosCalidad>();
+				String datos = entrada.readUTF();
+				ConsultasDatosCalidad consulta = new ConsultasDatosCalidad();
+				consulta.separardatos3(datos);
+
+				salidaf.writeObject(consulta.recogerDatosEspacioCalidad(dato));
+
+//				salida.writeUTF(ci.CambiarVentana());
+
+			} catch (IOException e) {
+
+				e.printStackTrace();
+			}
+			break;// case 14
 		case 0:// Cerrar
 			activo = false;
 			Servidor.activo = false;

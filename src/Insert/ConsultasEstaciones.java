@@ -40,4 +40,15 @@ public class ConsultasEstaciones {
 		return q.list();
 		
 	}
+	public List recogerEstacionesEspacios(ArrayList<Estaciones> esta,String datos) {
+		SessionFactory sesion = HibernateUtil.getSessionFactory();
+		Session session = sesion.openSession();
+		boolean agregar = true;
+		String hql= "From Estaciones where municipios.codMunicipio = (Select municipios.codMunicipio from EstaEn where espaciosNaturales.nombreEspacio ='" + datos + "')";
+		System.out.println(hql);
+		Query q= (Query) session.createQuery(hql);
+		
+		return q.list();
+		
+	}
 }
