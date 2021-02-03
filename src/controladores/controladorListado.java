@@ -125,7 +125,7 @@ public class controladorListado implements ActionListener {
 			rellenarComboBoxMuni("Bizkaia");
 			recogerDatosTopProvincia(vistaListado.getBoxTipoDeDato().getSelectedItem().toString(), "Bizkaia");
 			break;
-		case GIPUZKOA:
+		case GIPUZKOA: 
 			rellenarComboBoxMuni("Gipuzkoa");
 			recogerDatosTopProvincia(vistaListado.getBoxTipoDeDato().getSelectedItem().toString(), "Gipuzkoa");
 			break;
