@@ -50,13 +50,12 @@ public List recogermunicipios(ArrayList<Municipios> muni,String datos) {
 	
 }
 public List recogermunicipiosTop(String datos) {
-	System.out.println(datos);
+	
 	SessionFactory sesion = HibernateUtil.getSessionFactory();
 	Session session = sesion.openSession();
 	boolean agregar = true;
 	Query q= (Query) session.createQuery(datos);
 	List<DatosCalidad> muni = q.list();
-	System.out.println(muni.get(0).getHora());
 	return muni;
 	
 	

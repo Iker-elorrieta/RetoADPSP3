@@ -60,7 +60,6 @@ public class controladorcliente {
 			if (salida != null)
 			salida.close();
 		} catch (IOException e) {
-			e.printStackTrace();
 		}
 		System.out.println("Fin cliente");
 		return true;

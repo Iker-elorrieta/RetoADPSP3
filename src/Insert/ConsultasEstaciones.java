@@ -35,7 +35,7 @@ public class ConsultasEstaciones {
 		Session session = sesion.openSession();
 		boolean agregar = true;
 		String hql= "From Estaciones where municipios.codMunicipio = (Select codMunicipio from Municipios where nombre ='" + datos + "')";
-		System.out.println("holaaaaaa");
+		
 		Query q= (Query) session.createQuery(hql);
 		return q.list();
 		
@@ -45,7 +45,6 @@ public class ConsultasEstaciones {
 		Session session = sesion.openSession();
 		boolean agregar = true;
 		String hql= "From Estaciones where municipios.codMunicipio = (Select municipios.codMunicipio from EstaEn where espaciosNaturales.nombreEspacio ='" + datos + "')";
-		System.out.println(hql);
 		Query q= (Query) session.createQuery(hql);
 		
 		return q.list();

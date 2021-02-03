@@ -73,7 +73,7 @@ public class VentanaCliente extends JFrame {
 		contentPane.add(btnEntrar);
 		
 		btnRegistro = new JButton("Registrate");
-		btnRegistro.setBounds(262, 212, 89, 23);
+		btnRegistro.setBounds(262, 212, 120, 23);
 		contentPane.add(btnRegistro);
 		
 		lblNewLabel_2 = new JLabel("");

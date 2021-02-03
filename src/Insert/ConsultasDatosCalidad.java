@@ -62,7 +62,6 @@ public class ConsultasDatosCalidad {
 		
 			}catch(Exception e) {
 				e.printStackTrace();
-				System.out.println("valor repetido");
 			}	
 			
 			
@@ -77,7 +76,7 @@ public class ConsultasDatosCalidad {
 		boolean agregar = true;
 	
 		String hql= "From DatosCalidad where estaciones.municipios.nombre= '"+ nombreMuni +"' and estaciones.nombre = '" + nombreEsta + "' and fecha = '" + Fecha + "' and hora = '" + Hora + "'" ;
-		System.out.println(hql);
+		
 		Query q= (Query) session.createQuery(hql);
 		return q.list();
 		
@@ -92,7 +91,7 @@ public class ConsultasDatosCalidad {
 		boolean agregar = true;
 	
 		String hql= "From DatosCalidad where estaciones.municipios.nombre= (select municipios.nombre from EstaEn where espaciosNaturales.nombreEspacio = '"+ nombreMuni +"') and estaciones.nombre = '" + nombreEsta + "' and fecha = '" + Fecha + "' and hora = '" + Hora + "'" ;
-		System.out.println(hql);
+		
 		Query q= (Query) session.createQuery(hql);
 		return q.list();
 		

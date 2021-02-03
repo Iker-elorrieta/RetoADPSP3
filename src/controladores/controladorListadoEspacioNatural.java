@@ -132,7 +132,7 @@ public class controladorListadoEspacioNatural implements ActionListener {
 			salida.writeUTF(Nombre);
 			ArrayList<String> spNatu = (ArrayList<String>) entradaf.readObject();
 			for (String spNat : spNatu) {
-				System.out.println(spNat);
+				
 				vistaListadoEspaciosNaturales.getComboBoxMunicipio().addItem(spNat);
 
 			}
@@ -190,7 +190,7 @@ public class controladorListadoEspacioNatural implements ActionListener {
 			salida.writeUTF("14");
 			salida.writeUTF(Nombre + "_" + Nombre2 + "_" + Nombre3 + "_" + Nombre4);
 			List<DatosCalidad> datosCalid = (List<DatosCalidad>) entradaf.readObject();
-			System.out.println(datosCalid.size());
+			
 			for (DatosCalidad datosCali : datosCalid) {
 
 				if (datosCali.getFecha() != null) {
@@ -198,7 +198,7 @@ public class controladorListadoEspacioNatural implements ActionListener {
 					Calculos.add(datosCali.getFecha().toString());
 					contador++;
 				}
-				System.out.println(datosCali.getHora());
+				
 				if (datosCali.getHora() != null) {
 					tipoDeDato.add("Hora");
 					Calculos.add(datosCali.getHora().toString());
@@ -272,7 +272,7 @@ public class controladorListadoEspacioNatural implements ActionListener {
 				break;
 			}
 			String[][] dato = new String[tipoDeDato.size()][Calculos.size()];
-			System.out.println("aqui si");
+			
 			for (int x = 0; x < tipoDeDato.size(); x++) {
 				dato[x][0] = tipoDeDato.get(x);
 				dato[x][1] = Calculos.get(x);
@@ -307,7 +307,7 @@ public class controladorListadoEspacioNatural implements ActionListener {
 			List<Tablas.DatosCalidad> datosCali = (List<Tablas.DatosCalidad>) entradaf.readObject();
 
 			for (DatosCalidad datoCal : datosCali) {
-				System.out.println(datoCal.getFecha());
+				
 				if (Fecha == null) {
 					Fecha = datoCal.getFecha();
 					vistaListadoEspaciosNaturales.getComboBoxFecha().addItem(datoCal.getFecha());

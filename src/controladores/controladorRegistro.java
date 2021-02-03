@@ -69,16 +69,12 @@ public class controladorRegistro implements ActionListener {
 					resu += b;
 				}
 			} catch (NoSuchAlgorithmException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
 			
 			salida.writeUTF("1");
 			salida.writeUTF(usuario+":"+ resu);
 			res = entrada.readUTF();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 		if(res.equals("ok")) {
 			this.vistaRegistro.getLblNewLabel_3().setText("Usuario creado correctamente");
@@ -87,7 +83,6 @@ public class controladorRegistro implements ActionListener {
 			this.vistaRegistro.dispose();
 			return 1;
 			} catch (InterruptedException e) {
-				e.printStackTrace();
 			}	
 		}else {
 			this.vistaRegistro.getLblNewLabel_3().setText("error: Usuario ya existe");

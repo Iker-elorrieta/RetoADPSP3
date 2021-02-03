@@ -41,7 +41,7 @@ public class Hiloconecxiones extends Thread {
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			
 		} finally {
 			try {
 				if (entrada != null)
@@ -49,7 +49,7 @@ public class Hiloconecxiones extends Thread {
 				if (salida != null)
 					salida.close();
 			} catch (IOException e) {
-				e.printStackTrace();
+				
 			}
 		}
 	}
@@ -73,7 +73,6 @@ public class Hiloconecxiones extends Thread {
 				}
 			} catch (IOException e) {
 
-				e.printStackTrace();
 			}
 			break;// case 1
 
@@ -86,7 +85,6 @@ public class Hiloconecxiones extends Thread {
 
 			} catch (IOException e) {
 
-				e.printStackTrace();
 			}
 			break; // case 2
 //		case 3: //tras comprobar usuario y contraseña correcta cambia la contraseña
@@ -113,7 +111,6 @@ public class Hiloconecxiones extends Thread {
 
 			} catch (IOException e) {
 
-				e.printStackTrace();
 			}
 			break;// case 4
 		case 5: //
@@ -127,7 +124,6 @@ public class Hiloconecxiones extends Thread {
 
 			} catch (IOException e) {
 
-				e.printStackTrace();
 			}
 			break;// case 5
 
@@ -144,7 +140,6 @@ public class Hiloconecxiones extends Thread {
 
 			} catch (IOException e) {
 
-				e.printStackTrace();
 			}
 			break;// case 6
 		case 7: // Tras seleccionar la fecha cargaremos la informacion;
@@ -160,7 +155,6 @@ public class Hiloconecxiones extends Thread {
 
 			} catch (IOException e) {
 
-				e.printStackTrace();
 			}
 			break;// case 7
 		case 8: // Tras seleccionar la Hora cargaremos los Datos;
@@ -176,7 +170,6 @@ public class Hiloconecxiones extends Thread {
 
 			} catch (IOException e) {
 
-				e.printStackTrace();
 			}
 			break;// case 8
 		case 9: // Cargamos el top
@@ -234,7 +227,6 @@ public class Hiloconecxiones extends Thread {
 
 		} catch (IOException e) {
 
-			e.printStackTrace();
 		}
 		break;// case 10
 		case 11: //
@@ -248,7 +240,6 @@ public class Hiloconecxiones extends Thread {
 
 			} catch (IOException e) {
 
-				e.printStackTrace();
 			}
 			break;// case 11
 		case 12: // Tras seleccionar la estacion cargaremos la Fecha;
@@ -264,7 +255,6 @@ public class Hiloconecxiones extends Thread {
 
 			} catch (IOException e) {
 
-				e.printStackTrace();
 			}
 			break;// case 2
 		case 13: // Tras seleccionar la fecha cargaremos la informacion;
@@ -280,7 +270,6 @@ public class Hiloconecxiones extends Thread {
 
 			} catch (IOException e) {
 
-				e.printStackTrace();
 			}
 			break;// case 13
 		case 14: // Tras seleccionar la Hora cargaremos los Datos;
@@ -296,7 +285,6 @@ public class Hiloconecxiones extends Thread {
 
 			} catch (IOException e) {
 
-				e.printStackTrace();
 			}
 			break;// case 14
 		case 0:// Cerrar

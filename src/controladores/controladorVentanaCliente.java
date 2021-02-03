@@ -62,15 +62,13 @@ public class controladorVentanaCliente implements ActionListener {
 					resu += b;
 				}
 			} catch (NoSuchAlgorithmException e) {
-				// TODO Auto-generated catch block
 				
 			}
-			System.out.println("hola");
+			
 			salida.writeUTF("2");
 			salida.writeUTF(usuario+":"+ resu);
 			res = entrada.readBoolean();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			
 		}
 		if(!res) {

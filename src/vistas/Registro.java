@@ -59,7 +59,6 @@ public class Registro extends JFrame {
 		
 		lblNewLabel_3.setBounds(10, 156, 500, 14);
 		contentPane.add(lblNewLabel_3);
-		btnNewButton.setBackground(Color.BLACK);
 
 		
 		btnNewButton.setBounds(335, 227, 89, 23);

@@ -175,13 +175,13 @@ public class controladorListado implements ActionListener {
 				Hql = "FROM DatosCalidad where " + datos
 						+ " = 'Muy bueno / Oso ona' and estaciones.municipios.provincias.nombre = '" + provincia
 						+ "' ORDER BY NOgm3 DESC";
-				System.out.println(Hql);
+				
 
 			} else {
 				Hql = "FROM DatosCalidad where estaciones.municipios.provincias.nombre = '" + provincia + "' ORDER BY "
 						+ datos + " DESC";
 
-				System.out.println(Hql);
+				
 
 			}
 			salida.writeUTF(Hql);
@@ -194,11 +194,8 @@ public class controladorListado implements ActionListener {
 			rellenandoBoxMuni = false;
 			RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 
 	}
@@ -210,12 +207,12 @@ public class controladorListado implements ActionListener {
 			salida.writeUTF("9");
 			if (vistaListado.getBoxTipoDeDato().getSelectedItem().toString().contains("ica")) {
 				Hql = "FROM DatosCalidad where " + datos + " = 'Muy bueno / Oso ona' ORDER BY NOgm3 DESC";
-				System.out.println(Hql);
+				
 
 			} else {
 				Hql = "FROM DatosCalidad ORDER BY " + datos + " DESC";
 
-				System.out.println(Hql);
+				
 
 			}
 			salida.writeUTF(Hql);
@@ -228,11 +225,7 @@ public class controladorListado implements ActionListener {
 			rellenandoBoxMuni = false;
 			RellenarComboBoxEstac(vistaListado.getComboBoxMunicipio().getSelectedItem().toString());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 
 	}
@@ -258,10 +251,8 @@ public class controladorListado implements ActionListener {
 			RellenarComboFecha(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),
 					vistaListado.getComboBoxEstaciones().getSelectedItem().toString());
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 
 		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
 
 		}
 	}
@@ -280,7 +271,6 @@ public class controladorListado implements ActionListener {
 			salida.writeUTF("8");
 			salida.writeUTF(Nombre + "_" + Nombre2 + "_" + Nombre3 + "_" + Nombre4);
 			List<DatosCalidad> datosCalid = (List<DatosCalidad>) entradaf.readObject();
-			System.out.println(datosCalid.size());
 			for (DatosCalidad datosCali : datosCalid) {
 
 				if (datosCali.getFecha() != null) {
@@ -288,7 +278,6 @@ public class controladorListado implements ActionListener {
 					Calculos.add(datosCali.getFecha().toString());
 					contador++;
 				}
-				System.out.println(datosCali.getHora());
 				if (datosCali.getHora() != null) {
 					tipoDeDato.add("Hora");
 					Calculos.add(datosCali.getHora().toString());
@@ -362,7 +351,6 @@ public class controladorListado implements ActionListener {
 				break;
 			}
 			String[][] dato = new String[tipoDeDato.size()][Calculos.size()];
-			System.out.println("aqui si");
 			for (int x = 0; x < tipoDeDato.size(); x++) {
 				dato[x][0] = tipoDeDato.get(x);
 				dato[x][1] = Calculos.get(x);
@@ -413,10 +401,7 @@ public class controladorListado implements ActionListener {
 			 */
 
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-
 		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
 
 		}
 		rellenandoBoxFecha = false;
@@ -451,10 +436,8 @@ public class controladorListado implements ActionListener {
 			 */
 
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 
 		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
 
 		}
 		rellenandoBoxHora = false;
@@ -476,7 +459,6 @@ public class controladorListado implements ActionListener {
 		try {
 			salida.writeUTF("0");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 
 		}
 	}

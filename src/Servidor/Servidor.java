@@ -14,7 +14,7 @@ public class Servidor {
 	public static boolean activo = true;
 	
 	public static void main(String[] args) {
-		//principal.init.iniciarTodo();
+		principal.init.iniciarTodo();
 		iniciar();
 	}
 	
@@ -57,7 +57,7 @@ public static void iniciar() {
 		if (salida != null)
 			salida.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			
 		}
 		System.out.println("Fin servidor");
 		}

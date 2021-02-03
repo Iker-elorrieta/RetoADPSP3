@@ -37,7 +37,7 @@ public class ConsultaEspaciosNaturales {
 		Session session = sesion.openSession();
 		boolean agregar = true;
 		String hql= "from EstaEn where municipios.codMunicipio in (select municipios.codMunicipio from Estaciones) and municipios.provincias.nombre = '"+ datos +"'";
-		System.out.println(hql);
+		
 		Query q= (Query) session.createQuery(hql);
 		return q.list();
 		
