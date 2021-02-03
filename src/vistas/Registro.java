@@ -10,6 +10,7 @@ import javax.swing.JPasswordField;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.awt.Color;
+import javax.swing.ImageIcon;
 
 public class Registro extends JFrame {
 
@@ -19,6 +20,7 @@ public class Registro extends JFrame {
 	private JPasswordField passwordField_1;
 	private JButton btnNewButton = new JButton("Registrar");
 	private JLabel lblNewLabel_3 = new JLabel("");
+	private JLabel lblNewLabel_4;
 	public static enum enumAcciones {
 		Registrar
 	}
@@ -39,16 +41,20 @@ public class Registro extends JFrame {
 		textField.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("Usuario");
+		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setBounds(10, 33, 46, 14);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Contrase\u00F1a");
+		lblNewLabel_1.setForeground(Color.WHITE);
 		lblNewLabel_1.setBounds(10, 64, 93, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Repite contrtase\u00F1a");
+		lblNewLabel_2.setForeground(Color.WHITE);
 		lblNewLabel_2.setBounds(10, 95, 93, 14);
 		contentPane.add(lblNewLabel_2);
+		lblNewLabel_3.setForeground(Color.WHITE);
 		
 		
 		lblNewLabel_3.setBounds(10, 156, 500, 14);
@@ -66,6 +72,11 @@ public class Registro extends JFrame {
 		passwordField_1 = new JPasswordField();
 		passwordField_1.setBounds(162, 92, 245, 20);
 		contentPane.add(passwordField_1);
+		
+		lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("Fotos/SPOILER_NO.png"));
+		lblNewLabel_4.setBounds(0, 0, 434, 261);
+		contentPane.add(lblNewLabel_4);
 	}
 
 

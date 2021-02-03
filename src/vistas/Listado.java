@@ -21,6 +21,8 @@ import javax.swing.JLabel;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
 
 public class Listado extends JFrame {
 
@@ -36,6 +38,7 @@ public class Listado extends JFrame {
 	private JComboBox BoxTipoDeDato;
 	private JComboBox comboBoxTopProv;
 	private JLabel lblTop5;
+	private JLabel lblNewLabel_2;
 	public static enum enumAcciones {
 		ARABA,GIPUZKOA,BIZKAIA,TOP,CAMBIAR
 	}
@@ -48,15 +51,18 @@ public class Listado extends JFrame {
 		contentPane.setLayout(null);
 		
 		 btnBizkaia = new JButton("Bizkaia");
-		btnBizkaia.setBounds(10, 64, 159, 69);
+		 btnBizkaia.setIcon(new ImageIcon("Fotos/BizkaiaBoton.png"));
+		btnBizkaia.setBounds(10, 64, 142, 69);
 		contentPane.add(btnBizkaia);
 		
 		btnGipuzkoa = new JButton("Gipuzkoa");
-		btnGipuzkoa.setBounds(10, 176, 159, 69);
+		btnGipuzkoa.setIcon(new ImageIcon("Fotos/GipuzkoaBoton.png"));
+		btnGipuzkoa.setBounds(10, 176, 142, 69);
 		contentPane.add(btnGipuzkoa);
 		
 		btnArabalaba = new JButton("Araba/Álaba");
-		btnArabalaba.setBounds(10, 277, 159, 69);
+		btnArabalaba.setIcon(new ImageIcon("Fotos/ArabaBoton.png"));
+		btnArabalaba.setBounds(10, 277, 142, 69);
 		contentPane.add(btnArabalaba);
 		
 		comboBoxMunicipio = new JComboBox();
@@ -69,6 +75,8 @@ public class Listado extends JFrame {
 		contentPane.add(comboBoxEstaciones);
 		
 		textArea = new JTextArea();
+		textArea.setOpaque(false);
+		textArea.setForeground(Color.WHITE);
 		textArea.setEditable(false);
 		textArea.setBounds(746, 130, 285, 253);
 		contentPane.add(textArea);
@@ -83,27 +91,33 @@ public class Listado extends JFrame {
 		
 		
 		JLabel lblNewLabel = new JLabel("Municipio");
+		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setBounds(249, 203, 80, 14);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblEstaciones = new JLabel("Estaciones");
+		lblEstaciones.setForeground(Color.WHITE);
 		lblEstaciones.setBounds(243, 353, 104, 14);
 		contentPane.add(lblEstaciones);
 		
 		JLabel lblFecha = new JLabel("Fecha");
+		lblFecha.setForeground(Color.WHITE);
 		lblFecha.setBounds(550, 202, 104, 14);
 		contentPane.add(lblFecha);
 		
 		JLabel lblHora = new JLabel("Hora");
+		lblHora.setForeground(Color.WHITE);
 		lblHora.setBounds(550, 350, 104, 14);
 		contentPane.add(lblHora);
 		
 		btnTop = new JButton("Top_5");	
-		btnTop.setBounds(10, 378, 159, 69);
+		btnTop.setIcon(new ImageIcon("Fotos/top5.png"));
+		btnTop.setBounds(10, 378, 142, 69);
 		contentPane.add(btnTop);
 		
 		btnNewButton = new JButton("Espacios Naturales");
-		btnNewButton.setBounds(817, 449, 148, 64);
+		btnNewButton.setIcon(new ImageIcon("Fotos/EspaciosNaturales.png"));
+		btnNewButton.setBounds(817, 449, 142, 64);
 		contentPane.add(btnNewButton);
 		
 		BoxTipoDeDato = new JComboBox();
@@ -116,8 +130,19 @@ public class Listado extends JFrame {
 		contentPane.add(comboBoxTopProv);
 		
 		lblTop5 = new JLabel("Municipio");
+		lblTop5.setForeground(Color.WHITE);
 		lblTop5.setBounds(366, 113, 217, 14);
 		contentPane.add(lblTop5);
+		
+		lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("Fotos/Opacidad.png"));
+		lblNewLabel_2.setBounds(746, 130, 285, 253);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("Fotos/fondo2.png"));
+		lblNewLabel_1.setBounds(0, 0, 1124, 535);
+		contentPane.add(lblNewLabel_1);
 		
 	}
 		/*table_1 = new JTable();

@@ -17,6 +17,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
+import javax.swing.ImageIcon;
+import java.awt.Color;
 
 public class VentanaCliente extends JFrame {
 
@@ -30,6 +32,7 @@ public class VentanaCliente extends JFrame {
 	private JButton btnRegistro;
 	
 	JLabel LBL1 = new JLabel("Desconectado");
+	private JLabel lblNewLabel_2;
 	public VentanaCliente() {
 		
 		
@@ -40,6 +43,7 @@ public class VentanaCliente extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		LBL1.setForeground(Color.WHITE);
 		
 		
 		LBL1.setBounds(10, 11, 414, 14);
@@ -51,10 +55,12 @@ public class VentanaCliente extends JFrame {
 		textField.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("Usuario:");
+		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setBounds(10, 97, 73, 14);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Contrase\u00F1a");
+		lblNewLabel_1.setForeground(Color.WHITE);
 		lblNewLabel_1.setBounds(10, 129, 73, 14);
 		contentPane.add(lblNewLabel_1);
 		
@@ -69,6 +75,11 @@ public class VentanaCliente extends JFrame {
 		btnRegistro = new JButton("Registrate");
 		btnRegistro.setBounds(262, 212, 89, 23);
 		contentPane.add(btnRegistro);
+		
+		lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("Fotos/Inicio.png"));
+		lblNewLabel_2.setBounds(0, 0, 553, 466);
+		contentPane.add(lblNewLabel_2);
 		
 	}
 	
