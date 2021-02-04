@@ -88,14 +88,12 @@ public class controladorListado implements ActionListener {
 						RellenarTabla(vistaListado.getComboBoxTopProv().getSelectedItem().toString(),
 								vistaListado.getComboBoxEstaciones().getSelectedItem().toString(),
 								vistaListado.getComboBoxFecha().getSelectedItem().toString(),
-								vistaListado.getComboBoxHora().getSelectedItem().toString(),
-								vistaListado.getComboBoxTopProv().getSelectedItem().toString());
+								vistaListado.getComboBoxHora().getSelectedItem().toString());
 					} else {
 						RellenarTabla(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),
 								vistaListado.getComboBoxEstaciones().getSelectedItem().toString(),
 								vistaListado.getComboBoxFecha().getSelectedItem().toString(),
-								vistaListado.getComboBoxHora().getSelectedItem().toString(),
-							vistaListado.getComboBoxTopProv().getSelectedItem().toString());
+								vistaListado.getComboBoxHora().getSelectedItem().toString());
 					}
 				}
 			}
@@ -112,7 +110,7 @@ public class controladorListado implements ActionListener {
 		this.vistaListado.getBtnNewButton().addActionListener(this);
 		this.vistaListado.getBtnNewButton().setActionCommand(Listado.enumAcciones.CAMBIAR.toString());
 	}
-	private String Provincia;
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
@@ -120,17 +118,14 @@ public class controladorListado implements ActionListener {
 
 		switch (accion) {
 		case ARABA:
-			Provincia = "Araba/Álava";
 			rellenarComboBoxMuni("Araba/Álava");
 			recogerDatosTopProvincia(vistaListado.getBoxTipoDeDato().getSelectedItem().toString(), "Araba/Álava");
 			break;
 		case BIZKAIA:
-			Provincia = "Bizkaia";
 			rellenarComboBoxMuni("Bizkaia");
 			recogerDatosTopProvincia(vistaListado.getBoxTipoDeDato().getSelectedItem().toString(), "Bizkaia");
 			break;
 		case GIPUZKOA: 
-			Provincia = "Gipuzkoa";
 			rellenarComboBoxMuni("Gipuzkoa");
 			recogerDatosTopProvincia(vistaListado.getBoxTipoDeDato().getSelectedItem().toString(), "Gipuzkoa");
 			break;
@@ -266,34 +261,15 @@ public class controladorListado implements ActionListener {
 	String[] titulo = { "Tipo De Dato", "Calculos" };
 	private JTable tabla;
 
-	public void RellenarTabla(String Nombre, String Nombre2, String Nombre3, String Nombre4, String datos) {
+	public void RellenarTabla(String Nombre, String Nombre2, String Nombre3, String Nombre4) {
 		int contador = 0;
 
 		ArrayList<String> tipoDeDato = new ArrayList<String>();
 		ArrayList<String> Calculos = new ArrayList<String>();
 		this.vistaListado.getTextArea().setText("");
 		try {
-			if (seleciontop) {
-				String Hql = "";
-				salida.writeUTF("9");
-				if (vistaListado.getBoxTipoDeDato().getSelectedItem().toString().contains("ica")) {
-					Hql = "FROM DatosCalidad where codDatos in (select distinct(codDatos) from DatosCalidad where  " + datos
-							+ " = 'Muy bueno / Oso ona' and estaciones.municipios.provincias.nombre = '" + Provincia
-							+ "' ORDER BY NOgm3 DESC)";
-					
-
-				} else {
-					Hql = "FROM DatosCalidad where codDatos in (select distinct(codDatos) from DatosCalidad where estaciones.municipios.provincias.nombre = '" + Provincia + "' ORDER BY "
-							+ datos + " DESC)";
-
-					
-
-				}
-				salida.writeUTF(Hql);
-			}else {
 			salida.writeUTF("8");
 			salida.writeUTF(Nombre + "_" + Nombre2 + "_" + Nombre3 + "_" + Nombre4);
-			}
 			List<DatosCalidad> datosCalid = (List<DatosCalidad>) entradaf.readObject();
 			for (DatosCalidad datosCali : datosCalid) {
 
@@ -469,15 +445,12 @@ public class controladorListado implements ActionListener {
 			RellenarTabla(vistaListado.getComboBoxTopProv().getSelectedItem().toString(),
 					vistaListado.getComboBoxEstaciones().getSelectedItem().toString(),
 					vistaListado.getComboBoxFecha().getSelectedItem().toString(),
-					vistaListado.getComboBoxHora().getSelectedItem().toString(),
-					vistaListado.getComboBoxTopProv().getSelectedItem().toString());
-					
+					vistaListado.getComboBoxHora().getSelectedItem().toString());
 		} else {
 			RellenarTabla(vistaListado.getComboBoxMunicipio().getSelectedItem().toString(),
 					vistaListado.getComboBoxEstaciones().getSelectedItem().toString(),
 					vistaListado.getComboBoxFecha().getSelectedItem().toString(),
-					vistaListado.getComboBoxHora().getSelectedItem().toString(),
-			vistaListado.getComboBoxTopProv().getSelectedItem().toString());
+					vistaListado.getComboBoxHora().getSelectedItem().toString());
 
 		}
 	}
@@ -497,3 +470,4 @@ public class controladorListado implements ActionListener {
 		cerrarServer();
 	}
 }
+
